@@ -4,7 +4,10 @@ title = "Global Commerce Council"
 enableRobotsTXT = true
 enableGitInfo = false
 enableEmoji = true
-paginate = 12
+
+# Pagination settings
+[pagination]
+  pagerSize = 12
 
 # Build settings
 [build]
