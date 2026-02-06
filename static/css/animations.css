@@ -1,0 +1,578 @@
+/* =========================================
+   CENTRALIZED ANIMATION SYSTEM
+   Single source of truth for all animations
+   and micro-interactions
+   ========================================= */
+
+/* ==========================================
+   1. KEYFRAME ANIMATIONS
+   ========================================== */
+
+/* Entrance Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hover & Interaction Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes pulse-icon {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes ripple {
+  to {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: var(--bg-surface-secondary);
+  }
+  100% {
+    background-color: rgba(37, 99, 235, 0.05);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.6);
+  }
+}
+
+@keyframes underlineExpand {
+  from {
+    width: 0;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* Color & Light Animations */
+@keyframes colorShift {
+  0%, 100% {
+    color: var(--text-primary);
+  }
+  50% {
+    color: var(--primary);
+  }
+}
+
+@keyframes backgroundShift {
+  0%, 100% {
+    background-color: var(--bg-surface);
+  }
+  50% {
+    background-color: rgba(37, 99, 235, 0.05);
+  }
+}
+
+/* ==========================================
+   2. ANIMATION UTILITY CLASSES
+   ========================================== */
+
+/* Entrance Animation Classes */
+.animate-slide-up {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideInDown 0.6s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-fade {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out forwards;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+/* Continuous Animation Classes */
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--bg-surface) 0%,
+    var(--bg-surface-secondary) 50%,
+    var(--bg-surface) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Delay Utilities for Staggered Animations */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+
+/* Stagger Classes - Legacy Support */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Fade In (Legacy) */
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* ==========================================
+   3. TRANSITION UTILITIES
+   ========================================== */
+
+.transition-fast {
+  transition: all 0.15s ease-in-out;
+}
+
+.transition-base {
+  transition: all 0.2s ease-in-out;
+}
+
+.transition-slow {
+  transition: all 0.3s ease-in-out;
+}
+
+.transition-smooth {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Specific property transitions */
+.transition-colors {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.transition-transform {
+  transition: transform 0.2s ease;
+}
+
+.transition-all {
+  transition-property: background-color, border-color, color, box-shadow, transform, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+/* ==========================================
+   4. INTERACTIVE ELEMENT ANIMATIONS
+   ========================================== */
+
+/* Button Hover Effects */
+.btn-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.btn-hover-brighten:hover {
+  filter: brightness(1.1);
+}
+
+.btn-active-press:active {
+  transform: scale(0.98);
+}
+
+/* Card Hover Effects */
+.card-hover-lift:hover {
+  transform: translateY(-8px);
+}
+
+.card-hover-scale:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.card-hover-glow:hover {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Link Underline Animation */
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Icon Animation on Hover */
+.icon-hover-pulse:hover i {
+  animation: pulse-icon 0.5s ease-in-out;
+}
+
+.icon-hover-rotate:hover i {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease;
+}
+
+.icon-hover-bounce:hover i {
+  animation: bounce 0.5s ease;
+}
+
+/* ==========================================
+   5. FORM & INPUT ANIMATIONS
+   ========================================== */
+
+.form-control-focus {
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control-focus:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input-label-float {
+  position: relative;
+}
+
+.input-label-float label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.input-label-float input:focus ~ label,
+.input-label-float input:valid ~ label {
+  transform: translateY(-1.5rem);
+  color: var(--primary);
+}
+
+/* ==========================================
+   6. LOADER & SKELETON ANIMATIONS
+   ========================================== */
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.loader-pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.loader-bounce {
+  display: inline-block;
+}
+
+.loader-bounce span {
+  display: inline-block;
+  margin: 0 2px;
+  animation: bounce 0.8s ease-in-out infinite;
+}
+
+.loader-bounce span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loader-bounce span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loader-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: bounce 1.4s infinite ease-in-out;
+  margin: 0 4px;
+}
+
+.loader-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loader-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+/* ==========================================
+   7. PAGE TRANSITION ANIMATIONS
+   ========================================== */
+
+.page-enter {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.page-exit {
+  animation: fadeInUp 0.5s ease-out reverse;
+}
+
+/* ==========================================
+   8. ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================
+   9. COMBINATION CLASSES
+   ========================================== */
+
+/* For commonly used combinations */
+.fade-in-scale {
+  animation: fadeIn 0.4s ease-out, scaleIn 0.4s ease-out;
+}
+
+.slide-up-fade {
+  animation: slideInUp 0.6s ease-out, fadeIn 0.6s ease-out;
+}
+
+.bounce-in-scale {
+  animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55), fadeIn 0.6s ease-out;
+}
+
+/* ==========================================
+   10. RESPONSIVE ANIMATIONS
+   ========================================== */
+
+@media (max-width: 768px) {
+  /* Reduce animation duration on mobile for better performance */
+  .animate-slide-up,
+  .animate-slide-down,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-fade-in-up,
+  .animate-fade-in-down {
+    animation-duration: 0.4s !important;
+  }
+  
+  /* Disable some animations on mobile to reduce jank */
+  .animate-float {
+    animation: none;
+  }
+}

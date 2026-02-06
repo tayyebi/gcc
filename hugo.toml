@@ -31,6 +31,12 @@ enableEmoji = true
     email = "info@globalcommercecouncil.com"
     phone = "+1 (555) 123-4567"
 
+  # Single Source of Truth for Key Metrics
+  [params.stats]
+    countries = "4+"
+    partners = "100+"
+    avg_response = "72hrs"
+
 [taxonomies]
   category = "categories"
   tag = "tags"

@@ -23,20 +23,14 @@
         <div class="row mt-5 pt-4 g-3">
           <div class="col-6 col-md-4">
             <div class="stat-mini">
-              <div class="h3 fw-bold mb-0">50+</div>
+              <div class="h3 fw-bold mb-0">{{ .Site.Params.stats.countries }}</div>
               <small class="text-white-50">Countries Served</small>
             </div>
           </div>
           <div class="col-6 col-md-4">
             <div class="stat-mini">
-              <div class="h3 fw-bold mb-0">1000+</div>
+              <div class="h3 fw-bold mb-0">{{ .Site.Params.stats.partners }}</div>
               <small class="text-white-50">Active Partners</small>
-            </div>
-          </div>
-          <div class="col-6 col-md-4">
-            <div class="stat-mini">
-              <div class="h3 fw-bold mb-0">$2B+</div>
-              <small class="text-white-50">Trade Volume</small>
             </div>
           </div>
         </div>
@@ -65,7 +59,7 @@
     </div>
     
     <div class="row g-4">
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3 fade-in-up stagger-1">
         <div class="card category-card h-100 border-0 shadow-sm">
           <div class="card-body text-center d-flex flex-column">
             <div class="mb-4 mt-2">
@@ -81,7 +75,7 @@
         </div>
       </div>
       
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3 fade-in-up stagger-2">
         <div class="card category-card h-100 border-0 shadow-sm">
           <div class="card-body text-center d-flex flex-column">
             <div class="mb-4 mt-2">
@@ -97,7 +91,7 @@
         </div>
       </div>
       
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3 fade-in-up stagger-3">
         <div class="card category-card h-100 border-0 shadow-sm">
           <div class="card-body text-center d-flex flex-column">
             <div class="mb-4 mt-2">
@@ -113,7 +107,7 @@
         </div>
       </div>
       
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3 fade-in-up stagger-4">
         <div class="card category-card h-100 border-0 shadow-sm">
           <div class="card-body text-center d-flex flex-column">
             <div class="mb-4 mt-2">
@@ -190,25 +184,25 @@
           <div class="row g-3 mb-4">
             <div class="col-6">
               <div class="p-3 bg-light rounded-3">
-                <div class="h4 fw-bold text-primary mb-1">156%</div>
+                <div class="h4 fw-bold text-primary mb-1">{{ .Site.Params.stats.growth_rate }}</div>
                 <div class="small text-muted">Growth Rate</div>
               </div>
             </div>
             <div class="col-6">
               <div class="p-3 bg-light rounded-3">
-                <div class="h4 fw-bold text-success mb-1">98.5%</div>
+                <div class="h4 fw-bold text-success mb-1">{{ .Site.Params.stats.satisfaction }}</div>
                 <div class="small text-muted">Satisfaction</div>
               </div>
             </div>
             <div class="col-6">
               <div class="p-3 bg-light rounded-3">
-                <div class="h4 fw-bold text-info mb-1">45k+</div>
+                <div class="h4 fw-bold text-info mb-1">{{ .Site.Params.stats.transactions }}</div>
                 <div class="small text-muted">Transactions</div>
               </div>
             </div>
             <div class="col-6">
               <div class="p-3 bg-light rounded-3">
-                <div class="h4 fw-bold text-warning mb-1">72hrs</div>
+                <div class="h4 fw-bold text-warning mb-1">{{ .Site.Params.stats.avg_response }}</div>
                 <div class="small text-muted">Avg. Response</div>
               </div>
             </div>
@@ -241,8 +235,8 @@
     </div>
     
     <div class="row g-4">
-      {{ range first 3 (where .Site.RegularPages "Type" "insights") }}
-      <div class="col-md-6 col-lg-4">
+      {{ range $index, $element := first 3 (where .Site.RegularPages "Type" "insights") }}
+      <div class="col-md-6 col-lg-4 fade-in-up stagger-{{ add $index 1 }}">
         <article class="card insight-card h-100 border-0 shadow-sm">
           {{ with .Params.images }}
           <div class="position-relative overflow-hidden">
