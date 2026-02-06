@@ -5,6 +5,35 @@ enableRobotsTXT = true
 enableGitInfo = false
 enableEmoji = true
 
+# ========================================
+# GLOBAL VARIABLES - SINGLE SOURCE OF TRUTH
+# ========================================
+[globals]
+  # Organization Identity
+  name = "Global Commerce Council"
+  tagline = "Connecting Global Markets Through Innovation"
+  description = "Global Commerce Council - Connecting businesses worldwide through commerce in Ceramics, Gypsum, Petroleum, and more."
+  domain = "globalcommercecouncil.com"
+  
+  # Contact Emails
+  [globals.email]
+    main = "info@globalcommercecouncil.com"
+    support = "support@globalcommercecouncil.com"
+    privacy = "privacy@globalcommercecouncil.com"
+    legal = "legal@globalcommercecouncil.com"
+  
+  # Social Media
+  [globals.social]
+    twitter = "@globalcommerce"
+    linkedin = "globalcommercecouncil"
+    
+  # Logo Configuration
+  [globals.logo]
+    path = "/images/logo.svg"
+    alt = "Global Commerce Council Logo"
+    width = "48"
+    height = "48"
+
 # Pagination settings
 [pagination]
   pagerSize = 12
@@ -18,18 +47,26 @@ enableEmoji = true
   page = ["HTML"]
 
 [params]
-  description = "Global Commerce Council - Connecting businesses worldwide through commerce in Ceramics, Gypsum, Petroleum, and more."
-  author = "Global Commerce Council"
+  description = "{{ .Globals.description }}"
+  author = "{{ .Globals.name }}"
   images = ["/images/og-image.jpg"]
   
   [params.seo]
     twitter_card = "summary_large_image"
-    twitter_site = "@globalcommerce"
+    twitter_site = "{{ .Globals.social.twitter }}"
     fb_app_id = ""
 
   [params.contact]
-    email = "info@globalcommercecouncil.com"
-    phone = "+1 (555) 123-4567"
+    email = "{{ .Globals.email.main }}"
+
+  # Semantic Versioning
+  # Format: MAJOR.MINOR.PATCH
+  # Can be automatically updated via CI/CD using commit hash and date
+  # Example CI update: sed -i 's/version = .*/version = "1.0.0+git.'"$(git rev-parse --short HEAD)"'"/g' hugo.toml
+  [params.version]
+    semantic = "1.0.0"
+    build_date = "2026-02-06"
+    git_hash = "main"  # Set by CI/CD pipeline
 
   # Single Source of Truth for Key Metrics
   [params.stats]

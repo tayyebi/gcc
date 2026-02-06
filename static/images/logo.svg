@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <style>
+      .gcc-primary { fill: #2563EB; }
+      .gcc-accent { fill: #06B6D4; }
+      .gcc-light { fill: #60A5FA; }
+    </style>
+  </defs>
+  
+  <!-- Outer Circle Background -->
+  <circle cx="100" cy="100" r="95" class="gcc-light" opacity="0.1"/>
+  
+  <!-- Three interlocking circles representing Global Commerce Connection -->
+  <!-- Left circle - Ceramics/Goods -->
+  <circle cx="70" cy="100" r="28" class="gcc-primary" opacity="0.8"/>
+  
+  <!-- Right circle - Commerce/Trade -->
+  <circle cx="130" cy="100" r="28" class="gcc-accent" opacity="0.8"/>
+  
+  <!-- Top circle - Global/Council -->
+  <circle cx="100" cy="65" r="28" class="gcc-light" opacity="0.9"/>
+  
+  <!-- Center overlay - represents unity -->
+  <circle cx="100" cy="100" r="18" class="gcc-primary"/>
+  
+  <!-- Geometric accent lines forming connections -->
+  <!-- Horizontal line -->
+  <line x1="50" y1="100" x2="150" y2="100" stroke="#2563EB" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Diagonal line left -->
+  <line x1="72" y1="68" x2="90" y2="95" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Diagonal line right -->
+  <line x1="128" y1="68" x2="110" y2="95" stroke="#60A5FA" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Inner hexagon representing structure/trade -->
+  <g transform="translate(100, 100)">
+    <!-- Hexagon outline -->
+    <polygon points="0,-15 13,-7.5 13,7.5 0,15 -13,7.5 -13,-7.5" 
+             fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.9"/>
+  </g>
+  
+  <!-- Decorative corner accents -->
+  <!-- Top-left accent -->
+  <circle cx="30" cy="30" r="3" class="gcc-primary" opacity="0.6"/>
+  
+  <!-- Top-right accent -->
+  <circle cx="170" cy="30" r="3" class="gcc-accent" opacity="0.6"/>
+  
+  <!-- Bottom-left accent -->
+  <circle cx="30" cy="170" r="3" class="gcc-light" opacity="0.6"/>
+  
+  <!-- Bottom-right accent -->
+  <circle cx="170" cy="170" r="3" class="gcc-primary" opacity="0.6"/>
+  
+  <!-- Outer border -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#2563EB" stroke-width="2" opacity="0.3"/>
+</svg>

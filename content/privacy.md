@@ -12,7 +12,7 @@ Global Commerce Council ("we," "us," or "our") is committed to protecting your p
 ### Information We Collect
 
 #### Personal Information
-- Name and contact information (email, phone)
+- Name and contact information (email)
 - Company information
 - Communication preferences
 - Any information you provide through forms
@@ -73,4 +73,3 @@ We may update this Privacy Policy periodically. We will notify you of any change
 
 If you have questions about this Privacy Policy, please contact us at:
 - Email: privacy@globalcommercecouncil.com
-- Phone: +1 (555) 123-4567

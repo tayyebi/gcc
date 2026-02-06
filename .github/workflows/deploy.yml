@@ -25,6 +25,13 @@ jobs:
           hugo-version: '0.121.1'
           extended: true
       
+      - name: Update version info in hugo.toml
+        run: |
+          GIT_HASH=$(git rev-parse --short HEAD)
+          BUILD_DATE=$(date +%Y-%m-%d)
+          sed -i "s/git_hash = .*/git_hash = \"$GIT_HASH\"/" hugo.toml
+          sed -i "s/build_date = .*/build_date = \"$BUILD_DATE\"/" hugo.toml
+      
       - name: Build Hugo site
         run: hugo --minify
       

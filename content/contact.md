@@ -10,7 +10,6 @@ We'd love to hear from you. Whether you have a question about our services, need
 ### Contact Information
 
 **Email**: info@globalcommercecouncil.com  
-**Phone**: +1 (555) 123-4567  
 **Hours**: Monday - Friday, 9:00 AM - 6:00 PM EST
 
 ### Send Us a Message
@@ -34,11 +33,6 @@ We'd love to hear from you. Whether you have a question about our services, need
   <div class="mb-3">
     <label for="company" class="form-label">Company</label>
     <input type="text" class="form-control" id="company" name="company">
-  </div>
-  
-  <div class="mb-3">
-    <label for="phone" class="form-label">Phone</label>
-    <input type="tel" class="form-control" id="phone" name="phone">
   </div>
   
   <div class="mb-3">

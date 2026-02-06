@@ -52,4 +52,3 @@ These terms shall be governed by and construed in accordance with applicable law
 
 For questions about these Terms, contact us at:
 - Email: legal@globalcommercecouncil.com
-- Phone: +1 (555) 123-4567

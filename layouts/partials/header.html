@@ -5,7 +5,7 @@
       <div class="row align-items-center">
         <div class="col-md-6">
           <small class="d-flex align-items-center">
-            <i class="bi bi-envelope me-2"></i>{{ .Site.Params.contact.email }}
+            <i class="bi bi-envelope me-2"></i>{{ $.Globals.email.main }}
           </small>
         </div>
         <div class="col-md-6 text-md-end">
@@ -22,8 +22,10 @@
   <!-- Main Navigation -->
   <nav class="navbar navbar-expand-lg py-3 transition-smooth">
     <div class="container">
-      <a class="navbar-brand fw-bold fs-4 icon-hover-pulse" href="/" title="Global Commerce Council">
-        <i class="bi bi-globe me-2"></i>{{ .Site.Title }}
+      <!-- Logo Brand -->
+      <a class="navbar-brand fw-bold fs-4 d-flex align-items-center transition-smooth" href="/" title="{{ $.Globals.name }}" style="gap: 0.75rem;">
+        <img src="{{ $.Globals.logo.path }}" alt="{{ $.Globals.logo.alt }}" width="{{ $.Globals.logo.width }}" height="{{ $.Globals.logo.height }}" style="transition: transform var(--transition-base) ease;" class="icon-hover-pulse">
+        <span class="d-none d-sm-inline" style="font-size: 1.1rem; font-weight: 600;">GCC</span>
       </a>
       
       <button class="navbar-toggler transition-base" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
