@@ -29,6 +29,8 @@ jobs:
         run: hugo --minify
       
       - name: Publish to Cloudflare Pages
+        id: cloudflare-deployment
+        continue-on-error: true
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -37,3 +39,19 @@ jobs:
           directory: public
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: main
+      
+      - name: Deployment status
+        if: steps.cloudflare-deployment.outcome == 'failure'
+        run: |
+          echo "⚠️ Cloudflare Pages deployment failed or was skipped"
+          echo ""
+          echo "This is likely because required secrets are not configured:"
+          echo "  - CLOUDFLARE_API_TOKEN"
+          echo "  - CLOUDFLARE_ACCOUNT_ID"
+          echo ""
+          echo "To enable deployment, please configure these secrets in:"
+          echo "Repository Settings > Secrets and variables > Actions"
+          echo ""
+          echo "See DEPLOYMENT.md for detailed instructions."
+          echo ""
+          echo "Note: The build succeeded. Only deployment was affected."
