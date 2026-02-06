@@ -2,9 +2,10 @@
 <html lang="{{ .Site.LanguageCode }}">
 {{ partial "head.html" . }}
 <body>
+  <a class="visually-hidden-focusable p-3 position-absolute top-0 start-0 bg-primary text-white" href="#main-content" style="z-index: 2000;">Skip to content</a>
   {{ partial "header.html" . }}
   
-  <main>
+  <main id="main-content">
     {{ block "main" . }}{{ end }}
   </main>
   

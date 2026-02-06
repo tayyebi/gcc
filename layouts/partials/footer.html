@@ -5,7 +5,7 @@
     <div class="row mb-5 pb-4 border-bottom border-light border-opacity-10">
       <div class="col-lg-5 mb-4 mb-lg-0">
         <h4 class="fw-bold mb-2 text-white">
-          <i class="bi bi-bell-fill me-2"></i>Market Intelligence Updates
+          <i class="bi bi-bell-fill me-2" aria-hidden="true"></i>Market Intelligence Updates
         </h4>
         <p class="text-white-50 mb-0">Subscribe to receive curated insights on global trade trends, HS codes, and verified supplier networks.</p>
       </div>
@@ -14,9 +14,10 @@
           <div class="row g-3">
             <div class="col-md-8">
               <div class="input-group">
-                <input type="email" class="form-control form-control-lg border-0" placeholder="your@business.email" aria-label="Email" required>
+                <label for="email-subscribe" class="visually-hidden">Email address</label>
+                <input type="email" id="email-subscribe" class="form-control form-control-lg border-0" placeholder="your@business.email" aria-label="Email address" required>
                 <button class="btn btn-primary px-4" type="submit">
-                  <i class="bi bi-send me-2"></i>Subscribe
+                  <i class="bi bi-send me-2" aria-hidden="true"></i>Subscribe
                 </button>
               </div>
             </div>
@@ -27,28 +28,28 @@
                 <label class="form-check-label custom-toggle-pill">
                   <input type="checkbox" class="form-check-input visually-hidden" checked>
                   <span class="pill-content">
-                    <i class="bi bi-bricks me-1"></i>Ceramics
+                    <i class="bi bi-bricks me-1" aria-hidden="true"></i>Ceramics
                   </span>
                 </label>
                 
                 <label class="form-check-label custom-toggle-pill">
                   <input type="checkbox" class="form-check-input visually-hidden" checked>
                   <span class="pill-content">
-                    <i class="bi bi-building me-1"></i>Gypsum
+                    <i class="bi bi-building me-1" aria-hidden="true"></i>Gypsum
                   </span>
                 </label>
                 
                 <label class="form-check-label custom-toggle-pill">
                   <input type="checkbox" class="form-check-input visually-hidden">
                   <span class="pill-content">
-                    <i class="bi bi-droplet me-1"></i>Petroleum
+                    <i class="bi bi-droplet me-1" aria-hidden="true"></i>Petroleum
                   </span>
                 </label>
                 
                 <label class="form-check-label custom-toggle-pill">
                   <input type="checkbox" class="form-check-input visually-hidden">
                   <span class="pill-content">
-                    <i class="bi bi-truck me-1"></i>Logistics
+                    <i class="bi bi-truck me-1" aria-hidden="true"></i>Logistics
                   </span>
                 </label>
               </div>
@@ -114,14 +115,14 @@
       
       <div class="col-md-4 text-center mb-3 mb-md-0">
         <div class="theme-toggle btn-group btn-group-sm rounded-pill p-1 border border-secondary" role="group" aria-label="Theme Toggle">
-          <button type="button" class="btn btn-link text-white-50 theme-btn active" data-theme-value="light" title="Light Mode">
-            <i class="bi bi-sun-fill"></i>
+          <button type="button" class="btn btn-link text-white-50 theme-btn active" data-theme-value="light" aria-label="Light Mode">
+            <i class="bi bi-sun-fill" aria-hidden="true"></i>
           </button>
-          <button type="button" class="btn btn-link text-white-50 theme-btn" data-theme-value="dark" title="Dark Mode">
-            <i class="bi bi-moon-fill"></i>
+          <button type="button" class="btn btn-link text-white-50 theme-btn" data-theme-value="dark" aria-label="Dark Mode">
+            <i class="bi bi-moon-fill" aria-hidden="true"></i>
           </button>
-          <button type="button" class="btn btn-link text-white-50 theme-btn" data-theme-value="auto" title="System Auto">
-            <i class="bi bi-display"></i>
+          <button type="button" class="btn btn-link text-white-50 theme-btn" data-theme-value="auto" aria-label="System Auto">
+            <i class="bi bi-display" aria-hidden="true"></i>
           </button>
         </div>
       </div>
