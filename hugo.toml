@@ -30,6 +30,10 @@ enableEmoji = true
     description = "Global Commerce Council - Connecting businesses worldwide through commerce in Ceramics, Gypsum, Petroleum, and more."
     domain = "globalcommercecouncil.com"
     
+    [params.globals.logo]
+      path = "/images/logo.svg"
+      alt = "Global Commerce Council Logo"
+    
     # Contact Emails
     [params.globals.email]
       main = "info@globalcommercecouncil.com"
@@ -178,4 +182,22 @@ enableEmoji = true
     name = "Insights"
     url = "/insights/"
     weight = 2
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About Us"
+    url = "/about/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "suppliers"
+    name = "Suppliers"
+    url = "/suppliers/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
 
