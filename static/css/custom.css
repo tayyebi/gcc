@@ -41,6 +41,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--dark-navy);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -366,6 +375,7 @@ h6 { font-size: 1.25rem; }
     rgba(6, 182, 212, 0.5) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -1173,7 +1183,7 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 0 30px rgba(37, 99, 235, 0.5);
+  filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.5));
 }
 
 .metric-label {
@@ -1272,19 +1282,7 @@ html {
   filter: contrast(1.15) brightness(1.05);
 }
 
-/* 8K Ready - Crisp Text Rendering */
-body {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'kern' 1, 'liga' 1;
-}
-
 /* Figma-Style Precision */
-* {
-  box-sizing: border-box;
-}
-
 .precision-spacing {
   padding: calc(2rem + 0.5vw);
   margin: calc(1rem + 0.25vw);
@@ -1346,8 +1344,15 @@ body {
   transform: scale(0.95);
 }
 
-/* Ultra-smooth transitions */
-* {
+/* Ultra-smooth transitions for interactive elements */
+a,
+button,
+.btn,
+.card,
+.nav-link,
+input,
+textarea,
+select {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
