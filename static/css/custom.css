@@ -600,6 +600,78 @@ html {
   position: relative;
 }
 
+/* CTA-specific styles for a professional, high-contrast call-to-action */
+.cta-section {
+  --cta-accent: linear-gradient(90deg, rgba(37,99,235,0.18), rgba(16,185,129,0.12));
+  background: linear-gradient(180deg, rgba(6,10,33,0.92), rgba(8,30,74,0.9));
+  color: #fff;
+}
+
+.cta-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+}
+
+.cta-title {
+  color: #ffffff;
+  text-shadow: 0 6px 24px rgba(2,6,23,0.45);
+}
+
+.cta-lead {
+  color: rgba(255,255,255,0.88);
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-primary-btn {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.35);
+}
+
+.cta-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(2,6,23,0.45);
+}
+
+.cta-secondary-btn {
+  border-color: rgba(255,255,255,0.28);
+  color: #fff;
+  background: transparent;
+}
+
+.cta-secondary-btn:hover {
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+}
+
+.cta-badge {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.95);
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+  font-weight: 600;
+}
+
+.cta-decor {
+  background-image: radial-gradient(circle at 10% 20%, rgba(37,99,235,0.12) 0%, transparent 20%),
+                    radial-gradient(circle at 90% 80%, rgba(16,185,129,0.08) 0%, transparent 25%),
+                    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='50' fill='%23ffffff' fill-opacity='0.02'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: 400px 400px, 300px 300px, 60px 60px;
+  opacity: 0.7;
+  mix-blend-mode: overlay;
+}
+
+@media (max-width: 768px) {
+  .cta-card { padding: 2rem; }
+  .cta-title { font-size: 1.65rem; }
+}
+
 /* Link hover effects */
 a {
   transition: color var(--transition-base) ease;
