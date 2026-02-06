@@ -48,12 +48,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.documentElement.style.transition = 'background-color 0.3s ease, color 0.3s ease';
     
     if (theme === 'auto') {
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      // Respect system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (prefersDark) {
         document.documentElement.setAttribute('data-theme', 'dark');
       } else {
         document.documentElement.removeAttribute('data-theme');
       }
     } else {
+      // Force user-selected theme
       document.documentElement.setAttribute('data-theme', theme);
     }
     
@@ -73,19 +76,21 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('theme', theme);
   };
 
-  // Initial set
+  // Initial set based on localStorage or system preference
   setTheme(storedTheme);
 
-  // Event Listeners
+  // Event Listeners for theme buttons
   themeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       setTheme(btn.getAttribute('data-theme-value'));
     });
   });
 
-  // Listen for system changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    if (localStorage.getItem('theme') === 'auto') {
+  // Listen for system theme changes only when auto mode is active
+  const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  darkModeQuery.addEventListener('change', e => {
+    const currentTheme = localStorage.getItem('theme') || 'auto';
+    if (currentTheme === 'auto') {
       setTheme('auto');
     }
   });
