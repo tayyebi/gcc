@@ -43,7 +43,28 @@ Set the following environment variable in Cloudflare Pages:
 
 ### 4. Build Configuration
 
-The build settings are configured in the repository's `.github/workflows/deploy.yml` file.
+The build settings are configured in:
+- **GitHub Actions**: `.github/workflows/deploy.yml` - for automated deployment via GitHub Actions
+- **Wrangler**: `wrangler.jsonc` - for Cloudflare Pages direct integration or manual Wrangler deployments
+
+#### Wrangler Configuration
+
+The `wrangler.jsonc` file configures Cloudflare Wrangler to deploy the Hugo-generated static site:
+
+```json
+{
+  "name": "globalcommercecouncil",
+  "compatibility_date": "2026-02-06",
+  "assets": {
+    "directory": "./public"
+  }
+}
+```
+
+This configuration:
+- Specifies the project name matching your Cloudflare Pages project
+- Points to the `public` directory where Hugo outputs the built site
+- Enables deployment via `npx wrangler deploy`
 
 ## GitHub Secrets Configuration
 
@@ -71,7 +92,21 @@ For automated deployment via GitHub Actions, configure these secrets in your rep
 
 ## Manual Deployment
 
-To deploy manually:
+### Using Wrangler CLI
+
+The repository includes a `wrangler.jsonc` configuration file for Cloudflare deployments:
+
+```bash
+# Build the site
+hugo --minify
+
+# Deploy to Cloudflare Pages using Wrangler
+npx wrangler deploy
+```
+
+### Using Other Services
+
+To deploy manually to other hosting services:
 
 ```bash
 # Build the site
