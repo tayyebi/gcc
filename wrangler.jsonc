@@ -1,7 +1,7 @@
 {
   // Wrangler configuration for Cloudflare Pages deployment
   // This file is used when deploying via `npx wrangler deploy`
-  "name": "globalcommercecouncil",
+  "name": "gcc",
   "compatibility_date": "2026-02-06",
   "assets": {
     // Hugo builds the static site to the 'public' directory
