@@ -1,18 +1,53 @@
 {{ define "main" }}
 <!-- Hero Section -->
-<section class="hero-section bg-primary text-white py-5">
-  <div class="container">
-    <div class="row align-items-center py-5">
-      <div class="col-lg-6">
-        <h1 class="display-3 fw-bold mb-4">Global Commerce Council</h1>
-        <p class="lead mb-4">Connecting businesses worldwide through sustainable commerce in Ceramics, Gypsum, Petroleum, and more.</p>
-        <div class="d-flex gap-3">
-          <a href="/about/" class="btn btn-light btn-lg">Learn More</a>
-          <a href="/contact/" class="btn btn-outline-light btn-lg">Get in Touch</a>
+<section class="hero-section text-white py-5 position-relative">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0 slide-in-left">
+        <div class="badge bg-light text-primary mb-4 px-3 py-2">
+          <i class="bi bi-globe me-2"></i>Global Commerce Network
+        </div>
+        <h1 class="display-3 fw-bold mb-4">Connecting Global Markets Through Innovation</h1>
+        <p class="lead mb-5">Facilitating international trade in Ceramics, Gypsum, Petroleum, and specialty products with data-driven insights and verified supplier networks.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="/about/" class="btn btn-light btn-lg">
+            Explore Our Mission
+            <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+          <a href="/contact/" class="btn btn-outline-light btn-lg">
+            Partner With Us
+          </a>
+        </div>
+        
+        <!-- Stats -->
+        <div class="row mt-5 pt-4">
+          <div class="col-4">
+            <div class="stat-mini">
+              <div class="h3 fw-bold mb-0">50+</div>
+              <small class="text-white-50">Countries</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="stat-mini">
+              <div class="h3 fw-bold mb-0">1000+</div>
+              <small class="text-white-50">Partners</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="stat-mini">
+              <div class="h3 fw-bold mb-0">$2B+</div>
+              <small class="text-white-50">Trade Volume</small>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-lg-6 text-center">
-        <img src="/images/hero-illustration.svg" alt="Global Commerce" class="img-fluid" style="max-height: 400px;">
+      
+      <div class="col-lg-6 slide-in-right">
+        <div class="position-relative">
+          <div class="p-4 bg-white bg-opacity-10 backdrop-blur rounded-4 shadow-custom-lg">
+            <img src="/images/hero-illustration.svg" alt="Global Commerce" class="img-fluid">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -20,61 +55,74 @@
 
 <!-- Categories Section -->
 <section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="display-5 fw-bold">Our Categories</h2>
-      <p class="lead text-muted">Explore our diverse range of products and services</p>
+  <div class="container py-4">
+    <div class="text-center mb-5 fade-in">
+      <span class="badge bg-primary text-white mb-3 px-3 py-2">Product Categories</span>
+      <h2 class="display-5 fw-bold mb-3">Industry-Leading Solutions</h2>
+      <p class="lead text-muted col-lg-8 mx-auto">Discover comprehensive product portfolios across strategic global markets</p>
     </div>
     
     <div class="row g-4">
       <div class="col-md-6 col-lg-3">
-        <div class="card h-100 text-center border-0 shadow-sm hover-lift">
-          <div class="card-body p-4">
-            <div class="mb-3">
-              <i class="bi bi-bricks fs-1 text-primary"></i>
+        <div class="card category-card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <div class="mb-4 mt-2">
+              <i class="bi bi-bricks"></i>
             </div>
-            <h5 class="card-title fw-bold">Ceramics</h5>
-            <p class="card-text text-muted">High-quality ceramic products for construction and design</p>
-            <a href="/categories/ceramics/" class="btn btn-outline-primary">Explore</a>
+            <h5 class="card-title fw-bold mb-3">Ceramics</h5>
+            <p class="card-text text-muted small mb-4">High-performance ceramic products for construction and industrial applications</p>
+            <a href="/categories/ceramics/" class="btn btn-outline-primary w-100">
+              Explore
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
           </div>
         </div>
       </div>
       
       <div class="col-md-6 col-lg-3">
-        <div class="card h-100 text-center border-0 shadow-sm hover-lift">
-          <div class="card-body p-4">
-            <div class="mb-3">
-              <i class="bi bi-building fs-1 text-primary"></i>
+        <div class="card category-card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <div class="mb-4 mt-2">
+              <i class="bi bi-building"></i>
             </div>
-            <h5 class="card-title fw-bold">Gypsum</h5>
-            <p class="card-text text-muted">Premium gypsum materials for various applications</p>
-            <a href="/categories/gypsum/" class="btn btn-outline-primary">Explore</a>
+            <h5 class="card-title fw-bold mb-3">Gypsum</h5>
+            <p class="card-text text-muted small mb-4">Premium gypsum materials and advanced building solutions</p>
+            <a href="/categories/gypsum/" class="btn btn-outline-primary w-100">
+              Explore
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
           </div>
         </div>
       </div>
       
       <div class="col-md-6 col-lg-3">
-        <div class="card h-100 text-center border-0 shadow-sm hover-lift">
-          <div class="card-body p-4">
-            <div class="mb-3">
-              <i class="bi bi-droplet fs-1 text-primary"></i>
+        <div class="card category-card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <div class="mb-4 mt-2">
+              <i class="bi bi-droplet"></i>
             </div>
-            <h5 class="card-title fw-bold">Petroleum</h5>
-            <p class="card-text text-muted">Energy solutions and petroleum products</p>
-            <a href="/categories/petroleum/" class="btn btn-outline-primary">Explore</a>
+            <h5 class="card-title fw-bold mb-3">Petroleum</h5>
+            <p class="card-text text-muted small mb-4">Energy solutions and refined petroleum products</p>
+            <a href="/categories/petroleum/" class="btn btn-outline-primary w-100">
+              Explore
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
           </div>
         </div>
       </div>
       
       <div class="col-md-6 col-lg-3">
-        <div class="card h-100 text-center border-0 shadow-sm hover-lift">
-          <div class="card-body p-4">
-            <div class="mb-3">
-              <i class="bi bi-boxes fs-1 text-primary"></i>
+        <div class="card category-card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <div class="mb-4 mt-2">
+              <i class="bi bi-boxes"></i>
             </div>
-            <h5 class="card-title fw-bold">Other Products</h5>
-            <p class="card-text text-muted">Discover our additional product offerings</p>
-            <a href="/categories/other/" class="btn btn-outline-primary">Explore</a>
+            <h5 class="card-title fw-bold mb-3">Specialty Products</h5>
+            <p class="card-text text-muted small mb-4">Diverse industrial materials and custom solutions</p>
+            <a href="/categories/other/" class="btn btn-outline-primary w-100">
+              Explore
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -84,43 +132,89 @@
 
 <!-- Features Section -->
 <section class="py-5">
-  <div class="container">
+  <div class="container py-4">
     <div class="row align-items-center">
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <h2 class="display-6 fw-bold mb-4">Why Choose Us</h2>
-        <div class="mb-4">
-          <div class="d-flex mb-3">
-            <div class="me-3">
-              <i class="bi bi-check-circle-fill text-primary fs-4"></i>
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <span class="badge bg-primary text-white mb-3 px-3 py-2">Our Advantages</span>
+        <h2 class="display-6 fw-bold mb-4">Why Industry Leaders Choose Us</h2>
+        
+        <div class="feature-list">
+          <div class="d-flex mb-4">
+            <div class="me-4 flex-shrink-0">
+              <div class="bg-primary bg-opacity-10 rounded-circle p-3">
+                <i class="bi bi-globe-americas text-primary fs-4"></i>
+              </div>
             </div>
             <div>
-              <h5 class="fw-bold">Global Network</h5>
-              <p class="text-muted">Connected with suppliers and buyers worldwide</p>
+              <h5 class="fw-bold mb-2">Global Network</h5>
+              <p class="text-muted mb-0">Connected with verified suppliers and buyers across 50+ countries with real-time market intelligence</p>
             </div>
           </div>
-          <div class="d-flex mb-3">
-            <div class="me-3">
-              <i class="bi bi-check-circle-fill text-primary fs-4"></i>
+          
+          <div class="d-flex mb-4">
+            <div class="me-4 flex-shrink-0">
+              <div class="bg-success bg-opacity-10 rounded-circle p-3">
+                <i class="bi bi-shield-check text-success fs-4"></i>
+              </div>
             </div>
             <div>
-              <h5 class="fw-bold">Quality Assurance</h5>
-              <p class="text-muted">Vetted products meeting international standards</p>
+              <h5 class="fw-bold mb-2">Quality Assurance</h5>
+              <p class="text-muted mb-0">Rigorous vetting process ensuring compliance with international standards and certifications</p>
             </div>
           </div>
-          <div class="d-flex mb-3">
-            <div class="me-3">
-              <i class="bi bi-check-circle-fill text-primary fs-4"></i>
+          
+          <div class="d-flex mb-4">
+            <div class="me-4 flex-shrink-0">
+              <div class="bg-info bg-opacity-10 rounded-circle p-3">
+                <i class="bi bi-headset text-info fs-4"></i>
+              </div>
             </div>
             <div>
-              <h5 class="fw-bold">Expert Support</h5>
-              <p class="text-muted">Dedicated team to assist your business needs</p>
+              <h5 class="fw-bold mb-2">Expert Support</h5>
+              <p class="text-muted mb-0">Dedicated specialists providing market insights, logistics coordination, and trade guidance</p>
             </div>
           </div>
         </div>
-        <a href="/about/" class="btn btn-primary btn-lg">Learn More About Us</a>
+        
+        <a href="/about/" class="btn btn-primary btn-lg mt-3">
+          Learn More About Us
+          <i class="bi bi-arrow-right ms-2"></i>
+        </a>
       </div>
+      
       <div class="col-lg-6">
-        <img src="/images/features.jpg" alt="Features" class="img-fluid rounded shadow">
+        <div class="data-viz-container">
+          <h6 class="fw-bold mb-4 text-uppercase small text-muted">Trade Performance 2024</h6>
+          <div class="row g-3 mb-4">
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3">
+                <div class="h4 fw-bold text-primary mb-1">156%</div>
+                <div class="small text-muted">Growth Rate</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3">
+                <div class="h4 fw-bold text-success mb-1">98.5%</div>
+                <div class="small text-muted">Satisfaction</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3">
+                <div class="h4 fw-bold text-info mb-1">45k+</div>
+                <div class="small text-muted">Transactions</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3">
+                <div class="h4 fw-bold text-warning mb-1">72hrs</div>
+                <div class="small text-muted">Avg. Response</div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <img src="/images/features.jpg" alt="Performance Metrics" class="img-fluid rounded-3" style="max-height: 280px;">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -128,43 +222,75 @@
 
 <!-- Latest Insights -->
 <section class="py-5 bg-light">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="display-6 fw-bold">Latest Insights</h2>
-      <a href="/insights/" class="btn btn-primary">View All</a>
+  <div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+      <div>
+        <span class="badge bg-primary text-white mb-2 px-3 py-2">Industry Insights</span>
+        <h2 class="display-6 fw-bold mb-2">Latest Market Intelligence</h2>
+        <p class="text-muted">Data-driven analysis and trends shaping global commerce</p>
+      </div>
+      <a href="/insights/" class="btn btn-primary d-none d-md-inline-flex">
+        View All Insights
+        <i class="bi bi-arrow-right ms-2"></i>
+      </a>
     </div>
     
     <div class="row g-4">
       {{ range first 3 (where .Site.RegularPages "Type" "insights") }}
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm">
+      <div class="col-md-6 col-lg-4">
+        <article class="card insight-card h-100 border-0 shadow-sm">
           {{ with .Params.images }}
-          <img src="{{ index . 0 }}" class="card-img-top" alt="{{ $.Title }}">
+          <div class="position-relative overflow-hidden">
+            <img src="{{ index . 0 }}" class="card-img-top" alt="{{ $.Title }}" style="height: 220px; object-fit: cover;">
+            <div class="position-absolute top-0 end-0 m-3">
+              <span class="badge bg-dark bg-opacity-75">Article</span>
+            </div>
+          </div>
           {{ end }}
           <div class="card-body">
-            <div class="text-muted small mb-2">
-              <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time>
-            </div>
-            <h5 class="card-title fw-bold">{{ .Title }}</h5>
-            <p class="card-text text-muted">{{ .Summary }}</p>
-            <a href="{{ .Permalink }}" class="btn btn-sm btn-outline-primary">Read More</a>
+            <time datetime="{{ .PublishDate.Format "2006-01-02" }}" class="d-inline-block mb-3">
+              {{ .PublishDate.Format "Jan 2, 2006" }}
+            </time>
+            <h5 class="card-title fw-bold mb-3">{{ .Title }}</h5>
+            <p class="card-text text-muted mb-4">{{ truncate 120 .Summary }}</p>
+            <a href="{{ .Permalink }}" class="btn btn-sm btn-outline-primary">
+              Read Analysis
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
           </div>
-        </div>
+        </article>
       </div>
       {{ end }}
+    </div>
+    
+    <div class="text-center mt-4 d-md-none">
+      <a href="/insights/" class="btn btn-primary">
+        View All Insights
+        <i class="bi bi-arrow-right ms-2"></i>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- CTA Section -->
-<section class="py-5 bg-primary text-white">
-  <div class="container text-center">
-    <h2 class="display-5 fw-bold mb-4">Ready to Start Trading?</h2>
-    <p class="lead mb-4">Join our global network of suppliers and buyers today</p>
-    <div class="d-flex gap-3 justify-content-center">
-      <a href="/suppliers/" class="btn btn-light btn-lg">Browse Suppliers</a>
-      <a href="/contact/" class="btn btn-outline-light btn-lg">Contact Us</a>
+<section class="py-5 bg-gradient-primary text-white position-relative overflow-hidden">
+  <div class="container py-5 position-relative" style="z-index: 1;">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Global Trade?</h2>
+        <p class="lead mb-5 opacity-90">Join thousands of businesses leveraging our platform for seamless international commerce</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <a href="/suppliers/" class="btn btn-light btn-lg">
+            Browse Suppliers
+            <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+          <a href="/contact/" class="btn btn-outline-light btn-lg">
+            Schedule Consultation
+          </a>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="opacity: 0.05; background: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22white%22/></svg>') repeat; background-size: 60px;"></div>
 </section>
 {{ end }}

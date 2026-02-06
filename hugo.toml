@@ -1,7 +1,6 @@
 baseURL = "https://globalcommercecouncil.com"
 languageCode = "en-us"
 title = "Global Commerce Council"
-theme = ""
 enableRobotsTXT = true
 enableGitInfo = false
 enableEmoji = true
