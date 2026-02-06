@@ -1,10 +1,15 @@
 <header class="sticky-top header-custom" id="mainHeader">
-  <!-- Top Bar with Search and Contact -->
-  <div class="bg-primary text-white" style="padding: 0.4rem 0;">
+  <!-- Top Bar with Contact and Search -->
+  <div class="bg-primary text-white py-2 transition-colors">
     <div class="container-fluid">
-      <div class="d-flex align-items-center justify-content-between gap-2" style="min-height: 32px;">
-        <!-- Search - Left side, very compact -->
-        <form class="d-flex flex-grow-1" role="search" id="searchForm" style="min-width: 0;">
+      <div class="d-flex align-items-center justify-content-between gap-3" style="min-height: auto;">
+        <!-- Email - Left side, clickable -->
+        <a href="mailto:{{ .Site.Params.globals.email.main }}" class="text-white text-decoration-none" style="font-size: 0.85rem; white-space: nowrap;" title="Send email">
+          {{ .Site.Params.globals.email.main }}
+        </a>
+        
+        <!-- Search - Right side, very compact -->
+        <form class="d-flex" role="search" id="searchForm" style="min-width: 0;">
           <div class="input-group input-group-sm transition-base" style="max-width: 280px;">
             <input class="form-control form-control-focus border-0" type="search" placeholder="Search..." aria-label="Search" id="searchInput" style="font-size: 0.8rem; padding: 0.25rem 0.5rem; height: auto;">
             <button class="btn btn-outline-light icon-hover-bounce" type="submit" title="Search" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">
@@ -12,11 +17,6 @@
             </button>
           </div>
         </form>
-        
-        <!-- Email text - Right side, no icon -->
-        <small class="text-white" style="white-space: nowrap; font-size: 0.85rem;">
-          {{ .Site.Params.globals.email.main }}
-        </small>
       </div>
     </div>
   </div>
@@ -26,8 +26,8 @@
     <div class="container">
       <!-- Logo Brand -->
       <a class="navbar-brand fw-bold fs-4 d-flex align-items-center transition-smooth" href="/" title="{{ .Site.Params.globals.name }}" style="gap: 0.75rem;">
-        <img src="{{ .Site.Params.globals.logo.path | absURL }}" alt="{{ .Site.Params.globals.logo.alt }}" width="48" height="48" loading="eager" style="transition: transform var(--transition-base) ease;" class="icon-hover-pulse">
-        <span class="d-none d-sm-inline" style="font-size: 1.1rem; font-weight: 600;">GCC</span>
+        <img src="{{ .Site.Params.globals.logo.path }}" alt="{{ .Site.Params.globals.logo.alt }}" width="48" height="48" loading="eager" style="transition: transform var(--transition-base) ease;" class="icon-hover-pulse">
+        <span class="d-none d-sm-inline" style="font-size: 1.1rem; font-weight: 600;">{{ .Site.Params.globals.name }}</span>
       </a>
       
       <button class="navbar-toggler transition-base" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
