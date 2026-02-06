@@ -1,6 +1,28 @@
 // Main JavaScript functionality
 document.addEventListener('DOMContentLoaded', function() {
+  // ===========================================
+  // Header Scroll Effect
+  // ===========================================
+  const mainHeader = document.getElementById('mainHeader');
+  let lastScrollTop = 0;
+  
+  const handleHeaderScroll = () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > 50) {
+      mainHeader.classList.add('scrolled');
+    } else {
+      mainHeader.classList.remove('scrolled');
+    }
+    
+    lastScrollTop = scrollTop;
+  };
+  
+  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+  
+  // ===========================================
   // Theme Management
+  // ===========================================
   const themeBtns = document.querySelectorAll('.theme-btn');
   const storedTheme = localStorage.getItem('theme') || 'auto';
   
@@ -34,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Event Listeners
   themeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      setTheme(btn.dataset.themeValue);
+      setTheme(btn.getAttribute('data-theme-value'));
     });
   });
 
@@ -43,6 +65,32 @@ document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem('theme') === 'auto') {
       setTheme('auto');
     }
+  });
+
+  // ===========================================
+  // Intersection Observer for Animations
+  // ===========================================
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  // Apply observer to cards and feature lists
+  document.querySelectorAll('.card, .feature-list .d-flex, .insight-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
   });
 
   // Smooth scroll for anchor links

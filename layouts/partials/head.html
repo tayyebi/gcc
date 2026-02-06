@@ -11,10 +11,15 @@
   
   <title>{{ $title }}</title>
   
+  <!-- Accessibility -->
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#2563EB">
+  
   <!-- SEO Meta Tags -->
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author }}">
   <meta name="keywords" content="{{ if .Keywords }}{{ delimit .Keywords ", " }}{{ else }}global commerce, ceramics, gypsum, petroleum, international trade, hs code, suppliers{{ end }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   
   <!-- Open Graph -->
   <meta property="og:title" content="{{ $title }}">

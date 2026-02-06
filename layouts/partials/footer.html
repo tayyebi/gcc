@@ -4,16 +4,20 @@
     <!-- Subscription Section -->
     <div class="row mb-5 pb-4 border-bottom border-light border-opacity-10">
       <div class="col-lg-5 mb-4 mb-lg-0">
-        <h4 class="fw-bold mb-2 text-white">Market Intelligence Updates</h4>
-        <p class="text-white-50 mb-0">Subscribe to receive curated insights on global trade, HS codes, and supplier networks.</p>
+        <h4 class="fw-bold mb-2 text-white">
+          <i class="bi bi-bell-fill me-2"></i>Market Intelligence Updates
+        </h4>
+        <p class="text-white-50 mb-0">Subscribe to receive curated insights on global trade trends, HS codes, and verified supplier networks.</p>
       </div>
       <div class="col-lg-7">
         <form class="subscription-form" onsubmit="event.preventDefault();">
           <div class="row g-3">
             <div class="col-md-8">
               <div class="input-group">
-                <input type="email" class="form-control form-control-lg border-0" placeholder="Business email address" aria-label="Email">
-                <button class="btn btn-primary px-4" type="submit">Subscribe</button>
+                <input type="email" class="form-control form-control-lg border-0" placeholder="your@business.email" aria-label="Email" required>
+                <button class="btn btn-primary px-4" type="submit">
+                  <i class="bi bi-send me-2"></i>Subscribe
+                </button>
               </div>
             </div>
             <div class="col-12">
@@ -22,22 +26,30 @@
                 
                 <label class="form-check-label custom-toggle-pill">
                   <input type="checkbox" class="form-check-input visually-hidden" checked>
-                  <span class="pill-content">Ceramics</span>
+                  <span class="pill-content">
+                    <i class="bi bi-bricks me-1"></i>Ceramics
+                  </span>
                 </label>
                 
                 <label class="form-check-label custom-toggle-pill">
                   <input type="checkbox" class="form-check-input visually-hidden" checked>
-                  <span class="pill-content">Gypsum</span>
+                  <span class="pill-content">
+                    <i class="bi bi-building me-1"></i>Gypsum
+                  </span>
                 </label>
                 
                 <label class="form-check-label custom-toggle-pill">
                   <input type="checkbox" class="form-check-input visually-hidden">
-                  <span class="pill-content">Petroleum</span>
+                  <span class="pill-content">
+                    <i class="bi bi-droplet me-1"></i>Petroleum
+                  </span>
                 </label>
                 
                 <label class="form-check-label custom-toggle-pill">
                   <input type="checkbox" class="form-check-input visually-hidden">
-                  <span class="pill-content">Logistics</span>
+                  <span class="pill-content">
+                    <i class="bi bi-truck me-1"></i>Logistics
+                  </span>
                 </label>
               </div>
             </div>
@@ -48,12 +60,12 @@
 
     <div class="row">
       <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3 text-white">{{ .Site.Title }}</h5>
-        <p class="text-white-50">{{ .Site.Params.description }}</p>
+        <h5 class="fw-bold mb-3 text-white">
+          <i class="bi bi-globe me-2"></i>{{ .Site.Title }}
+        </h5>
+        <p class="text-white-50 small">{{ .Site.Params.description }}</p>
         <div class="mt-3">
-          <a href="#" class="text-white text-decoration-none me-3"><i class="bi bi-twitter fs-5"></i></a>
-          <a href="#" class="text-white text-decoration-none me-3"><i class="bi bi-linkedin fs-5"></i></a>
-          <a href="#" class="text-white text-decoration-none"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" class="text-white text-decoration-none" title="RSS Feed"><i class="bi bi-rss fs-5"></i></a>
         </div>
       </div>
       
@@ -67,7 +79,9 @@
       </div>
       
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3 text-white">Categories</h6>
+        <h6 class="fw-bold mb-3 text-white">
+          <i class="bi bi-collection me-2"></i>Categories
+        </h6>
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/categories/ceramics/" class="text-white-50 text-decoration-none">Ceramics</a></li>
           <li class="mb-2"><a href="/categories/gypsum/" class="text-white-50 text-decoration-none">Gypsum</a></li>
@@ -77,9 +91,16 @@
       </div>
       
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3 text-white">Contact Us</h6>
-        <ul class="list-unstyled text-white-50">
-          <li class="mb-2"><i class="bi bi-envelope me-2"></i>{{ .Site.Params.contact.email }}</li>
+        <h6 class="fw-bold mb-3 text-white">
+          <i class="bi bi-chat-dots me-2"></i>Contact Us
+        </h6>
+        <ul class="list-unstyled text-white-50 small">
+          <li class="mb-2">
+            <i class="bi bi-envelope me-2"></i>
+            <a href="mailto:{{ .Site.Params.contact.email }}" class="text-white-50 text-decoration-none">
+              {{ .Site.Params.contact.email }}
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -88,7 +109,7 @@
     
     <div class="row align-items-center">
       <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-        <small class="text-white-50">&copy; {{ now.Year }} {{ .Site.Title }}</small>
+        <small class="text-white-50">&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</small>
       </div>
       
       <div class="col-md-4 text-center mb-3 mb-md-0">
@@ -107,8 +128,8 @@
 
       <div class="col-md-4 text-center text-md-end">
         <small>
-          <a href="/privacy/" class="text-white-50 text-decoration-none me-3">Privacy</a>
-          <a href="/terms/" class="text-white-50 text-decoration-none">Terms</a>
+          <a href="/privacy/" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+          <a href="/terms/" class="text-white-50 text-decoration-none">Terms of Service</a>
         </small>
       </div>
     </div>
