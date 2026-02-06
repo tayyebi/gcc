@@ -41,56 +41,67 @@ document.addEventListener('DOMContentLoaded', function() {
   // Theme Management with Smooth Transition
   // ===========================================
   const themeBtns = document.querySelectorAll('.theme-btn');
-  const storedTheme = localStorage.getItem('theme') || 'auto';
+  const storedTheme = localStorage.getItem('theme');
   
   const setTheme = (theme) => {
-    // Add transition animation
-    document.documentElement.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+    const htmlElement = document.documentElement;
     
-    if (theme === 'auto') {
+    // Add transition for smooth color change
+    htmlElement.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+    
+    if (theme === 'auto' || !theme) {
       // Respect system preference
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      htmlElement.removeAttribute('data-theme');
       if (prefersDark) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        htmlElement.setAttribute('data-bs-theme', 'dark');
       } else {
-        document.documentElement.removeAttribute('data-theme');
+        htmlElement.removeAttribute('data-bs-theme');
       }
     } else {
       // Force user-selected theme
-      document.documentElement.setAttribute('data-theme', theme);
+      htmlElement.setAttribute('data-theme', theme);
+      htmlElement.setAttribute('data-bs-theme', theme);
     }
     
-    // Update active button state with animation
+    // Update active button state
     themeBtns.forEach(btn => {
-      btn.classList.remove('active', 'text-white');
-      btn.classList.add('text-white-50');
-      btn.style.transform = 'scale(1)';
-      
-      if (btn.dataset.themeValue === theme) {
+      const btnTheme = btn.getAttribute('data-theme-value');
+      if (btnTheme === theme || (theme === 'auto' && !storedTheme && btnTheme === 'auto')) {
         btn.classList.add('active', 'text-white');
         btn.classList.remove('text-white-50');
-        btn.style.animation = 'pulse-icon 0.5s ease-in-out';
+      } else {
+        btn.classList.remove('active', 'text-white');
+        btn.classList.add('text-white-50');
       }
     });
     
-    localStorage.setItem('theme', theme);
+    // Store preference
+    if (theme !== 'auto') {
+      localStorage.setItem('theme', theme);
+    } else {
+      localStorage.removeItem('theme');
+    }
   };
 
-  // Initial set based on localStorage or system preference
-  setTheme(storedTheme);
+  // Initial set on page load
+  const initialTheme = storedTheme || 'auto';
+  setTheme(initialTheme);
 
   // Event Listeners for theme buttons
   themeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      setTheme(btn.getAttribute('data-theme-value'));
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const selectedTheme = btn.getAttribute('data-theme-value');
+      setTheme(selectedTheme);
     });
   });
 
-  // Listen for system theme changes only when auto mode is active
+  // Listen for system theme changes
   const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
   darkModeQuery.addEventListener('change', e => {
-    const currentTheme = localStorage.getItem('theme') || 'auto';
-    if (currentTheme === 'auto') {
+    const currentTheme = localStorage.getItem('theme');
+    if (!currentTheme || currentTheme === 'auto') {
       setTheme('auto');
     }
   });
