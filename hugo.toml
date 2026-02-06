@@ -5,28 +5,7 @@ enableRobotsTXT = true
 enableGitInfo = false
 enableEmoji = true
 
-# ========================================
-# GLOBAL VARIABLES - SINGLE SOURCE OF TRUTH
-# ========================================
-[globals]
-  # Organization Identity
-  name = "Global Commerce Council"
-  tagline = "Connecting Global Markets Through Innovation"
-  description = "Global Commerce Council - Connecting businesses worldwide through commerce in Ceramics, Gypsum, Petroleum, and more."
-  domain = "globalcommercecouncil.com"
-  
-  # Contact Emails
-  [globals.email]
-    main = "info@globalcommercecouncil.com"
-    support = "support@globalcommercecouncil.com"
-    privacy = "privacy@globalcommercecouncil.com"
-    legal = "legal@globalcommercecouncil.com"
-  
-  # Social Media
-  [globals.social]
-    twitter = "@globalcommerce"
-    linkedin = "globalcommercecouncil"
-    rss = "https://globalcommercecouncil.com/index.xml"
+
 
 # Pagination settings
 [pagination]
@@ -41,6 +20,29 @@ enableEmoji = true
   page = ["HTML"]
 
 [params]
+  # ========================================
+  # GLOBAL VARIABLES - SINGLE SOURCE OF TRUTH
+  # ========================================
+  [params.globals]
+    # Organization Identity
+    name = "Global Commerce Council"
+    tagline = "Connecting Global Markets Through Innovation"
+    description = "Global Commerce Council - Connecting businesses worldwide through commerce in Ceramics, Gypsum, Petroleum, and more."
+    domain = "globalcommercecouncil.com"
+    
+    # Contact Emails
+    [params.globals.email]
+      main = "info@globalcommercecouncil.com"
+      support = "support@globalcommercecouncil.com"
+      privacy = "privacy@globalcommercecouncil.com"
+      legal = "legal@globalcommercecouncil.com"
+    
+    # Social Media
+    [params.globals.social]
+      twitter = "@globalcommerce"
+      linkedin = "globalcommercecouncil"
+      rss = "https://globalcommercecouncil.com/index.xml"
+
   description = "Global Commerce Council - Connecting businesses worldwide through commerce in Ceramics, Gypsum, Petroleum, and more."
   author = "Global Commerce Council"
   images = ["/images/og-image.jpg"]
