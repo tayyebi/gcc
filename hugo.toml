@@ -1,0 +1,100 @@
+baseURL = "https://globalcommercecouncil.com"
+languageCode = "en-us"
+title = "Global Commerce Council"
+enableRobotsTXT = true
+enableGitInfo = false
+enableEmoji = true
+paginate = 12
+
+# Build settings
+[build]
+  writeStats = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+
+[params]
+  description = "Global Commerce Council - Connecting businesses worldwide through commerce in Ceramics, Gypsum, Petroleum, and more."
+  author = "Global Commerce Council"
+  images = ["/images/og-image.jpg"]
+  
+  [params.seo]
+    twitter_card = "summary_large_image"
+    twitter_site = "@globalcommerce"
+    fb_app_id = ""
+
+  [params.contact]
+    email = "info@globalcommercecouncil.com"
+    phone = "+1 (555) 123-4567"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+  
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 3
+  
+  [[menu.main]]
+    identifier = "products"
+    name = "Products"
+    url = "/products/"
+    weight = 4
+  
+  [[menu.main]]
+    identifier = "insights"
+    name = "Insights"
+    url = "/insights/"
+    weight = 5
+  
+  [[menu.main]]
+    identifier = "hscode"
+    name = "HS Code"
+    url = "/hscode/"
+    weight = 6
+  
+  [[menu.main]]
+    identifier = "suppliers"
+    name = "Suppliers"
+    url = "/suppliers/"
+    weight = 7
+  
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 8
+

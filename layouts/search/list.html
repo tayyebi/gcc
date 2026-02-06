@@ -1,0 +1,81 @@
+{{ define "main" }}
+<div class="container my-5">
+  <h1 class="display-5 fw-bold mb-4">Search Results</h1>
+  
+  <div id="searchResults">
+    <p class="text-muted">Loading results...</p>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get('q');
+  const resultsDiv = document.getElementById('searchResults');
+  
+  if (!query) {
+    resultsDiv.innerHTML = '<p class="text-muted">Please enter a search query.</p>';
+    return;
+  }
+  
+  // Get search results from sessionStorage
+  const storedResults = sessionStorage.getItem('searchResults');
+  
+  if (storedResults) {
+    const results = JSON.parse(storedResults);
+    displayResults(query, results);
+  } else {
+    // Fallback: fetch and search
+    fetch('/index.json')
+      .then(response => response.json())
+      .then(data => {
+        const results = data.filter(item => {
+          return item.title.toLowerCase().includes(query.toLowerCase()) ||
+                 (item.content && item.content.toLowerCase().includes(query.toLowerCase())) ||
+                 (item.description && item.description.toLowerCase().includes(query.toLowerCase()));
+        });
+        displayResults(query, results);
+      });
+  }
+  
+  function displayResults(query, results) {
+    if (results.length === 0) {
+      resultsDiv.innerHTML = `
+        <p class="text-muted">No results found for "<strong>${escapeHtml(query)}</strong>"</p>
+        <p>Try different keywords or <a href="/">return to home page</a>.</p>
+      `;
+      return;
+    }
+    
+    let html = `<p class="mb-4">Found <strong>${results.length}</strong> result${results.length !== 1 ? 's' : ''} for "<strong>${escapeHtml(query)}</strong>"</p>`;
+    html += '<div class="list-group">';
+    
+    results.forEach(result => {
+      html += `
+        <a href="${result.permalink}" class="list-group-item list-group-item-action mb-3">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">${escapeHtml(result.title)}</h5>
+            <small class="text-muted">${result.type}</small>
+          </div>
+          ${result.description ? `<p class="mb-1">${escapeHtml(result.description)}</p>` : ''}
+        </a>
+      `;
+    });
+    
+    html += '</div>';
+    resultsDiv.innerHTML = html;
+  }
+  
+  function escapeHtml(text) {
+    const map = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;'
+    };
+    return text.replace(/[&<>"']/g, m => map[m]);
+  }
+});
+</script>
+{{ end }}
