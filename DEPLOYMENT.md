@@ -2,6 +2,17 @@
 
 This guide explains how to deploy the Global Commerce Council website to Cloudflare Pages.
 
+## ⚠️ Important: Required Secrets Configuration
+
+**Before the automated deployment can work**, you must configure GitHub Secrets:
+
+1. Go to repository **Settings > Secrets and variables > Actions**
+2. Add these required secrets:
+   - **`CLOUDFLARE_API_TOKEN`**: Your Cloudflare API token (see instructions below)
+   - **`CLOUDFLARE_ACCOUNT_ID`**: Your Cloudflare account ID (see instructions below)
+
+Without these secrets, the GitHub Actions workflow will skip the deployment step and show a notice.
+
 ## Prerequisites
 
 1. GitHub account with access to the repository
