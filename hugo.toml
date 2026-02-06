@@ -36,6 +36,81 @@ enableEmoji = true
     countries = "4+"
     partners = "100+"
     avg_response = "72hrs"
+    growth_rate = "45%"
+    satisfaction = "98%"
+    transactions = "10K+"
+
+  # ========================================
+  # DESIGN SYSTEM CONFIGURATION
+  # Single source of truth for animations and interactions
+  # ========================================
+  [params.design]
+    # Animation Timings (in milliseconds)
+    [params.design.timing]
+      fast = 100
+      base = 150
+      normal = 200
+      slow = 300
+      slower = 400
+      slowest = 500
+    
+    # Spacing Scale (in rem units)
+    [params.design.spacing]
+      xs = "0.25rem"
+      sm = "0.5rem"
+      md = "1rem"
+      lg = "1.5rem"
+      xl = "2rem"
+      "2xl" = "3rem"
+      "3xl" = "4rem"
+    
+    # Border Radius Values
+    [params.design.radius]
+      xs = "2px"
+      sm = "4px"
+      md = "8px"
+      lg = "12px"
+      xl = "16px"
+      full = "9999px"
+    
+    # Animation Easing Functions
+    [params.design.easing]
+      linear = "linear"
+      "in" = "ease-in"
+      out = "ease-out"
+      "in-out" = "ease-in-out"
+      smooth = "cubic-bezier(0.4, 0, 0.2, 1)"
+      bounce = "cubic-bezier(0.68, -0.55, 0.265, 1.55)"
+    
+    # Color Palette Reference
+    [params.design.colors]
+      primary = "#2563EB"
+      primary_dark = "#1E40AF"
+      primary_light = "#60A5FA"
+      success = "#10B981"
+      danger = "#EF4444"
+      warning = "#F59E0B"
+      info = "#0EA5E9"
+    
+    # Z-Index Scale
+    [params.design.zindex]
+      hide = "-1"
+      base = "0"
+      dropdown = "100"
+      sticky = "500"
+      fixed = "1000"
+      modal = "1100"
+      tooltip = "1300"
+      notification = "1400"
+      skiplink = "2000"
+    
+    # Component-Specific Configuration
+    [params.design.components]
+      card_shadow = "0 10px 15px -3px rgba(0,0,0,0.05)"
+      card_radius = "12px"
+      button_padding = "0.625rem 1.5rem"
+      input_padding = "0.625rem 1rem"
+      badge_padding = "0.25rem 0.75rem"
 
 [taxonomies]
   category = "categories"

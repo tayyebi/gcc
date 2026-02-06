@@ -1,11 +1,11 @@
-<footer class="footer-custom mt-5">
+<footer class="footer-custom mt-5 transition-colors">
   <div class="container py-5">
     
-    <!-- Subscription Section -->
-    <div class="row mb-5 pb-4 border-bottom border-light border-opacity-10">
+    <!-- Subscription Section with Animation -->
+    <div class="row mb-5 pb-4 border-bottom border-light border-opacity-10 animate-fade-in-up">
       <div class="col-lg-5 mb-4 mb-lg-0">
         <h4 class="fw-bold mb-2 text-white">
-          <i class="bi bi-bell-fill me-2" aria-hidden="true"></i>Market Intelligence Updates
+          <i class="bi bi-bell-fill me-2 icon-hover-bounce" aria-hidden="true"></i>Market Intelligence Updates
         </h4>
         <p class="text-white-50 mb-0">Subscribe to receive curated insights on global trade trends, HS codes, and verified supplier networks.</p>
       </div>
@@ -13,10 +13,10 @@
         <form class="subscription-form" onsubmit="event.preventDefault();">
           <div class="row g-3">
             <div class="col-md-8">
-              <div class="input-group">
+              <div class="input-group transition-smooth">
                 <label for="email-subscribe" class="visually-hidden">Email address</label>
-                <input type="email" id="email-subscribe" class="form-control form-control-lg border-0" placeholder="your@business.email" aria-label="Email address" required>
-                <button class="btn btn-primary px-4" type="submit">
+                <input type="email" id="email-subscribe" class="form-control form-control-focus form-control-lg border-0" placeholder="your@business.email" aria-label="Email address" required>
+                <button class="btn btn-primary px-4 icon-hover-pulse" type="submit">
                   <i class="bi bi-send me-2" aria-hidden="true"></i>Subscribe
                 </button>
               </div>
@@ -25,28 +25,28 @@
               <div class="d-flex gap-2 flex-wrap mt-2">
                 <span class="text-white-50 small me-2 my-auto">Interests:</span>
                 
-                <label class="form-check-label custom-toggle-pill">
+                <label class="form-check-label custom-toggle-pill transition-base">
                   <input type="checkbox" class="form-check-input visually-hidden" checked>
                   <span class="pill-content">
                     <i class="bi bi-bricks me-1" aria-hidden="true"></i>Ceramics
                   </span>
                 </label>
                 
-                <label class="form-check-label custom-toggle-pill">
+                <label class="form-check-label custom-toggle-pill transition-base">
                   <input type="checkbox" class="form-check-input visually-hidden" checked>
                   <span class="pill-content">
                     <i class="bi bi-building me-1" aria-hidden="true"></i>Gypsum
                   </span>
                 </label>
                 
-                <label class="form-check-label custom-toggle-pill">
+                <label class="form-check-label custom-toggle-pill transition-base">
                   <input type="checkbox" class="form-check-input visually-hidden">
                   <span class="pill-content">
                     <i class="bi bi-droplet me-1" aria-hidden="true"></i>Petroleum
                   </span>
                 </label>
                 
-                <label class="form-check-label custom-toggle-pill">
+                <label class="form-check-label custom-toggle-pill transition-base">
                   <input type="checkbox" class="form-check-input visually-hidden">
                   <span class="pill-content">
                     <i class="bi bi-truck me-1" aria-hidden="true"></i>Logistics
@@ -60,45 +60,45 @@
     </div>
 
     <div class="row">
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 animate-fade-in-up delay-100">
         <h5 class="fw-bold mb-3 text-white">
-          <i class="bi bi-globe me-2"></i>{{ .Site.Title }}
+          <i class="bi bi-globe me-2 icon-hover-rotate"></i>{{ .Site.Title }}
         </h5>
         <p class="text-white-50 small">{{ .Site.Params.description }}</p>
         <div class="mt-3">
-          <a href="#" class="text-white text-decoration-none" title="RSS Feed"><i class="bi bi-rss fs-5"></i></a>
+          <a href="#" class="text-white text-decoration-none link-underline" title="RSS Feed"><i class="bi bi-rss fs-5"></i></a>
         </div>
       </div>
       
-      <div class="col-md-2 mb-4">
+      <div class="col-md-2 mb-4 animate-fade-in-up delay-200">
         <h6 class="fw-bold mb-3 text-white">Quick Links</h6>
         <ul class="list-unstyled">
           {{ range first 4 .Site.Menus.main }}
-          <li class="mb-2"><a href="{{ .URL }}" class="text-white-50 text-decoration-none">{{ .Name }}</a></li>
+          <li class="mb-2"><a href="{{ .URL }}" class="text-white-50 text-decoration-none link-underline">{{ .Name }}</a></li>
           {{ end }}
         </ul>
       </div>
       
-      <div class="col-md-3 mb-4">
+      <div class="col-md-3 mb-4 animate-fade-in-up delay-300">
         <h6 class="fw-bold mb-3 text-white">
           <i class="bi bi-collection me-2"></i>Categories
         </h6>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="/categories/ceramics/" class="text-white-50 text-decoration-none">Ceramics</a></li>
-          <li class="mb-2"><a href="/categories/gypsum/" class="text-white-50 text-decoration-none">Gypsum</a></li>
-          <li class="mb-2"><a href="/categories/petroleum/" class="text-white-50 text-decoration-none">Petroleum</a></li>
-          <li class="mb-2"><a href="/categories/other/" class="text-white-50 text-decoration-none">Other Products</a></li>
+          <li class="mb-2"><a href="/categories/ceramics/" class="text-white-50 text-decoration-none link-underline">Ceramics</a></li>
+          <li class="mb-2"><a href="/categories/gypsum/" class="text-white-50 text-decoration-none link-underline">Gypsum</a></li>
+          <li class="mb-2"><a href="/categories/petroleum/" class="text-white-50 text-decoration-none link-underline">Petroleum</a></li>
+          <li class="mb-2"><a href="/categories/other/" class="text-white-50 text-decoration-none link-underline">Other Products</a></li>
         </ul>
       </div>
       
-      <div class="col-md-3 mb-4">
+      <div class="col-md-3 mb-4 animate-fade-in-up delay-400">
         <h6 class="fw-bold mb-3 text-white">
           <i class="bi bi-chat-dots me-2"></i>Contact Us
         </h6>
         <ul class="list-unstyled text-white-50 small">
           <li class="mb-2">
             <i class="bi bi-envelope me-2"></i>
-            <a href="mailto:{{ .Site.Params.contact.email }}" class="text-white-50 text-decoration-none">
+            <a href="mailto:{{ .Site.Params.contact.email }}" class="text-white-50 text-decoration-none link-underline">
               {{ .Site.Params.contact.email }}
             </a>
           </li>
@@ -114,14 +114,14 @@
       </div>
       
       <div class="col-md-4 text-center mb-3 mb-md-0">
-        <div class="theme-toggle btn-group btn-group-sm rounded-pill p-1 border border-secondary" role="group" aria-label="Theme Toggle">
-          <button type="button" class="btn btn-link text-white-50 theme-btn active" data-theme-value="light" aria-label="Light Mode">
+        <div class="theme-toggle btn-group btn-group-sm rounded-pill p-1 border border-secondary transition-smooth" role="group" aria-label="Theme Toggle">
+          <button type="button" class="btn btn-link text-white-50 theme-btn active icon-hover-bounce" data-theme-value="light" aria-label="Light Mode">
             <i class="bi bi-sun-fill" aria-hidden="true"></i>
           </button>
-          <button type="button" class="btn btn-link text-white-50 theme-btn" data-theme-value="dark" aria-label="Dark Mode">
+          <button type="button" class="btn btn-link text-white-50 theme-btn icon-hover-bounce" data-theme-value="dark" aria-label="Dark Mode">
             <i class="bi bi-moon-fill" aria-hidden="true"></i>
           </button>
-          <button type="button" class="btn btn-link text-white-50 theme-btn" data-theme-value="auto" aria-label="System Auto">
+          <button type="button" class="btn btn-link text-white-50 theme-btn icon-hover-bounce" data-theme-value="auto" aria-label="System Auto">
             <i class="bi bi-display" aria-hidden="true"></i>
           </button>
         </div>
@@ -129,14 +129,14 @@
 
       <div class="col-md-4 text-center text-md-end">
         <small>
-          <a href="/privacy/" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
-          <a href="/terms/" class="text-white-50 text-decoration-none">Terms of Service</a>
+          <a href="/privacy/" class="text-white-50 text-decoration-none me-3 link-underline">Privacy Policy</a>
+          <a href="/terms/" class="text-white-50 text-decoration-none link-underline">Terms of Service</a>
         </small>
       </div>
     </div>
     
     <div class="text-center mt-3 pt-2 border-top border-light border-opacity-10">
-      <small class="text-white-50">v{{ now.Format "2006.01.02" }} | {{ .Site.Title }} &copy; {{ now.Year }}</small>
+      <small class="text-white-50">v{{ now.Format "2006.01.02" }}</small>
     </div>
   </div>
 </footer>
