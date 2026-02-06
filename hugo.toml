@@ -27,13 +27,6 @@ enableEmoji = true
     twitter = "@globalcommerce"
     linkedin = "globalcommercecouncil"
     rss = "https://globalcommercecouncil.com/index.xml"
-    
-  # Logo Configuration
-  [globals.logo]
-    path = "/images/logo.svg"
-    alt = "Global Commerce Council Logo"
-    width = "48"
-    height = "48"
 
 # Pagination settings
 [pagination]
