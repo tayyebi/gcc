@@ -47,17 +47,17 @@ enableEmoji = true
   page = ["HTML"]
 
 [params]
-  description = "{{ .Globals.description }}"
-  author = "{{ .Globals.name }}"
+  description = "Global Commerce Council - Connecting businesses worldwide through commerce in Ceramics, Gypsum, Petroleum, and more."
+  author = "Global Commerce Council"
   images = ["/images/og-image.jpg"]
   
   [params.seo]
     twitter_card = "summary_large_image"
-    twitter_site = "{{ .Globals.social.twitter }}"
+    twitter_site = "@globalcommerce"
     fb_app_id = ""
 
   [params.contact]
-    email = "{{ .Globals.email.main }}"
+    email = "info@globalcommercecouncil.com"
 
   # Semantic Versioning
   # Format: MAJOR.MINOR.PATCH
