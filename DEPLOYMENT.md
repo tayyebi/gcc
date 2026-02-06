@@ -44,8 +44,10 @@ Set the following environment variable in Cloudflare Pages:
 ### 4. Build Configuration
 
 The build settings are configured in:
-- **GitHub Actions**: `.github/workflows/deploy.yml` - for automated deployment via GitHub Actions
+- **GitHub Actions**: `.github/workflows/deploy.yml` - for automated deployment via GitHub Actions (production only, no preview deployments)
 - **Wrangler**: `wrangler.jsonc` - for Cloudflare Pages direct integration or manual Wrangler deployments
+
+**Note**: Preview deployments for pull requests are disabled. Only pushes to the `main` branch will trigger automatic deployments to production.
 
 #### Wrangler Configuration
 

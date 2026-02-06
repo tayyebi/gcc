@@ -4,9 +4,8 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+  # pull_request trigger removed to disable preview deployments
+  # Only production deployments on push to main will occur
 
 jobs:
   build-and-deploy:
