@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="container my-5">
+  <article>
+    <header class="mb-4">
+      <h1 class="display-4 fw-bold">{{ .Title }}</h1>
+      {{ if not .IsHome }}
+      <p class="text-muted">
+        {{ if .PublishDate }}<time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "January 2, 2006" }}</time>{{ end }}
+      </p>
+      {{ end }}
+    </header>
+    
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </article>
+</div>
+{{ end }}
