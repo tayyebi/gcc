@@ -45,7 +45,7 @@
       <div class="col-lg-6">
         <div class="position-relative">
           <div class="p-4 rounded-4 shadow-custom-lg" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
-            <img src="/images/3d-globe.svg" alt="Global Commerce Network" class="img-fluid" loading="lazy">
+            <img src="/images/3d-globe.svg" alt="Global Commerce Network" class="img-fluid" loading="lazy" onerror="this.src='/images/placeholder-gradient.svg'">
           </div>
         </div>
       </div>
@@ -246,7 +246,14 @@
         <article class="card insight-card h-100 border-0 shadow-sm">
           {{ with .Params.images }}
           <div class="position-relative overflow-hidden">
-            <img src="{{ index . 0 }}" class="card-img-top" alt="{{ $.Title }}" style="height: 220px; object-fit: cover;">
+            <img src="{{ index . 0 }}" class="card-img-top" alt="{{ $.Title }}" style="height: 220px; object-fit: cover;" loading="lazy" onerror="this.src='/images/placeholder-gradient.svg'">
+            <div class="position-absolute top-0 end-0 m-3">
+              <span class="badge bg-dark bg-opacity-75">Article</span>
+            </div>
+          </div>
+          {{ else }}
+          <div class="position-relative overflow-hidden">
+            <img src="/images/placeholder-gradient.svg" class="card-img-top" alt="{{ .Title }}" style="height: 220px; object-fit: cover;">
             <div class="position-absolute top-0 end-0 m-3">
               <span class="badge bg-dark bg-opacity-75">Article</span>
             </div>
