@@ -5,6 +5,7 @@ description: "High-cis Polybutadiene Rubber known for excellent elasticity and a
 categories: ["petrochemicals", "rubber"]
 images: ["/images/products/polybutadiene-rubber.jpg"]
 hscode: "4002.20"
+smiles: "C=CC=C"
 featured: true
 specifications:
   cis_content: "Min 96%"
@@ -22,7 +23,6 @@ Polybutadiene Rubber (PBR) is a synthetic rubber that offers exceptional elastic
 | Feature | Detail |
 | :--- | :--- |
 | **Formal Name** | Polybutadiene Rubber (PBR) |
-| **Persian Name** | پلی بودتادین رابر |
 | **Common Trade Names** | BR, Polybutadiene |
 | **HS Code** | 4002.20 |
 | **Chemical Formula** | (C₄H₆)ₙ |

@@ -22,7 +22,6 @@ White Spirit, also known as Mineral Spirits or Solvent 402, is a petroleum-deriv
 | Feature | Detail |
 | :--- | :--- |
 | **Formal Name** | White Spirit (Mineral Spirits, Solvent 402) |
-| **Persian Name** | حلال وایت اسپریت حلال ۴۰۲ |
 | **Common Trade Names** | White Spirit, Mineral Spirits |
 | **HS Code** | 2710.12 |
 | **Chemical Formula** | Hydrocarbon mixture (~C₇–C₁₂) |

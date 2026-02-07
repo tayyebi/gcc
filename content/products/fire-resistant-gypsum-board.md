@@ -6,6 +6,7 @@ categories: ["gypsum"]
 images: ["/images/products/gypsum-board.jpg"]
 price: "15.00"
 hscode: "6809.11"
+smiles: "[Ca+2].[O-]S(=O)(=O)[O-].O.O"
 specifications:
   size: "1200x2400mm"
   thickness: "12mm, 15mm, 18mm"

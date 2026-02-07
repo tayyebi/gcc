@@ -22,7 +22,6 @@ Petroleum Naphtha is a flammable liquid hydrocarbon mixture. It is a key interme
 | Feature | Detail |
 | :--- | :--- |
 | **Formal Name** | Petroleum Naphtha |
-| **Persian Name** | نفتا |
 | **Common Trade Names** | Naphtha, Light Naphtha |
 | **HS Code** | 2710.16 |
 | **Chemical Formula** | Hydrocarbon mixture (~C₅–C₁₂) |

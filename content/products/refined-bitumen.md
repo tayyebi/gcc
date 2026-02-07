@@ -22,7 +22,6 @@ Our refined bitumen (Petroleum Asphalt) is a premium petroleum product character
 | Feature | Detail |
 | :--- | :--- |
 | **Formal Name** | Refined Bitumen (Petroleum Asphalt) |
-| **Persian Name** | قیر پالایش شده |
 | **Common Trade Names** | Bitumen, Asphalt |
 | **HS Code** | 2713.20 |
 | **Chemical Formula** | Hydrocarbon mixture (no fixed formula) |
