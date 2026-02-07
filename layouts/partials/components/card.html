@@ -1,0 +1,14 @@
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        {{ with .Params.images }}
+        <img src="{{ index . 0 }}" class="card-img-top" alt="{{ $.Title }}" loading="lazy" onerror="this.src='/images/placeholder-gradient.svg'">
+        {{ else }}
+        <img src="/images/placeholder-gradient.svg" class="card-img-top" alt="{{ $.Title }}">
+        {{ end }}
+        <div class="card-body">
+          <h5 class="card-title">{{ .Title }}</h5>
+          <p class="card-text">{{ .Summary }}</p>
+          <a href="{{ .Permalink }}" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>

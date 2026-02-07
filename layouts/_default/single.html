@@ -10,60 +10,7 @@
       {{ end }}
     </header>
     
-    {{ if .Params.smiles }}
-    <div class="card mb-4">
-      <div class="card-header bg-light">
-        <h5 class="card-title mb-0">Chemical Structure</h5>
-      </div>
-      <div class="card-body text-center">
-        <div class="chemical-structure-container" style="position: relative; height: 300px; width: 100%; max-width: 500px; margin: 0 auto;">
-          <canvas id="chemical-structure-canvas" data-smiles="{{ .Params.smiles }}"></canvas>
-        </div>
-        <p class="text-muted small mt-2">Structure representation generated from SMILES: <code>{{ .Params.smiles }}</code></p>
-      </div>
-    </div>
-    
-    <script src="https://unpkg.com/smiles-drawer@2.0.1/dist/smiles-drawer.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const canvas = document.getElementById('chemical-structure-canvas');
-        if (canvas) {
-          const smiles = canvas.getAttribute('data-smiles');
-          const options = {
-            width: 500,
-            height: 300,
-            padding: 10,
-            bondThickness: 1,
-            themes: {
-              light: {
-                C: '#444',
-                O: '#e74c3c',
-                N: '#3498db',
-                F: '#2ecc71',
-                CL: '#1abc9c',
-                BR: '#e67e22',
-                I: '#f1c40f',
-                P: '#d35400',
-                S: '#f1c40f',
-                B: '#e67e22',
-                SI: '#e67e22',
-                H: '#999',
-                BACKGROUND: '#ffffff'
-              }
-            }
-          };
-          
-          const drawer = new SmilesDrawer.Drawer(options);
-          
-          SmilesDrawer.parse(smiles, function(tree) {
-            drawer.draw(tree, 'chemical-structure-canvas', 'light', false);
-          }, function(err) {
-            console.error('Error parsing SMILES:', err);
-          });
-        }
-      });
-    </script>
-    {{ end }}
+    {{ partial "components/chemical-structure.html" . }}
     
     <div class="content">
       {{ .Content }}
