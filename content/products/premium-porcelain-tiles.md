@@ -4,30 +4,27 @@ date: 2024-02-01
 description: "High-quality porcelain tiles for residential and commercial applications"
 categories: ["ceramics"]
 images: ["/images/products/porcelain-tiles.jpg"]
-price: "25.00"
-hscode: "6908.00"
+hscode: "6907.21"
 specifications:
-  size: "600x600mm, 800x800mm"
-  finish: "Glazed, Matt, High-gloss"
-  thickness: "10mm, 12mm"
+  water_absorption: "< 0.5% (Group BIa)"
+  breaking_strength: "Min 1300 N"
+  modulus_of_rupture: "Min 35 N/mm²"
+  surface_finish: "Polished / Matt / Structured"
 ---
 
-## Premium Porcelain Tiles
+## Premium Porcelain Tiles (Large Format)
 
-Our premium porcelain tiles combine durability, beauty, and versatility for both residential and commercial projects.
+Our Premium Porcelain Tiles offer the perfect blend of aesthetic sophistication and technical performance. Manufactured using high-pressure compaction and double-firing techniques, they are virtually impervious to water, making them frost-proof and exceptionally durable.
 
-### Features
+### Performance Features
+*   **Full Body / Color Body**: Consistent color throughout the thickness.
+*   **Stain Resistance**: Class 5 (Easily cleanable).
+*   **Abrasion Resistance (PEI)**: Class IV-V (Suitable for heavy traffic).
 
-- **Size Range**: 12"x12" to 24"x48"
-- **Thickness**: 8-10mm
-- **Finish Options**: Polished, Matte, Textured
-- **Water Absorption**: <0.5%
-- **Frost Resistant**: Yes
-
-### Applications
-
-- Residential flooring
-- Commercial spaces
+### Recommended Applications
+*   **Commercial**: Shopping malls, airport terminals, and office lobbies.
+*   **Residential**: Living rooms, luxury bathrooms, and outdoor patios (2cm pavers).
+*   **Facades**: Ventilated curtain wall systems.
 - Outdoor patios
 - Wall cladding
 - High-traffic areas

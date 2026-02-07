@@ -5,17 +5,22 @@ description: "High-grade copper concentrate for smelting"
 categories: ["other"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "7401.00"
-smiles: "[Cu].[Fe].[S].[S]"
 specifications:
-  copper: "20-30% Cu"
-  gold: "0.1-0.5 g/ton"
-  unit: "Metric ton (MT)"
+  copper_cu: "Min 25.0%"
+  moisture: "Max 10.0%"
+  gold_au: "Min 5.0 g/dmt"
+  silver_ag: "Min 60.0 g/dmt"
+  arsenic_as: "Max 0.20%"
 ---
 
 ## Copper Concentrate
 
-Quality copper concentrate sourced from leading mines.
+High-grade Sulfide Copper Concentrate obtained through flotation processing of copper ores. It serves as the primary raw material for copper smelters worldwide to produce copper anodes and cathodes.
+
+### Composition Details
+Our concentrate is typically Chalcopyrite-based, ensuring favorable smelting characteristics with valuable by-products like Gold and Silver.
 
 ### Applications
-- Copper smelting
-- Metal production
+*   **Smelting**: Feedstock for flash furnaces to produce Copper Matte.
+*   **Roasting**: Chemical processing for hydrometallurgical extraction.
+*   **Alloy Production**: Precursor for bronze and brass manufacturing.

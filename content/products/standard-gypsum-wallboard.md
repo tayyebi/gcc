@@ -5,18 +5,26 @@ description: "Standard gypsum wallboard for general interior construction"
 categories: ["gypsum"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "6809.11"
+cid: "24928"
 smiles: "[Ca+2].[O-]S(=O)(=O)[O-].O.O"
 specifications:
-  size: "1200x2400mm"
-  thickness: "9.5mm, 12mm"
-  density: "Standard density"
+  core_material: "Aerated Gypsum (Calcium Sulfate Dihydrate)"
+  surface: "Ivory face paper, Grey back paper"
+  edge_types: "Tapered (TE), Square (SE)"
+  thermal_conductivity: "0.19 W/mK"
+  standard_compliance: "ASTM C1396 / EN 520 Type A"
 ---
 
-## Standard Gypsum Wallboard
+## Standard Gypsum Wallboard (Regular)
 
-The industry standard for drywall construction, offering ease of installation and excellent finish.
+Standard Gypsum Wallboard is the premier solution for residential and commercial drylining applications. Composed of a non-combustible gypsum core encased in high-quality 100% recycled paper, it provides a cost-effective, durable surface for painting, wallpapering, or tiling.
 
-### Applications
-- Interior walls
-- Ceilings
-- Partitions
+### Product Overview
+*   **Versatile utility**: Suitable for most general building applications.
+*   **Ease of use**: Lightweight, easy to cut, and quick to install.
+*   **Fire safety**: Naturally fire-resistant gypsum core.
+
+### Common Applications
+*   Internal partitions and wall linings.
+*   Ceiling systems (screw-fixed or suspended).
+*   Drylining masonry walls.

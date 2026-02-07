@@ -1,0 +1,82 @@
+{{ if or .Params.smiles .Params.cid }}
+<div class="card mb-4">
+  <div class="card-header bg-light d-flex justify-content-between align-items-center">
+    <h5 class="card-title mb-0">Molecular Geometry</h5>
+    <span class="badge bg-primary">Interactive</span>
+  </div>
+  <div class="card-body p-0 position-relative">
+    <div id="container-01" class="mol-container" style="width: 100%; height: 400px; position: relative;"></div>
+    
+    <div class="position-absolute bottom-0 start-0 p-2 bg-white bg-opacity-75 w-100 small text-muted">
+        <i class="bi bi-mouse"></i> Rotate: Left Click | Zoom: Scroll | Pan: Right Click
+        {{ if .Params.cid }}<span class="float-end">PubChem CID: {{ .Params.cid }}</span>{{ end }}
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.4/3Dmol-min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const element = document.getElementById("container-01");
+    // Config for transparent background inside the container
+    const config = { backgroundColor: "0xffffff" }; 
+    
+    // Check if 3Dmol is loaded
+    if (typeof $3Dmol !== 'undefined') {
+        const viewer = $3Dmol.createViewer(element, config);
+
+        {{ if .Params.cid }}
+            // Load by PubChem CID directly
+            fetch("https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/{{ .Params.cid }}/record/SDF/?record_type=3d&response_type=save&response_basename=structure")
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.text();
+                })
+                .then(data => {
+                    viewer.addModel(data, "sdf");
+                    viewer.setStyle({}, { stick: { radius: 0.15 }, sphere: { scale: 0.25 } });
+                    viewer.zoomTo();
+                    viewer.render();
+                })
+                .catch(error => {
+                    console.error("Failed to fetch 3D structure for CID {{ .Params.cid }}", error);
+                    element.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 text-danger">Molecular Model Rendering Failed</div>';
+                });
+        {{ else if .Params.smiles }}
+            // Fallback: Use SMILES to search PubChem for CID, then fetch 3D
+            const smiles = "{{ .Params.smiles }}";
+            // First get CID from SMILES
+            const cidUrl = `https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/${encodeURIComponent(smiles)}/cids/JSON`;
+            
+            fetch(cidUrl)
+                .then(r => r.json())
+                .then(d => {
+                    if (d.IdentifierList && d.IdentifierList.CID) {
+                        const cid = d.IdentifierList.CID[0];
+                        return fetch(`https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/${cid}/record/SDF/?record_type=3d&response_type=save`);
+                    }
+                    throw new Error("CID not found");
+                })
+                .then(r => r.text())
+                .then(sdf => {
+                    viewer.addModel(sdf, "sdf");
+                    viewer.setStyle({}, { stick: { radius: 0.15 }, sphere: { scale: 0.25 } });
+                    viewer.zoomTo();
+                    viewer.render();
+                })
+                .catch(e => {
+                    console.error(e);
+                    // Last resort: simple embed or error
+                    // 3Dmol doesn't generate 3D coords from SMILES well without a service.
+                   element.innerHTML = `<div class="d-flex align-items-center justify-content-center h-100 text-muted p-3">
+                        <div class="text-center">
+                            <p class="mb-1">Molecular Conformation Unavailable</p>
+                            <small class="d-block text-break">SMILES: ${smiles}</small>
+                        </div>
+                    </div>`;
+                });
+        {{ end }}
+    }
+  });
+</script>
+{{ end }}

@@ -6,28 +6,25 @@ categories: ["petroleum"]
 images: ["/images/products/crude-oil.jpg"]
 hscode: "2709.00"
 specifications:
-  api: "38°API"
-  sulfur: "0.37% by weight"
-  unit: "Barrel (bbl)"
+  api_gravity: "38.3° (Light)"
+  sulfur_content: "0.37% Mass (Sweet)"
+  pour_point: "-3°C"
+  wax_content: "5% Mass"
+  nickel: "< 2 ppm"
 ---
 
-## Brent Crude Oil
+## Brent Crude Oil (Light Sweet)
 
-High-quality Brent crude oil from North Sea fields, benchmark for global oil pricing.
+Brent Crude is the leading global price benchmark for Atlantic basin crude oils. Sourced from the North Sea, it is a light, sweet crude oil that is ideal for refining into high-value products like gasoline, middle distillates, and diesel.
 
-### Product Specifications
+### Refining Characteristics
+*   **High Yield**: Produces a high percentage of gasoline and diesel upon refining.
+*   **Low Sulfur**: "Sweet" classification (<0.5% sulfur) requires less processing to meet environmental standards.
+*   **Transportation**: Easily transported via tanker for global arbitrage.
 
-- **Type**: Light Sweet Crude Oil
-- **API Gravity**: 38-39°
-- **Sulfur Content**: ~0.37%
-- **Origin**: North Sea
-- **Pricing Benchmark**: ICE Brent Futures
-
-### Key Characteristics
-
-- Low sulfur content
-- High API gravity
-- Excellent refining yields
+### Market Importance
+*   **Benchmark**: Used to price two-thirds of the world's internationally traded crude oil supplies.
+*   **Liquidity**: High trading volume in futures and physical markets.
 - Global benchmark pricing
 - Consistent quality
 

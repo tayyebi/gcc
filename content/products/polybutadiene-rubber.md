@@ -5,6 +5,7 @@ description: "High-cis Polybutadiene Rubber known for excellent elasticity and a
 categories: ["petrochemicals", "rubber"]
 images: ["/images/products/polybutadiene-rubber.jpg"]
 hscode: "4002.20"
+cid: "7845"
 smiles: "C=CC=C"
 featured: true
 specifications:

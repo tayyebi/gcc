@@ -4,13 +4,14 @@ date: 2024-02-01
 description: "Type X fire-resistant gypsum board for enhanced fire protection"
 categories: ["gypsum"]
 images: ["/images/products/gypsum-board.jpg"]
-price: "15.00"
 hscode: "6809.11"
+cid: "24928"
 smiles: "[Ca+2].[O-]S(=O)(=O)[O-].O.O"
 specifications:
-  size: "1200x2400mm"
-  thickness: "12mm, 15mm, 18mm"
-  rating: "Fire-resistant up to 2 hours"
+  core: "Gypsum reinforced with glass fibers"
+  fire_rating: "30min to 240min (System Dependent)"
+  standard_compliance: "ASTM C1396 Type X / EN 520 Type F"
+  surface_burning: "Class A (ASTM E84)"
 ---
 
 ## Fire-Resistant Gypsum Board (Type X)
