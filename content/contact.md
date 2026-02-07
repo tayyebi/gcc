@@ -55,28 +55,3 @@ We'd love to hear from you. Whether you have a question about our services, need
   
   <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
 </form>
-
-### Office Locations
-
-#### North America Headquarters
-123 Commerce Street  
-New York, NY 10001  
-United States
-
-#### Europe Office
-456 Trade Avenue  
-London EC1A 1BB  
-United Kingdom
-
-#### Asia Pacific Office
-789 Business Road  
-Singapore 018956  
-Singapore
-
-### Follow Us
-
-Stay connected with us on social media for the latest updates and industry insights.
-
-- [Twitter](#)
-- [LinkedIn](#)
-- [Facebook](#)

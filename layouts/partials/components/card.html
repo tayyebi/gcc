@@ -7,8 +7,8 @@
         {{ end }}
         <div class="card-body">
           <h5 class="card-title">{{ .Title }}</h5>
-          <p class="card-text">{{ .Summary }}</p>
-          <a href="{{ .Permalink }}" class="btn btn-primary">Learn More</a>
+          <p class="card-text text-muted small">{{ .Description | default .Summary | truncate 50 }}</p>
+          <a href="{{ .Permalink }}" class="btn btn-primary btn-sm">Learn More</a>
         </div>
       </div>
     </div>
