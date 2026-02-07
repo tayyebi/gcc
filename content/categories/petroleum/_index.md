@@ -1,7 +1,21 @@
 ---
 title: "Petroleum"
-description: "Energy solutions and petroleum products including crude oil, refined products, and petrochemicals"
+description: "Energy solutions and refined petroleum products"
 images: ["/images/categories/petroleum.jpg"]
+icon: "bi-droplet"
+hscodes:
+  - code: "2709.00"
+    description: "Crude petroleum"
+    examples: ["Brent crude", "WTI crude"]
+  - code: "2710.11"
+    description: "Light oils"
+    examples: ["Gasoline", "Kerosene"]
+  - code: "2710.12"
+    description: "Middle distillates"
+    examples: ["Diesel", "Heating oil"]
+  - code: "2710.19"
+    description: "Heavy oils"
+    examples: ["Fuel oil", "Bitumen"]
 ---
 
 ## Petroleum Products

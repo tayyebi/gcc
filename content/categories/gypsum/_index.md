@@ -1,7 +1,18 @@
 ---
 title: "Gypsum"
-description: "Premium gypsum products for construction, including gypsum boards, plasters, and compounds"
+description: "Premium gypsum materials and advanced building solutions"
 images: ["/images/categories/gypsum.jpg"]
+icon: "bi-building"
+hscodes:
+  - code: "6809.11"
+    description: "Gypsum plasterboard"
+    examples: ["Drywall", "Wallboard"]
+  - code: "6809.19"
+    description: "Gypsum articles"
+    examples: ["Gypsum blocks", "Partitions"]
+  - code: "2520.10"
+    description: "Raw gypsum"
+    examples: ["Natural gypsum", "Gypsum ore"]
 ---
 
 ## Gypsum Products

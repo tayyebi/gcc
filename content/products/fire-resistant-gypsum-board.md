@@ -5,6 +5,11 @@ description: "Type X fire-resistant gypsum board for enhanced fire protection"
 categories: ["gypsum"]
 images: ["/images/products/gypsum-board.jpg"]
 price: "15.00"
+hscode: "6809.11"
+specifications:
+  size: "1200x2400mm"
+  thickness: "12mm, 15mm, 18mm"
+  rating: "Fire-resistant up to 2 hours"
 ---
 
 ## Fire-Resistant Gypsum Board (Type X)

@@ -219,65 +219,6 @@
   </div>
 </section>
 
-<!-- Latest Insights -->
-<section class="py-5 bg-light">
-  <div class="container py-4">
-    <div class="d-flex justify-content-between align-items-center mb-5">
-      <div>
-        <span class="badge bg-primary text-white mb-2 px-3 py-2">Industry Insights</span>
-        <h2 class="display-6 fw-bold mb-2">Latest Market Intelligence</h2>
-        <p class="text-muted">Data-driven analysis and trends shaping global commerce</p>
-      </div>
-      <a href="/insights/" class="btn btn-primary d-none d-md-inline-flex">
-        View All Insights
-        <i class="bi bi-arrow-right ms-2"></i>
-      </a>
-    </div>
-    
-    <div class="row g-4">
-      {{ range $index, $element := first 3 (where .Site.RegularPages "Type" "insights") }}
-      <div class="col-md-6 col-lg-4 fade-in-up stagger-{{ add $index 1 }}">
-        <article class="card insight-card h-100 border-0 shadow-sm">
-          {{ with .Params.images }}
-          <div class="position-relative overflow-hidden">
-            <img src="{{ index . 0 }}" class="card-img-top" alt="{{ $.Title }}" style="height: 220px; object-fit: cover;" loading="lazy" onerror="this.src='/images/placeholder-gradient.svg'">
-            <div class="position-absolute top-0 end-0 m-3">
-              <span class="badge bg-dark bg-opacity-75">Article</span>
-            </div>
-          </div>
-          {{ else }}
-          <div class="position-relative overflow-hidden">
-            <img src="/images/placeholder-gradient.svg" class="card-img-top" alt="{{ .Title }}" style="height: 220px; object-fit: cover;">
-            <div class="position-absolute top-0 end-0 m-3">
-              <span class="badge bg-dark bg-opacity-75">Article</span>
-            </div>
-          </div>
-          {{ end }}
-          <div class="card-body">
-            <time datetime="{{ .PublishDate.Format "2006-01-02" }}" class="d-inline-block mb-3">
-              {{ .PublishDate.Format "Jan 2, 2006" }}
-            </time>
-            <h5 class="card-title fw-bold mb-3">{{ .Title }}</h5>
-            <p class="card-text text-muted mb-4">{{ truncate 120 .Summary }}</p>
-            <a href="{{ .Permalink }}" class="btn btn-sm btn-outline-primary">
-              Read Analysis
-              <i class="bi bi-arrow-right ms-1"></i>
-            </a>
-          </div>
-        </article>
-      </div>
-      {{ end }}
-    </div>
-    
-    <div class="text-center mt-4 d-md-none">
-      <a href="/insights/" class="btn btn-primary">
-        View All Insights
-        <i class="bi bi-arrow-right ms-2"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- CTA Section -->
 <section class="py-5 bg-gradient-primary text-white position-relative overflow-hidden cta-section">
   <div class="container py-5 position-relative" style="z-index: 1;">

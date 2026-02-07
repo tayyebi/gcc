@@ -1,5 +1,5 @@
 {{- $.Scratch.Add "index" slice -}}
-{{- range where .Site.RegularPages "Type" "in" (slice "products" "insights" "categories" "suppliers") -}}
+{{- range where .Site.RegularPages "Type" "in" (slice "products" "categories" "suppliers") -}}
   {{- $.Scratch.Add "index" (dict "title" .Title "description" .Description "content" .Plain "permalink" .Permalink "type" .Type) -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

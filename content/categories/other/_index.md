@@ -1,7 +1,18 @@
 ---
-title: "Other Products"
-description: "Additional product categories including industrial materials, chemicals, and specialty items"
+title: "Specialty Products"
+description: "Diverse industrial materials and custom solutions"
 images: ["/images/categories/other.jpg"]
+icon: "bi-boxes"
+hscodes:
+  - code: "2501.00"
+    description: "Salt"
+    examples: ["Industrial salt", "Rock salt"]
+  - code: "2503.00"
+    description: "Sulfur"
+    examples: ["Elemental sulfur", "Refined sulfur"]
+  - code: "7401.00"
+    description: "Copper"
+    examples: ["Copper ore", "Copper concentrate"]
 ---
 
 ## Other Product Categories

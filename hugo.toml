@@ -176,12 +176,6 @@ enableEmoji = true
     name = "Products"
     url = "/products/"
     weight = 1
-  
-  [[menu.main]]
-    identifier = "insights"
-    name = "Insights"
-    url = "/insights/"
-    weight = 2
 
   [[menu.main]]
     identifier = "about"

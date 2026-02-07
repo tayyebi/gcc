@@ -5,6 +5,11 @@ description: "High-quality porcelain tiles for residential and commercial applic
 categories: ["ceramics"]
 images: ["/images/products/porcelain-tiles.jpg"]
 price: "25.00"
+hscode: "6908.00"
+specifications:
+  size: "600x600mm, 800x800mm"
+  finish: "Glazed, Matt, High-gloss"
+  thickness: "10mm, 12mm"
 ---
 
 ## Premium Porcelain Tiles

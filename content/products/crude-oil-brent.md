@@ -4,6 +4,11 @@ date: 2024-01-30
 description: "Premium Brent crude oil from North Sea for refining and energy production"
 categories: ["petroleum"]
 images: ["/images/products/crude-oil.jpg"]
+hscode: "2709.00"
+specifications:
+  api: "38°API"
+  sulfur: "0.37% by weight"
+  unit: "Barrel (bbl)"
 ---
 
 ## Brent Crude Oil

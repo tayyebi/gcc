@@ -1,7 +1,21 @@
 ---
 title: "Ceramics"
-description: "High-quality ceramic products including tiles, sanitary ware, and decorative ceramics"
+description: "High-performance ceramic products for construction and industrial applications"
 images: ["/images/categories/ceramics.jpg"]
+icon: "bi-bricks"
+hscodes:
+  - code: "6907.00"
+    description: "Unglazed ceramic tiles"
+    examples: ["Floor tiles", "Wall tiles"]
+  - code: "6908.00"
+    description: "Glazed ceramic tiles"
+    examples: ["Porcelain tiles", "Decorative tiles"]
+  - code: "6909.11"
+    description: "Ceramic laboratory equipment"
+    examples: ["Crucibles", "Tubes"]
+  - code: "6910.00"
+    description: "Ceramic household articles"
+    examples: ["Dinnerware", "Kitchenware"]
 ---
 
 ## Ceramic Products
