@@ -151,3 +151,13 @@ graph TD
     style I fill:#f0e6ff
     style J fill:#e6ffe6
 ```
+
+
+Industries & Products
+
+* Oil & Petrochemicals
+* Chemicals & Polymers
+* Metals & Minerals
+* Agriculture & Food
+* Machinery & Equipment
+* Consumer Goods

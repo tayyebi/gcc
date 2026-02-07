@@ -35,12 +35,145 @@
       </button>
       
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          {{ range .Site.Menus.main }}
-          <li class="nav-item">
-            <a class="nav-link link-underline{{ if $.IsMenuCurrent "main" . }} active{{ end }}" href="{{ .URL }}" data-animate="fade-in">{{ .Name }}</a>
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle link-underline" href="/products/" id="megaProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Products</a>
+            <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaProducts">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="mega-group">
+                    <h6 class="mega-title">Categories</h6>
+                    <a class="dropdown-item" href="/categories/ceramics/">Ceramics</a>
+                    <a class="dropdown-item" href="/categories/gypsum/">Gypsum</a>
+                    <a class="dropdown-item" href="/categories/petroleum/">Petroleum</a>
+                    <a class="dropdown-item" href="/categories/other/">Other Industries</a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="mega-group">
+                    <h6 class="mega-title">Energy & Petrochemicals</h6>
+                    <a class="dropdown-item" href="/products/crude-oil-brent/">Crude Oil (Brent)</a>
+                    <a class="dropdown-item" href="/products/premium-diesel/">Premium Diesel</a>
+                    <a class="dropdown-item" href="/products/marine-fuel-oil/">Marine Fuel Oil</a>
+                    <a class="dropdown-item" href="/products/petroleum-naphtha/">Petroleum Naphtha</a>
+                    <a class="dropdown-item" href="/products/bitumen-60-70/">Bitumen 60/70</a>
+                    <a class="dropdown-item" href="/products/white-spirit-solvent-402/">White Spirit 402</a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="mega-group">
+                    <h6 class="mega-title">Construction Materials</h6>
+                    <a class="dropdown-item" href="/products/standard-gypsum-wallboard/">Standard Gypsum Wallboard</a>
+                    <a class="dropdown-item" href="/products/fire-resistant-gypsum-board/">Fire-Resistant Gypsum Board</a>
+                    <a class="dropdown-item" href="/products/moisture-resistant-gypsum-board/">Moisture-Resistant Gypsum Board</a>
+                    <a class="dropdown-item" href="/products/premium-porcelain-tiles/">Premium Porcelain Tiles</a>
+                    <a class="dropdown-item" href="/products/decorative-wall-tiles/">Decorative Wall Tiles</a>
+                    <a class="dropdown-item" href="/products/unglazed-floor-tiles/">Unglazed Floor Tiles</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
-          {{ end }}
+
+          <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle link-underline" href="/knowledge-base/" id="megaKnowledge" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Knowledge Base</a>
+            <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaKnowledge">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="mega-group">
+                    <h6 class="mega-title">International Trade & Business</h6>
+                    <a class="dropdown-item" href="/knowledge-base/#import-export-fundamentals">Import & Export Fundamentals</a>
+                    <a class="dropdown-item" href="/knowledge-base/#trade-documentation-compliance">Trade Documentation & Compliance</a>
+                    <a class="dropdown-item" href="/knowledge-base/#market-research-strategy">Market Research & Strategy</a>
+                  </div>
+                  <div class="mega-group">
+                    <h6 class="mega-title">Logistics & Supply Chain</h6>
+                    <a class="dropdown-item" href="/knowledge-base/#transportation-freight-forwarding">Transportation & Freight Forwarding</a>
+                    <a class="dropdown-item" href="/knowledge-base/#warehousing-inventory-management">Warehousing & Inventory Management</a>
+                    <a class="dropdown-item" href="/knowledge-base/#supply-chain-optimization">Supply Chain Optimization</a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="mega-group">
+                    <h6 class="mega-title">Trade Finance & Payments</h6>
+                    <a class="dropdown-item" href="/knowledge-base/#letters-of-credit-payment-terms">Letters of Credit & Payment Terms</a>
+                    <a class="dropdown-item" href="/knowledge-base/#currency-risk-management">Currency & Risk Management</a>
+                    <a class="dropdown-item" href="/knowledge-base/#trade-insurance">Trade Insurance</a>
+                  </div>
+                  <div class="mega-group">
+                    <h6 class="mega-title">Law & Compliance</h6>
+                    <a class="dropdown-item" href="/knowledge-base/#international-trade-law">International Trade Law</a>
+                    <a class="dropdown-item" href="/knowledge-base/#customs-tariffs">Customs & Tariffs</a>
+                    <a class="dropdown-item" href="/knowledge-base/#sanctions-restricted-markets">Sanctions & Restricted Markets</a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="mega-group">
+                    <h6 class="mega-title">Marketing & Global Strategy</h6>
+                    <a class="dropdown-item" href="/knowledge-base/#global-market-entry">Global Market Entry</a>
+                    <a class="dropdown-item" href="/knowledge-base/#cross-border-marketing">Cross-Border Marketing</a>
+                    <a class="dropdown-item" href="/knowledge-base/#branding-negotiation-tactics">Branding & Negotiation Tactics</a>
+                  </div>
+                  <div class="mega-group">
+                    <h6 class="mega-title">E-commerce & Digital Platforms</h6>
+                    <a class="dropdown-item" href="/knowledge-base/#b2b-marketplaces">B2B Marketplaces</a>
+                    <a class="dropdown-item" href="/knowledge-base/#ecommerce-logistics">E-commerce Logistics</a>
+                    <a class="dropdown-item" href="/knowledge-base/#digital-payment-systems">Digital Payment Systems</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle link-underline" href="/tools/" id="megaTools" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Tools</a>
+            <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaTools">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="mega-group">
+                    <h6 class="mega-title">Trade Utilities</h6>
+                    <a class="dropdown-item" href="/tools/#trade-cost-calculator">Trade Cost Calculator</a>
+                    <a class="dropdown-item" href="/tools/#document-templates">Document Templates (Invoice, Packing List, LC)</a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mega-group">
+                    <h6 class="mega-title">Lookup Tools</h6>
+                    <a class="dropdown-item" href="/tools/#hs-code-incoterms-lookup">HS Code & Incoterms Lookup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle link-underline" href="/country-guides/" id="megaCountryGuides" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Country Guides</a>
+            <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaCountryGuides">
+              <div class="row g-4">
+                <div class="col-md-12">
+                  <div class="mega-group">
+                    <h6 class="mega-title">Country & Market Guides</h6>
+                    <a class="dropdown-item" href="/country-guides/#exporting-to-usa-eu-china-middle-east">Exporting to USA, EU, China, Middle East</a>
+                    <a class="dropdown-item" href="/country-guides/#importing-from-middle-east">Importing from Middle East</a>
+                    <a class="dropdown-item" href="/country-guides/#sanctions-sensitive-markets">Sanctions-Sensitive Markets</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link link-underline" href="/supply-chain/" data-animate="fade-in">Supply Chain</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-underline" href="/about/" data-animate="fade-in">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-underline" href="/suppliers/" data-animate="fade-in">Suppliers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-underline" href="/contact/" data-animate="fade-in">Contact</a>
+          </li>
         </ul>
       </div>
     </div>

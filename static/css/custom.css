@@ -125,6 +125,54 @@ html {
   color: var(--primary) !important;
 }
 
+/* Mega Menu Styles */
+.mega-dropdown .dropdown-menu {
+  width: min(1040px, 94vw);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 16px;
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-xl);
+}
+
+.mega-menu .mega-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.mega-menu .mega-group + .mega-group {
+  margin-top: 1.2rem;
+}
+
+.mega-menu .dropdown-item {
+  padding: 0.35rem 0;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  background: transparent;
+}
+
+.mega-menu .dropdown-item:hover,
+.mega-menu .dropdown-item:focus {
+  color: var(--primary);
+  background: transparent;
+}
+
+@media (max-width: 991.98px) {
+  .mega-dropdown .dropdown-menu {
+    width: 100%;
+    left: 0;
+    transform: none;
+    border-radius: 12px;
+  }
+
+  .mega-menu .dropdown-item {
+    padding: 0.4rem 0;
+  }
+}
+
 /* Hero Section */
 .hero-section {
   background: radial-gradient(circle at top right, var(--primary-light), transparent),
