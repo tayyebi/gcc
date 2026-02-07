@@ -14,3 +14,13 @@ Hugo is a [static site generator] written in [Go], optimized for speed and desig
    - **`CLOUDFLARE_ACCOUNT_ID`**: Your Cloudflare account ID (see instructions below)
 
 Without these secrets, the GitHub Actions workflow will skip the deployment step and show a notice.
+
+## Development
+
+### Generating Supply Chain Diagrams
+
+To regenerate the supply chain SVG diagrams after modifying the PlantUML files in `assets/diagrams/`:
+
+```bash
+plantuml -tsvg -o static/images/diagrams assets/diagrams/main.puml
+```

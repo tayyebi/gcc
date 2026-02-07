@@ -9,8 +9,8 @@ rectangle "Processing" as mining_processing {
 }
 
 rectangle "Products" as mining_products {
-    rectangle "Copper Concentrate" as conc <<ExistingProduct>> #Application
-    rectangle "Industrial Salt" as salt <<ExistingProduct>> #Application
+    rectangle "Copper Concentrate" as conc <<ExistingProduct>>
+    rectangle "Industrial Salt" as salt <<ExistingProduct>>
 }
 
 cu_mine --> flotation

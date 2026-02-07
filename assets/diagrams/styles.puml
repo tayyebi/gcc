@@ -1,1 +1,66 @@
-skinparam backgroundColor whiteskinparam handwritten falseskinparam defaultFontName "Segoe UI"skinparam defaultFontSize 12skinparam shadowing falseskinparam roundcorner 8' Layout directionleft to right direction' Colors!define COLOR_RAW #E8F5E9!define COLOR_PROCESS #E3F2FD!define COLOR_LOGISTICS #FFF3E0!define COLOR_PRODUCT_BORDER #0284c7!define COLOR_PRODUCT_BG #e0f2fe!define COLOR_ARROW #555555skinparam rectangle {    BackgroundColor white    BorderColor #999999    BorderThickness 1}skinparam arrow {    Color COLOR_ARROW    Thickness 1.5}' Custom Stereotypes with Iconsskinparam rectangle<<Extraction>> {    BackgroundColor COLOR_RAW    BorderColor #4CAF50    FontStyle Bold}skinparam rectangle<<Processing>> {    BackgroundColor COLOR_PROCESS    BorderColor #2196F3    FontStyle Bold}skinparam rectangle<<Logistics>> {    BackgroundColor COLOR_LOGISTICS    BorderColor #FF9800}' Existing Product Highlightskinparam rectangle<<ExistingProduct>> {    BackgroundColor COLOR_PRODUCT_BG    BorderColor COLOR_PRODUCT_BORDER    BorderThickness 2.5    FontColor #0e1b4b    FontStyle Bold}!function $icon($name)!return "<size:18><&" + $name + "></size>"!endfunction
+skinparam backgroundColor white
+skinparam handwritten false
+skinparam defaultFontName "Helvetica Neue"
+skinparam defaultFontSize 11
+skinparam roundcorner 0
+skinparam shadowing false
+
+left to right direction
+skinparam nodesep 40
+skinparam ranksep 60
+skinparam linetype polyline
+
+!define C_STEEL #455A64
+!define C_PIPE #37474F
+!define C_HIGHLIGHT #0277BD
+!define C_WARNING #FF6F00
+
+skinparam arrow {
+    Color C_PIPE
+    Thickness 2
+    FontColor C_PIPE
+    FontSize 10
+}
+
+skinparam rectangle {
+    BackgroundColor white
+    BorderColor C_STEEL
+    BorderThickness 1.5
+    FontColor C_STEEL
+}
+
+skinparam package {
+    BackgroundColor white
+    BorderColor C_STEEL
+    BorderThickness 1
+    FontColor C_STEEL
+    FontStyle Bold
+}
+
+skinparam rectangle {
+    BackgroundColor<<Extraction>> #F5F5F5
+    BorderColor<<Extraction>> C_STEEL
+    BorderThickness<<Extraction>> 2
+    FontStyle<<Extraction>> Bold
+}
+
+skinparam rectangle {
+    BackgroundColor<<Processing>> #ECEFF1
+    BorderColor<<Processing>> C_STEEL
+    BorderThickness<<Processing>> 2
+}
+
+skinparam rectangle {
+    BackgroundColor<<Logistics>> white
+    BorderColor<<Logistics>> C_WARNING
+}
+
+skinparam rectangle {
+    BackgroundColor<<ExistingProduct>> #E1F5FE
+    BorderColor<<ExistingProduct>> C_HIGHLIGHT
+    BorderThickness<<ExistingProduct>> 2
+    FontColor<<ExistingProduct>> #01579B
+    FontStyle<<ExistingProduct>> Bold
+}
+
+!define $icon(x) 
