@@ -1,46 +1,85 @@
 ---
-title: "Refined Bitumen (Petroleum Asphalt)"
-date: 2026-02-07
-description: "High-grade refined bitumen for paving and roofing applications, offering superior durability and weather resistance."
-categories: ["petroleum", "construction"]
-images: ["/images/products/bitumen.jpg"]
+title: "Refined Bitumen (Petroleum Asphalt) – Export Grade"
+description: "Export-grade refined bitumen for road construction, roofing, and industrial waterproofing. Stable quality, international standards, global supply."
 hscode: "2713.20"
+cas_number: "8052-42-4"
 featured: true
-specifications:
-  grade: "Penetration Grade 60/70, 80/100"
-  softening_point: "40-50°C"
-  solubility: "99% in TCE"
-  flash_point: ">230°C"
 ---
 
+## Product Summary
 
-Our refined bitumen (Petroleum Asphalt) is a premium petroleum product characterized by its high viscosity, waterproofing capabilities, and adhesive properties. Produced through the fractional distillation of crude oil, it serves as a critical component in the construction and infrastructure sectors globally.
+Refined Bitumen (Petroleum Asphalt) is an export-grade petroleum product produced via vacuum distillation of crude oil. It offers strong adhesion, waterproofing, and long-term durability for infrastructure and industrial applications.
 
-### Product Overview
+## Key Selling Points
 
-| Feature | Detail |
-| :--- | :--- |
-| **Formal Name** | Refined Bitumen (Petroleum Asphalt) |
-| **Common Trade Names** | Bitumen, Asphalt |
+- Consistent quality and stable performance  
+- Compliant with international standards  
+- Suitable for hot, moderate, and cold climates  
+- Available in bulk and export packaging  
+- Global shipping support
+
+## Product Identification
+
+| Item | Detail |
+|---|---|
+| **Product Name** | Refined Bitumen / Petroleum Asphalt |
+| **Common Market Names** | Bitumen, Asphalt, Paving Grade Bitumen |
 | **HS Code** | 2713.20 |
-| **Chemical Formula** | Hydrocarbon mixture (no fixed formula) |
+| **CAS Number** | 8052-42-4 |
+| **Chemical Nature** | Heavy hydrocarbon mixture |
+| **Chemical Formula** | No fixed formula (approx. C₅₀–C₁₅₀) |
 
-### Key Applications
+## Available Grades
 
-*   **Road Construction**: Used as a binder in asphalt concrete for roads, runways, and parking lots.
-*   **Roofing & Waterproofing**: Essential for manufacturing roofing felts, shingles, and waterproofing membranes.
-*   **Industrial Use**: Utilized in pipe coating, soundproofing, and various industrial adhesives.
+- **Penetration Grades**: 40/50, 60/70, 80/100  
+- **Viscosity Grades**: VG-10, VG-30, VG-40  
+- **Performance Grades (PG)**: On request
 
-### Technical Specifications
+## Typical Specifications
 
-We supply various grades to meet international standards (ASTM, AASHTO, EN 12591), including:
+| Property | Standard | Value |
+|---|---|---|
+| Penetration @25°C | ASTM D5 | 40–100 dmm |
+| Softening Point | ASTM D36 | 40–55°C |
+| Ductility @25°C | ASTM D113 | >100 cm |
+| Flash Point | ASTM D92 | >230°C |
+| Solubility in TCE | ASTM D2042 | ≥99% |
 
-*   **Penetration Grades**: 40/50, 60/70, 85/100 (Standard Paving Grades)
-*   **Viscosity Grades**: VG-10, VG-30, VG-40 (For varying climatic conditions)
-*   **Performance Grades (PG)**: Tailored for specific temperature ranges and traffic loads.
+## Applications
 
-### Logistics & Packaging
+- **Road & Highway Construction**  
+  Asphalt concrete for roads, highways, and runways.
+- **Roofing & Waterproofing**  
+  Membranes, roofing sheets, damp-proofing systems.
+- **Industrial Uses**  
+  Pipe coating, corrosion protection, sealants, insulation.
 
-*   **Bulk**: Heated vessels for large volume transport.
-*   **Drums**: New steel drums (150kg, 180kg) for ease of handling.
-*   **Polybag**: Meltable bags for convenient application.
+## Standards & Compliance
+
+- ASTM D946 / D6373  
+- AASHTO M20 / M226  
+- EN 12591  
+- Other national standards available on request
+
+## Packaging Options
+
+- **Bulk**: Heated tankers / vessels  
+- **Steel Drums**: 150 kg, 180 kg (new drums)  
+- **Jumbo / Polybags**: Meltable export packaging
+
+## Logistics & Supply
+
+- FOB / CFR / CIF terms available  
+- Worldwide shipment  
+- Export documentation provided (COA, MSDS, SGS on request)
+
+## Storage & Shelf Life
+
+- Store below 60°C  
+- Avoid overheating  
+- Shelf life: minimum 12 months
+
+## Safety
+
+- Non-flammable at ambient temperature  
+- MSDS available upon request
