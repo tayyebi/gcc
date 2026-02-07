@@ -1,0 +1,29 @@
+rectangle "Raw Materials" as const_raw {
+    rectangle "$icon(map-marker) Gypsum Quarry" as g_mining <<Extraction>>
+    rectangle "$icon(map-marker) Clay Pit" as c_mining <<Extraction>>
+}
+
+rectangle "Manufacturing" as const_mfg {
+    rectangle "$icon(cog) Gypsum Board Plant" as g_plant <<Processing>>
+    rectangle "$icon(fire) Ceramic Kiln" as c_kiln <<Processing>>
+}
+
+rectangle "Construction Products" as const_products {
+    rectangle "Standard Wallboard" as g_std <<ExistingProduct>>
+    rectangle "Fire-Resistant Board" as g_fire <<ExistingProduct>>
+    rectangle "Moisture-Resistant Board" as g_moist <<ExistingProduct>>
+
+    rectangle "Porcelain Tiles" as c_porcelain <<ExistingProduct>>
+    rectangle "Decorative Wall Tiles" as c_wall <<ExistingProduct>>
+    rectangle "Unglazed Floor Tiles" as c_floor <<ExistingProduct>>
+}
+
+g_mining --> g_plant
+g_plant --> g_std
+g_plant --> g_fire
+g_plant --> g_moist
+
+c_mining --> c_kiln
+c_kiln --> c_porcelain
+c_kiln --> c_wall
+c_kiln --> c_floor

@@ -1,0 +1,20 @@
+rectangle "Mining & Extraction" as mining_sector {
+    rectangle "$icon(globe) Copper Mine" as cu_mine <<Extraction>>
+    rectangle "$icon(sun) Solar Salt Pans" as salt_mine <<Extraction>>
+}
+
+rectangle "Processing" as mining_processing {
+    rectangle "$icon(cog) Flotation Plant" as flotation <<Processing>>
+    rectangle "$icon(beaker) Refining" as salt_refinery <<Processing>>
+}
+
+rectangle "Products" as mining_products {
+    rectangle "Copper Concentrate" as conc <<ExistingProduct>> #Application
+    rectangle "Industrial Salt" as salt <<ExistingProduct>> #Application
+}
+
+cu_mine --> flotation
+flotation --> conc
+
+salt_mine --> salt_refinery
+salt_refinery --> salt

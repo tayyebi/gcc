@@ -1,0 +1,34 @@
+@startuml
+!include styles.puml
+
+title Global Commerce Supply Chain Network
+
+package "Upstream (Sourcing)" {
+    !include mining.puml
+    !include petroleum.puml
+    !include construction.puml
+}
+
+
+package "Downstream (Services)" {
+    rectangle "$icon(briefcase) Distribution Center" as dc <<Logistics>>
+    rectangle "$icon(truck) Global Logistics" as logistics <<Logistics>>
+    rectangle "$icon(people) End Markets" as market <<Logistics>>
+}
+
+' Connections to Downstream
+conc --> logistics
+salt --> logistics
+
+diesel --> logistics
+mfo --> logistics
+pbr --> logistics
+bitumen --> logistics
+
+g_std --> dc
+c_porcelain --> dc
+
+dc --> logistics
+logistics --> market
+
+@enduml

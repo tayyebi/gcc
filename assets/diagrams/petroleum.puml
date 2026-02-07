@@ -1,0 +1,37 @@
+rectangle "Oil & Gas Extraction" as oil_sector {
+    rectangle "$icon(rss) Offshore Platforms" as offshore <<Extraction>>
+}
+
+rectangle "Refining & Petrochemicals" as oil_processing {
+    rectangle "$icon(fire) Distillation Unit" as distillation <<Processing>> #White
+    rectangle "$icon(beaker) Cracking Unit" as cracker <<Processing>>
+    rectangle "$icon(droplet) Desulfurization" as desulf <<Processing>>
+}
+
+rectangle "Petroleum Products" as oil_products {
+    rectangle "Brent Crude Oil" as brent <<ExistingProduct>>
+    
+    rectangle "Petroleum Naphtha" as naphtha <<ExistingProduct>>
+    rectangle "Premium Diesel" as diesel <<ExistingProduct>>
+    rectangle "Marine Fuel Oil" as mfo <<ExistingProduct>>
+    rectangle "Refined Bitumen" as bitumen <<ExistingProduct>>
+    rectangle "White Spirit" as whitespirit <<ExistingProduct>>
+    rectangle "Refined Sulfur" as sulfur <<ExistingProduct>>
+    
+    rectangle "Polybutadiene Rubber" as pbr <<ExistingProduct>>
+}
+
+offshore --> brent
+brent --> distillation
+
+distillation --> naphtha
+distillation --> diesel
+distillation --> mfo
+distillation --> bitumen
+distillation --> whitespirit
+distillation --> desulf
+
+desulf --> sulfur
+
+naphtha --> cracker
+cracker --> pbr
