@@ -5,6 +5,7 @@ description: "High-purity industrial salt for various applications"
 categories: ["other"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "2501.00"
+smiles: "[Na+].[Cl-]"
 specifications:
   purity: "99.5%+"
   size: "Fine, coarse, granular"

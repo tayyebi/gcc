@@ -5,6 +5,7 @@ description: "High-purity refined sulfur for industrial use"
 categories: ["other"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "2503.00"
+smiles: "S1SSSSSSS1"
 specifications:
   purity: "99.99%"
   form: "Powder, prills, liquid"

@@ -5,6 +5,7 @@ description: "High-quality diesel fuel for automotive and industrial use"
 categories: ["petroleum"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "2710.12"
+smiles: "CCCCCCCCCCCCCCCC"
 specifications:
   cetane: "51+ CN"
   sulfur: "<15 ppm"
