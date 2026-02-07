@@ -15,7 +15,7 @@ hscodes:
     examples: ["Copper ore", "Copper concentrate"]
 ---
 
-## Other Product Categories
+# Specialty Products
 
 Explore our diverse range of additional products and materials.
 

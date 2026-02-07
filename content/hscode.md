@@ -3,8 +3,6 @@ title: "HS Code Directory"
 description: "Harmonized System Code directory for international trade classification"
 ---
 
-## HS Code Directory
-
 The Harmonized System (HS) Code is an internationally standardized system of names and numbers to classify traded products. Use our directory to find the correct HS codes for your products.
 
 ### About HS Codes

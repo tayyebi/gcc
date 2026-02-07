@@ -12,7 +12,6 @@ specifications:
   chemical_resistance: "Acid & Alkali Resistant"
 ---
 
-## Unglazed Floor Tiles (Heavy Duty)
 
 Technical ceramic tiles designed for the most demanding environments. With no glaze to wear off, the surface texture is integral to the tile body, providing enduring slip resistance and durability even under constant heavy footfall or industrial machinery.
 

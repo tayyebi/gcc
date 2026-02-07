@@ -13,7 +13,6 @@ specifications:
   arsenic_as: "Max 0.20%"
 ---
 
-## Copper Concentrate
 
 High-grade Sulfide Copper Concentrate obtained through flotation processing of copper ores. It serves as the primary raw material for copper smelters worldwide to produce copper anodes and cathodes.
 

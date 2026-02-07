@@ -15,7 +15,6 @@ specifications:
   organic_matter: "Max 0.03%"
 ---
 
-## Refined Sulfur (Elemental Sulfur)
 
 High-purity Refined Sulfur recovered from efficient desulfurization of Natural Gas and Crude Oil. It appears as bright yellow granules or prills and is a fundamental raw material for the chemical and agricultural industries.
 

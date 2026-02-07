@@ -14,7 +14,6 @@ specifications:
   surface_burning: "Class A (ASTM E84)"
 ---
 
-## Fire-Resistant Gypsum Board (Type X)
 
 Professional-grade fire-resistant gypsum board designed to provide superior fire protection in commercial and residential buildings.
 

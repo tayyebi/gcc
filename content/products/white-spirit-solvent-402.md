@@ -13,7 +13,6 @@ specifications:
   distillation_range: "142-200°C"
 ---
 
-## White Spirit (Mineral Spirits, Solvent 402)
 
 White Spirit, also known as Mineral Spirits or Solvent 402, is a petroleum-derived clear liquid used widely as a common organic solvent in painting and decorating. It represents a mixture of aliphatic and alicyclic hydrocarbons with a limited aromatic content, offering excellent solvency power with a controlled evaporation rate.
 

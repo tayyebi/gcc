@@ -13,7 +13,6 @@ specifications:
   nickel: "< 2 ppm"
 ---
 
-## Brent Crude Oil (Light Sweet)
 
 Brent Crude is the leading global price benchmark for Atlantic basin crude oils. Sourced from the North Sea, it is a light, sweet crude oil that is ideal for refining into high-value products like gasoline, middle distillates, and diesel.
 

@@ -15,7 +15,6 @@ specifications:
   ash_content: "Max 0.3%"
 ---
 
-## Polybutadiene Rubber (PBR)
 
 Polybutadiene Rubber (PBR) is a synthetic rubber that offers exceptional elasticity, high abrasion resistance, and low rolling resistance. It is a polymer formed from the polymerization of the monomer 1,3-butadiene. Our High-Cis PBR is particularly valued in the tire industry for improving fuel efficiency and durability.
 

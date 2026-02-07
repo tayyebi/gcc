@@ -15,7 +15,6 @@ specifications:
   grain_size: "0.2mm - 0.8mm (Industrial Grade)"
 ---
 
-## Industrial Salt (Sodium Chloride)
 
 High-grade Industrial Salt (NaCl) produced through solar evaporation or rock salt mining. It is processed to achieve high chemical purity, making it suitable for demanding industrial processes, specifically Chlor-Alkali production.
 

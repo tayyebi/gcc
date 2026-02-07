@@ -12,7 +12,6 @@ specifications:
   edge: "Rectified / Non-Rectified"
 ---
 
-## Decorative Wall Tiles (Ceramic)
 
 A curated collection of glazed ceramic wall tiles designed to transform interior spaces. From vibrant majolica patterns to subtle textured reliefs, these tiles add character and depth to any vertical surface.
 

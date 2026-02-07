@@ -13,7 +13,6 @@ specifications:
   flash_point: ">230°C"
 ---
 
-## Refined Bitumen (Petroleum Asphalt)
 
 Our refined bitumen (Petroleum Asphalt) is a premium petroleum product characterized by its high viscosity, waterproofing capabilities, and adhesive properties. Produced through the fractional distillation of crude oil, it serves as a critical component in the construction and infrastructure sectors globally.
 

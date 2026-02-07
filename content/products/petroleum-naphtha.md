@@ -13,7 +13,6 @@ specifications:
   final_boiling_point: "Max 200°C"
 ---
 
-## Petroleum Naphtha
 
 Petroleum Naphtha is a flammable liquid hydrocarbon mixture. It is a key intermediate in the oil refining process and serves as a primary feedstock for the petrochemical industry. We offer both Light Naphtha (paraffin-rich) and Heavy Naphtha (naphthene/aromatic-rich) to suit various industrial requirements.
 

@@ -15,7 +15,6 @@ specifications:
   standard_compliance: "ASTM C1396 / EN 520 Type A"
 ---
 
-## Standard Gypsum Wallboard (Regular)
 
 Standard Gypsum Wallboard is the premier solution for residential and commercial drylining applications. Composed of a non-combustible gypsum core encased in high-quality 100% recycled paper, it provides a cost-effective, durable surface for painting, wallpapering, or tiling.
 

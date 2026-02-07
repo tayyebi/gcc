@@ -15,7 +15,6 @@ specifications:
   water_content: "Max 200 mg/kg"
 ---
 
-## Premium Diesel Fuel (Ultra-Low Sulfur)
 
 Our Premium Diesel is a high-performance, ultra-low sulfur diesel (ULSD) fuel engineered to meet the stringent demands of modern diesel engines. It ensures cleaner combustion, reduced emissions, and improved fuel economy.
 

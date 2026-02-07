@@ -18,7 +18,7 @@ hscodes:
     examples: ["Dinnerware", "Kitchenware"]
 ---
 
-## Ceramic Products
+# Ceramic Products
 
 Discover our extensive range of ceramic products for construction, design, and industrial applications.
 

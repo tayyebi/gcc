@@ -15,7 +15,7 @@ hscodes:
     examples: ["Natural gypsum", "Gypsum ore"]
 ---
 
-## Gypsum Products
+# Gypsum Products
 
 High-quality gypsum materials for construction and finishing applications.
 

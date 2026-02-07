@@ -12,7 +12,6 @@ specifications:
   surface_finish: "Polished / Matt / Structured"
 ---
 
-## Premium Porcelain Tiles (Large Format)
 
 Our Premium Porcelain Tiles offer the perfect blend of aesthetic sophistication and technical performance. Manufactured using high-pressure compaction and double-firing techniques, they are virtually impervious to water, making them frost-proof and exceptionally durable.
 
