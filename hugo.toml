@@ -178,6 +178,12 @@ enableEmoji = true
     weight = 1
 
   [[menu.main]]
+    identifier = "supply-chain"
+    name = "Supply Chain"
+    url = "/supply-chain/"
+    weight = 2
+
+  [[menu.main]]
     identifier = "about"
     name = "About Us"
     url = "/about/"

@@ -74,6 +74,12 @@
   <!-- Animation System Utilities (for enhanced interactions) -->
   <script src="/js/animations.js" defer></script>
   
+  <!-- Mermaid Diagram Support -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+  <script defer>
+    window.mermaidConfig = { startOnLoad: true, theme: 'default', securityLevel: 'loose' };
+  </script>
+  
   <!-- Structured Data -->
   {{ partial "structured-data.html" . }}
   
