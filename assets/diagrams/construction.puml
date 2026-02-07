@@ -1,29 +1,27 @@
-rectangle "Raw Materials" as const_raw {
-    rectangle "$icon(map-marker) Gypsum Quarry" as g_mining <<Extraction>>
-    rectangle "$icon(map-marker) Clay Pit" as c_mining <<Extraction>>
-}
-
-rectangle "Manufacturing" as const_mfg {
-    rectangle "$icon(cog) Gypsum Board Plant" as g_plant <<Processing>>
-    rectangle "$icon(fire) Ceramic Kiln" as c_kiln <<Processing>>
-}
-
-rectangle "Construction Products" as const_products {
-    rectangle "Standard Wallboard" as g_std <<ExistingProduct>>
-    rectangle "Fire-Resistant Board" as g_fire <<ExistingProduct>>
-    rectangle "Moisture-Resistant Board" as g_moist <<ExistingProduct>>
-
-    rectangle "Porcelain Tiles" as c_porcelain <<ExistingProduct>>
-    rectangle "Decorative Wall Tiles" as c_wall <<ExistingProduct>>
-    rectangle "Unglazed Floor Tiles" as c_floor <<ExistingProduct>>
-}
-
-g_mining --> g_plant
-g_plant --> g_std
-g_plant --> g_fire
-g_plant --> g_moist
-
-c_mining --> c_kiln
-c_kiln --> c_porcelain
-c_kiln --> c_wall
-c_kiln --> c_floor
+graph TD
+    A["🏔️ Gypsum Quarry<br/>Raw Gypsum Extraction"] -->|Raw Material| B["🏭 Gypsum Board Plant<br/>Manufacturing & Processing"]
+    
+    B -->|Standard Product| C["Standard Gypsum Wallboard<br/>Basic Interior Construction"]
+    B -->|Fire-Rated| D["Fire-Resistant Gypsum Board<br/>Safety & Code Compliance"]
+    B -->|Moisture-Resistant| E["Moisture-Resistant Gypsum Board<br/>Wet Areas & Humidity Control"]
+    
+    F["🪨 Clay Pit<br/>Raw Clay Extraction"] -->|Raw Material| G["🔥 Ceramic Kiln<br/>High-Temperature Firing"]
+    
+    G -->|Precision-Made| H["Premium Porcelain Tiles<br/>High-End Flooring"]
+    G -->|Decorative| I["Decorative Wall Tiles<br/>Interior Design"]
+    G -->|Durable| J["Unglazed Floor Tiles<br/>Commercial & Heavy-Use"]
+    
+    K["🏢 Construction & Interior Applications"]
+    C --> K
+    D --> K
+    E --> K
+    H --> K
+    I --> K
+    J --> K
+    
+    style C fill:#f5f5f5
+    style D fill:#ffe6e6
+    style E fill:#e6f3ff
+    style H fill:#fff8e6
+    style I fill:#f0e6ff
+    style J fill:#e6ffe6

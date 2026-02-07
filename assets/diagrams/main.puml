@@ -1,34 +1,49 @@
-@startuml
-!include styles.puml
-
-title Global Commerce Supply Chain Network
-
-package "Upstream (Sourcing)" {
-    !include mining.puml
-    !include petroleum.puml
-    !include construction.puml
-}
-
-
-package "Downstream (Services)" {
-    rectangle "$icon(briefcase) Distribution Center" as dc <<Logistics>>
-    rectangle "$icon(truck) Global Logistics" as logistics <<Logistics>>
-    rectangle "$icon(people) End Markets" as market <<Logistics>>
-}
-
-' Connections to Downstream
-conc --> logistics
-salt --> logistics
-
-diesel --> logistics
-mfo --> logistics
-pbr --> logistics
-bitumen --> logistics
-
-g_std --> dc
-c_porcelain --> dc
-
-dc --> logistics
-logistics --> market
-
-@enduml
+graph TD
+    subgraph mining["⛏️ MINING & EXTRACTION"]
+        A["🌍 Copper Ore"] -->|Flotation| B["Copper Concentrate"]
+        C["🏜️ Salt Brine"] -->|Crystallization| D["Industrial Salt"]
+    end
+    
+    subgraph petroleum["⛽ OIL & PETROCHEMICALS"]
+        E["⛽ Brent Crude Oil"] -->|Distillation| F["Premium Diesel"]
+        E -->|Distillation| G["Marine Fuel Oil"]
+        E -->|Distillation| H["Petroleum Naphtha"]
+        E -->|Distillation| I["Refined Bitumen"]
+        E -->|Distillation| J["White Spirit"]
+        E -->|Desulfurization| K["Refined Sulfur"]
+        H -->|Cracking| L["Polybutadiene Rubber"]
+    end
+    
+    subgraph construction["🏢 CONSTRUCTION MATERIALS"]
+        M["🏔️ Gypsum"] -->|Manufacturing| N["Standard Wallboard"]
+        M -->|Manufacturing| O["Fire-Resistant Board"]
+        M -->|Manufacturing| P["Moisture-Resistant Board"]
+        Q["🪨 Clay"] -->|Firing| R["Porcelain Tiles"]
+        Q -->|Firing| S["Decorative Tiles"]
+        Q -->|Firing| T["Floor Tiles"]
+    end
+    
+    subgraph logistics["📦 GLOBAL LOGISTICS & DISTRIBUTION"]
+        U["Distribution Centers"]
+        V["Global Transport"]
+        W["End Markets"]
+        U --> V --> W
+    end
+    
+    B --> U
+    D --> U
+    F --> U
+    G --> U
+    K --> U
+    L --> U
+    N --> U
+    O --> U
+    P --> U
+    R --> U
+    S --> U
+    T --> U
+    
+    style mining fill:#e8f5e9
+    style petroleum fill:#fff3e0
+    style construction fill:#f3e5f5
+    style logistics fill:#e3f2fd

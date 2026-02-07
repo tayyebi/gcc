@@ -1,20 +1,13 @@
-rectangle "Mining & Extraction" as mining_sector {
-    rectangle "$icon(globe) Copper Mine" as cu_mine <<Extraction>>
-    rectangle "$icon(sun) Solar Salt Pans" as salt_mine <<Extraction>>
-}
-
-rectangle "Processing" as mining_processing {
-    rectangle "$icon(cog) Flotation Plant" as flotation <<Processing>>
-    rectangle "$icon(beaker) Refining" as salt_refinery <<Processing>>
-}
-
-rectangle "Products" as mining_products {
-    rectangle "Copper Concentrate" as conc <<ExistingProduct>>
-    rectangle "Industrial Salt" as salt <<ExistingProduct>>
-}
-
-cu_mine --> flotation
-flotation --> conc
-
-salt_mine --> salt_refinery
-salt_refinery --> salt
+graph TD
+    A["🌍 Copper Ore Extraction"] -->|Raw Material| B["⚙️ Flotation Processing"]
+    B -->|Concentration| C["Copper Concentrate"]
+    C -->|High-purity product| D["Industrial Applications:<br/>Electronics, Construction,<br/>Power Generation"]
+    
+    E["🏜️ Salt Extraction<br/>Solar Pans & Brine"] -->|Raw Material| F["🔄 Crystallization &<br/>Refinement"]
+    F -->|Purification| G["Industrial Salt"]
+    G -->|De-icing, Chemical,<br/>Food Processing| H["Industrial Applications:<br/>Chemical Manufacturing,<br/>Agriculture, Food Industry"]
+    
+    style C fill:#ff9999
+    style G fill:#99ccff
+    style D fill:#ffe6e6
+    style H fill:#e6f2ff
