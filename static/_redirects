@@ -1,17 +1,2 @@
-# Static assets - serve directly
-/css/* /css/:splat 200
-/js/* /js/:splat 200
-/images/* /images/:splat 200
-/favicon.svg /favicon.svg 200
-/robots.txt /robots.txt 200
-
-# Locale-prefixed URLs - serve as-is
-/en_us/* /en_us/:splat 200
-/ru_ru/* /ru_ru/:splat 200
-/ar_iq/* /ar_iq/:splat 200
-
-# Root redirect to English
+# Root redirect to English (default language)
 / /en_us/ 301
-
-# Catch-all: everything else redirects to English
-/* /en_us/:splat 301
