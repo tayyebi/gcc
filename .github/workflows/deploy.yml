@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-  # pull_request trigger removed to disable preview deployments
-  # Only production deployments on push to main will occur
 
 jobs:
   build-and-deploy:
@@ -21,7 +19,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.121.1'
+          hugo-version: '0.147.7'
           extended: true
       
       - name: Update version info in hugo.toml
@@ -34,30 +32,8 @@ jobs:
       - name: Build Hugo site
         run: hugo --minify
       
-      - name: Publish to Cloudflare Pages
-        id: cloudflare-deployment
-        continue-on-error: true
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: globalcommercecouncil
-          directory: public
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-      
-      - name: Deployment status
-        if: steps.cloudflare-deployment.outcome == 'failure'
-        run: |
-          echo "⚠️ Cloudflare Pages deployment failed or was skipped"
-          echo ""
-          echo "This is likely because required secrets are not configured:"
-          echo "  - CLOUDFLARE_API_TOKEN"
-          echo "  - CLOUDFLARE_ACCOUNT_ID"
-          echo ""
-          echo "To enable deployment, please configure these secrets in:"
-          echo "Repository Settings > Secrets and variables > Actions"
-          echo ""
-          echo "See DEPLOYMENT.md for detailed instructions."
-          echo ""
-          echo "Note: The build succeeded. Only deployment was affected."
+      - name: Deploy to Cloudflare Pages
+        run: npx wrangler pages deploy public --project-name=gcc
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
