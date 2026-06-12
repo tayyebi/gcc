@@ -1,11 +1,9 @@
 baseURL = "https://globalcommercecouncil.com"
-languageCode = "en-us"
-title = "Global Commerce Council"
+defaultContentLanguage = "en_us"
+defaultContentLanguageInSubdir = true
 enableRobotsTXT = true
 enableGitInfo = false
 enableEmoji = true
-
-
 
 # Pagination settings
 [pagination]
@@ -18,6 +16,30 @@ enableEmoji = true
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML"]
+
+[languages]
+  [languages.en_us]
+    languageCode = "en-US"
+    languageName = "English"
+    weight = 1
+    title = "Global Commerce Council"
+    contentDir = "content/en_us"
+
+  [languages.ru_ru]
+    languageCode = "ru-RU"
+    languageName = "Русский"
+    weight = 2
+    title = "Global Commerce Council"
+    contentDir = "content/ru_ru"
+
+  [languages.ar_iq]
+    languageCode = "ar-IQ"
+    languageName = "العربية (العراق)"
+    weight = 3
+    title = "مجلس التجارة العالمي"
+    contentDir = "content/ar_iq"
+    [languages.ar_iq.params]
+      rtl = true
 
 [params]
   # ========================================

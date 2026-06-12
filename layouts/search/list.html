@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="container my-5">
-  <h1 class="display-5 fw-bold mb-4">Search Results</h1>
+  <h1 class="display-5 fw-bold mb-4">{{ i18n "search_results" | default "Search Results" }}</h1>
   
   <div id="searchResults">
     <p class="text-muted">Loading results...</p>
@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
     displayResults(query, results);
   } else {
     // Fallback: fetch and search
-    fetch('/index.json')
+    const locale = window.location.pathname.split('/')[1] || 'en_us';
+    fetch('/' + locale + '/index.json')
       .then(response => response.json())
       .then(data => {
         const results = data.filter(item => {

@@ -1,4 +1,4 @@
-<head>
+<head{{ if eq .Language.Lang "ar_iq" }} dir="rtl" lang="ar"{{ end }}>
   <meta charset="utf-8">
   
   {{ $title := .Title }}
@@ -9,6 +9,12 @@
   {{ end }}
   
   <title>{{ $title }}</title>
+  
+  <!-- Hreflang alternate links -->
+  {{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+  {{ end }}
+  <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}">
   
   <!-- Accessibility -->
   <meta name="color-scheme" content="light dark">
@@ -56,6 +62,7 @@
     {{ end }}
   {{ end }}
   <meta property="og:site_name" content="{{ .Site.Title }}">
+  {{ if eq .Language.Lang "ar_iq" }}<meta property="og:locale" content="ar_IQ">{{ end }}
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="{{ .Site.Params.seo.twitter_card }}">

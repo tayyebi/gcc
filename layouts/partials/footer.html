@@ -5,44 +5,44 @@
     <div class="row mb-5 pb-4 border-bottom border-light border-opacity-10 animate-fade-in-up">
       <div class="col-lg-5 mb-4 mb-lg-0">
         <h4 class="fw-bold mb-2 text-white">
-          <i class="bi bi-bell-fill me-2 icon-hover-bounce" aria-hidden="true"></i>Market Intelligence Updates
+          <i class="bi bi-bell-fill me-2 icon-hover-bounce" aria-hidden="true"></i>{{ i18n "footer_intelligence" }}
         </h4>
-        <p class="text-white-50 mb-0">Subscribe to receive curated insights on global trade trends, HS codes, and verified supplier networks.</p>
+        <p class="text-white-50 mb-0">{{ i18n "footer_subscribe_text" }}</p>
       </div>
       <div class="col-lg-7">
         <form class="subscription-form" onsubmit="event.preventDefault();">
           <div class="row g-3">
             <div class="col-md-8">
               <div class="input-group transition-smooth">
-                <label for="email-subscribe" class="visually-hidden">Email address</label>
-                <input type="email" id="email-subscribe" class="form-control form-control-focus form-control-lg border-0" placeholder="your@business.email" aria-label="Email address" required>
+                <label for="email-subscribe" class="visually-hidden">{{ i18n "email_address" | default "Email address" }}</label>
+                <input type="email" id="email-subscribe" class="form-control form-control-focus form-control-lg border-0" placeholder='{{ i18n "footer_email_placeholder" }}' aria-label="Email address" required>
                 <button class="btn btn-primary px-4 icon-hover-pulse" type="submit">
-                  <i class="bi bi-send me-2" aria-hidden="true"></i>Subscribe
+                  <i class="bi bi-send me-2" aria-hidden="true"></i>{{ i18n "footer_subscribe" }}
                 </button>
               </div>
             </div>
             <div class="col-12">
               <div class="d-flex gap-2 flex-wrap mt-2">
-                <span class="text-white-50 small me-2 my-auto">Interests:</span>
+                <span class="text-white-50 small me-2 my-auto">{{ i18n "footer_interests" }}</span>
                 
                 <label class="form-check-label custom-toggle-pill transition-base">
                   <input type="checkbox" class="form-check-input visually-hidden" checked>
                   <span class="pill-content">
-                    <i class="bi bi-bricks me-1" aria-hidden="true"></i>Ceramics
+                    <i class="bi bi-bricks me-1" aria-hidden="true"></i>{{ i18n "mega_ceramics" }}
                   </span>
                 </label>
                 
                 <label class="form-check-label custom-toggle-pill transition-base">
                   <input type="checkbox" class="form-check-input visually-hidden" checked>
                   <span class="pill-content">
-                    <i class="bi bi-building me-1" aria-hidden="true"></i>Gypsum
+                    <i class="bi bi-building me-1" aria-hidden="true"></i>{{ i18n "mega_gypsum" }}
                   </span>
                 </label>
                 
                 <label class="form-check-label custom-toggle-pill transition-base">
                   <input type="checkbox" class="form-check-input visually-hidden">
                   <span class="pill-content">
-                    <i class="bi bi-droplet me-1" aria-hidden="true"></i>Petroleum
+                    <i class="bi bi-droplet me-1" aria-hidden="true"></i>{{ i18n "mega_petroleum" }}
                   </span>
                 </label>
                 
@@ -65,29 +65,29 @@
       </div>
       
       <div class="col-md-2 mb-4 animate-fade-in-up delay-200">
-        <h6 class="fw-bold mb-3 text-white">Quick Links</h6>
+        <h6 class="fw-bold mb-3 text-white">{{ i18n "footer_quick_links" }}</h6>
         <ul class="list-unstyled">
           {{ range first 6 .Site.Menus.main }}
-          <li class="mb-2"><a href="{{ .URL }}" class="text-white-50 text-decoration-none link-underline">{{ .Name }}</a></li>
+          <li class="mb-2"><a href="{{ .URL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n (printf "nav_%s" .Identifier) | default .Name }}</a></li>
           {{ end }}
         </ul>
       </div>
       
       <div class="col-md-3 mb-4 animate-fade-in-up delay-300">
         <h6 class="fw-bold mb-3 text-white">
-          <i class="bi bi-collection me-2"></i>Categories
+          <i class="bi bi-collection me-2"></i>{{ i18n "footer_categories" }}
         </h6>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="/categories/ceramics/" class="text-white-50 text-decoration-none link-underline">Ceramics</a></li>
-          <li class="mb-2"><a href="/categories/gypsum/" class="text-white-50 text-decoration-none link-underline">Gypsum</a></li>
-          <li class="mb-2"><a href="/categories/petroleum/" class="text-white-50 text-decoration-none link-underline">Petroleum</a></li>
-          <li class="mb-2"><a href="/categories/other/" class="text-white-50 text-decoration-none link-underline">Other Products</a></li>
+          <li class="mb-2"><a href="{{ "/categories/ceramics/" | relLangURL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n "mega_ceramics" }}</a></li>
+          <li class="mb-2"><a href="{{ "/categories/gypsum/" | relLangURL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n "mega_gypsum" }}</a></li>
+          <li class="mb-2"><a href="{{ "/categories/petroleum/" | relLangURL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n "mega_petroleum" }}</a></li>
+          <li class="mb-2"><a href="{{ "/categories/other/" | relLangURL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n "mega_other_industries" }}</a></li>
         </ul>
       </div>
       
       <div class="col-md-3 mb-4 animate-fade-in-up delay-400">
         <h6 class="fw-bold mb-3 text-white">
-          <i class="bi bi-chat-dots me-2"></i>Contact Us
+          <i class="bi bi-chat-dots me-2"></i>{{ i18n "footer_contact_us" }}
         </h6>
         <ul class="list-unstyled text-white-50 small">
           <li class="mb-2">
@@ -104,7 +104,7 @@
     
     <div class="row align-items-center">
       <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-        <small class="text-white-50">&copy; {{ now.Year }} {{ .Site.Params.globals.name }}. All rights reserved.</small>
+        <small class="text-white-50">&copy; {{ now.Year }} {{ .Site.Params.globals.name }}. {{ i18n "footer_all_rights" }}</small>
       </div>
       
       <div class="col-md-4 text-center mb-3 mb-md-0">
@@ -123,8 +123,8 @@
 
       <div class="col-md-4 text-center text-md-end">
         <small>
-          <a href="/privacy/" class="text-white-50 text-decoration-none me-3 link-underline">Privacy Policy</a>
-          <a href="/terms/" class="text-white-50 text-decoration-none link-underline">Terms of Service</a>
+          <a href="{{ "/privacy/" | relLangURL }}" class="text-white-50 text-decoration-none me-3 link-underline">{{ i18n "footer_privacy" }}</a>
+          <a href="{{ "/terms/" | relLangURL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n "footer_terms" }}</a>
         </small>
       </div>
     </div>
