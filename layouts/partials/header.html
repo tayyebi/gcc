@@ -1,18 +1,14 @@
 <header class="sticky-top header-custom" id="mainHeader">
-  <!-- Top Bar with Contact and Search -->
-  <div class="bg-primary text-white py-2 transition-colors">
+  <div class="bg-primary text-white py-2">
     <div class="container">
-      <div class="d-flex align-items-center justify-content-between gap-3" style="min-height: auto;">
-        <!-- Email - Left side, clickable -->
-        <a href="mailto:{{ .Site.Params.globals.email.main }}" class="text-white text-decoration-none" style="font-size: 0.85rem; white-space: nowrap;" title="Send email">
+      <div class="d-flex align-items-center justify-content-between gap-3">
+        <a href="mailto:{{ .Site.Params.globals.email.main }}" class="text-white text-decoration-none small" title="Send email">
           {{ .Site.Params.globals.email.main }}
         </a>
-        
-        <!-- Search - Right side, very compact -->
-        <form class="d-flex" role="search" id="searchForm" style="min-width: 0;">
-          <div class="input-group input-group-sm transition-base" style="max-width: 280px;">
-            <input class="form-control form-control-focus border-0" type="search" placeholder="Search..." aria-label="Search" id="searchInput" style="font-size: 0.8rem; padding: 0.25rem 0.5rem; height: auto;">
-            <button class="btn btn-outline-light icon-hover-bounce" type="submit" title="Search" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+        <form class="d-flex" role="search" id="searchForm">
+          <div class="input-group input-group-sm" style="max-width: 260px;">
+            <input class="form-control form-control-sm border-0" type="search" placeholder="Search..." aria-label="Search" id="searchInput" style="font-size: 0.8rem; padding: 0.2rem 0.5rem; height: auto; background: rgba(255,255,255,0.15); color: #fff;">
+            <button class="btn btn-outline-light" type="submit" title="Search" style="padding: 0.2rem 0.5rem; font-size: 0.8rem; border-color: rgba(255,255,255,0.3);">
               <i class="bi bi-search"></i>
             </button>
           </div>
@@ -20,39 +16,40 @@
       </div>
     </div>
   </div>
-  
-  <!-- Main Navigation -->
-  <nav class="navbar navbar-expand-lg py-3 transition-smooth">
+
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <!-- Logo Brand -->
-      <a class="navbar-brand fw-bold fs-4 d-flex align-items-center transition-smooth" href="/" title="{{ .Site.Params.globals.name }}" style="gap: 0.75rem;">
-        <img src="/images/logo.svg" alt="{{ .Site.Params.globals.logo.alt }}" width="48" height="48" loading="eager" style="transition: transform var(--transition-base) ease;" class="icon-hover-pulse">
-        <span class="d-none d-sm-inline" style="font-size: 1.1rem; font-weight: 600;">{{ .Site.Params.globals.name }}</span>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/" title="{{ .Site.Params.globals.name }}">
+        <img src="/images/logo.svg" alt="{{ .Site.Params.globals.logo.alt }}" width="40" height="40" loading="eager">
+        <span class="d-none d-sm-inline fs-6 fw-semibold">{{ .Site.Params.globals.name }}</span>
       </a>
-      
-      <button class="navbar-toggler transition-base" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
+        <ul class="navbar-nav ms-auto">
           {{ $currentPage := .Page }}
-          <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle link-underline{{ if or (eq $currentPage.RelPermalink "/products/") (hasPrefix $currentPage.RelPermalink "/products/") }} active{{ end }}" href="/products/" id="megaProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Products</a>
-            <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaProducts">
-              <div class="row g-4">
-                <div class="col-md-4">
-                  <div class="mega-group">
-                    <h6 class="mega-title">Categories</h6>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle{{ if or (eq $currentPage.RelPermalink "/products/") (hasPrefix $currentPage.RelPermalink "/products/") }} active{{ end }}" href="/products/" id="megaProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <div class="dropdown-menu dropdown-mega p-0" aria-labelledby="megaProducts">
+              <div class="row g-0">
+                <div class="col-lg-4">
+                  <div class="p-3">
+                    <h6 class="dropdown-header">Categories</h6>
                     <a class="dropdown-item" href="/categories/ceramics/">Ceramics</a>
                     <a class="dropdown-item" href="/categories/gypsum/">Gypsum</a>
                     <a class="dropdown-item" href="/categories/petroleum/">Petroleum</a>
                     <a class="dropdown-item" href="/categories/other/">Other Industries</a>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="mega-group">
-                    <h6 class="mega-title">Energy & Petrochemicals</h6>
+                <div class="col-lg-4">
+                  <div class="p-3 border-start">
+                    <h6 class="dropdown-header">Energy & Petrochemicals</h6>
                     <a class="dropdown-item" href="/products/crude-oil-brent/">Crude Oil (Brent)</a>
                     <a class="dropdown-item" href="/products/premium-diesel/">Premium Diesel</a>
                     <a class="dropdown-item" href="/products/marine-fuel-oil/">Marine Fuel Oil</a>
@@ -61,9 +58,9 @@
                     <a class="dropdown-item" href="/products/white-spirit-solvent-402/">White Spirit 402</a>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="mega-group">
-                    <h6 class="mega-title">Construction Materials</h6>
+                <div class="col-lg-4">
+                  <div class="p-3 border-start">
+                    <h6 class="dropdown-header">Construction Materials</h6>
                     <a class="dropdown-item" href="/products/standard-gypsum-wallboard/">Standard Gypsum Wallboard</a>
                     <a class="dropdown-item" href="/products/fire-resistant-gypsum-board/">Fire-Resistant Gypsum Board</a>
                     <a class="dropdown-item" href="/products/moisture-resistant-gypsum-board/">Moisture-Resistant Gypsum Board</a>
@@ -76,47 +73,49 @@
             </div>
           </li>
 
-          <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle link-underline{{ if or (eq $currentPage.RelPermalink "/knowledge-base/") (hasPrefix $currentPage.RelPermalink "/knowledge-base/") }} active{{ end }}" href="/knowledge-base/" id="megaKnowledge" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Knowledge Base</a>
-            <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaKnowledge">
-              <div class="row g-4">
-                <div class="col-md-4">
-                  <div class="mega-group">
-                    <h6 class="mega-title">International Trade & Business</h6>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle{{ if or (eq $currentPage.RelPermalink "/knowledge-base/") (hasPrefix $currentPage.RelPermalink "/knowledge-base/") }} active{{ end }}" href="/knowledge-base/" id="megaKnowledge" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Knowledge Base
+            </a>
+            <div class="dropdown-menu dropdown-mega p-0" aria-labelledby="megaKnowledge">
+              <div class="row g-0">
+                <div class="col-lg-4">
+                  <div class="p-3">
+                    <h6 class="dropdown-header">International Trade & Business</h6>
                     <a class="dropdown-item" href="/knowledge-base/#import-export-fundamentals">Import & Export Fundamentals</a>
                     <a class="dropdown-item" href="/knowledge-base/#trade-documentation-compliance">Trade Documentation & Compliance</a>
                     <a class="dropdown-item" href="/knowledge-base/#market-research-strategy">Market Research & Strategy</a>
                   </div>
-                  <div class="mega-group">
-                    <h6 class="mega-title">Logistics & Supply Chain</h6>
+                  <div class="p-3 pt-0">
+                    <h6 class="dropdown-header">Logistics & Supply Chain</h6>
                     <a class="dropdown-item" href="/knowledge-base/#transportation-freight-forwarding">Transportation & Freight Forwarding</a>
                     <a class="dropdown-item" href="/knowledge-base/#warehousing-inventory-management">Warehousing & Inventory Management</a>
                     <a class="dropdown-item" href="/knowledge-base/#supply-chain-optimization">Supply Chain Optimization</a>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="mega-group">
-                    <h6 class="mega-title">Trade Finance & Payments</h6>
+                <div class="col-lg-4">
+                  <div class="p-3 border-start">
+                    <h6 class="dropdown-header">Trade Finance & Payments</h6>
                     <a class="dropdown-item" href="/knowledge-base/#letters-of-credit-payment-terms">Letters of Credit & Payment Terms</a>
                     <a class="dropdown-item" href="/knowledge-base/#currency-risk-management">Currency & Risk Management</a>
                     <a class="dropdown-item" href="/knowledge-base/#trade-insurance">Trade Insurance</a>
                   </div>
-                  <div class="mega-group">
-                    <h6 class="mega-title">Law & Compliance</h6>
+                  <div class="p-3 pt-0 border-start">
+                    <h6 class="dropdown-header">Law & Compliance</h6>
                     <a class="dropdown-item" href="/knowledge-base/#international-trade-law">International Trade Law</a>
                     <a class="dropdown-item" href="/knowledge-base/#customs-tariffs">Customs & Tariffs</a>
                     <a class="dropdown-item" href="/knowledge-base/#sanctions-restricted-markets">Sanctions & Restricted Markets</a>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="mega-group">
-                    <h6 class="mega-title">Marketing & Global Strategy</h6>
+                <div class="col-lg-4">
+                  <div class="p-3 border-start">
+                    <h6 class="dropdown-header">Marketing & Global Strategy</h6>
                     <a class="dropdown-item" href="/knowledge-base/#global-market-entry">Global Market Entry</a>
                     <a class="dropdown-item" href="/knowledge-base/#cross-border-marketing">Cross-Border Marketing</a>
                     <a class="dropdown-item" href="/knowledge-base/#branding-negotiation-tactics">Branding & Negotiation Tactics</a>
                   </div>
-                  <div class="mega-group">
-                    <h6 class="mega-title">E-commerce & Digital Platforms</h6>
+                  <div class="p-3 pt-0 border-start">
+                    <h6 class="dropdown-header">E-commerce & Digital Platforms</h6>
                     <a class="dropdown-item" href="/knowledge-base/#b2b-marketplaces">B2B Marketplaces</a>
                     <a class="dropdown-item" href="/knowledge-base/#ecommerce-logistics">E-commerce Logistics</a>
                     <a class="dropdown-item" href="/knowledge-base/#digital-payment-systems">Digital Payment Systems</a>
@@ -126,20 +125,22 @@
             </div>
           </li>
 
-          <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle link-underline{{ if or (eq $currentPage.RelPermalink "/tools/") (hasPrefix $currentPage.RelPermalink "/tools/") }} active{{ end }}" href="/tools/" id="megaTools" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Tools</a>
-            <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaTools">
-              <div class="row g-4">
-                <div class="col-md-6">
-                  <div class="mega-group">
-                    <h6 class="mega-title">Trade Utilities</h6>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle{{ if or (eq $currentPage.RelPermalink "/tools/") (hasPrefix $currentPage.RelPermalink "/tools/") }} active{{ end }}" href="/tools/" id="megaTools" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tools
+            </a>
+            <div class="dropdown-menu dropdown-mega p-0" aria-labelledby="megaTools">
+              <div class="row g-0">
+                <div class="col-lg-6">
+                  <div class="p-3">
+                    <h6 class="dropdown-header">Trade Utilities</h6>
                     <a class="dropdown-item" href="/tools/#trade-cost-calculator">Trade Cost Calculator</a>
                     <a class="dropdown-item" href="/tools/#document-templates">Document Templates (Invoice, Packing List, LC)</a>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="mega-group">
-                    <h6 class="mega-title">Lookup Tools</h6>
+                <div class="col-lg-6">
+                  <div class="p-3 border-start">
+                    <h6 class="dropdown-header">Lookup Tools</h6>
                     <a class="dropdown-item" href="/tools/#hs-code-incoterms-lookup">HS Code & Incoterms Lookup</a>
                   </div>
                 </div>
@@ -147,13 +148,15 @@
             </div>
           </li>
 
-          <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle link-underline{{ if or (eq $currentPage.RelPermalink "/country-guides/") (hasPrefix $currentPage.RelPermalink "/country-guides/") }} active{{ end }}" href="/country-guides/" id="megaCountryGuides" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Country Guides</a>
-            <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaCountryGuides">
-              <div class="row g-4">
-                <div class="col-md-12">
-                  <div class="mega-group">
-                    <h6 class="mega-title">Country & Market Guides</h6>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle{{ if or (eq $currentPage.RelPermalink "/country-guides/") (hasPrefix $currentPage.RelPermalink "/country-guides/") }} active{{ end }}" href="/country-guides/" id="megaCountryGuides" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Country Guides
+            </a>
+            <div class="dropdown-menu dropdown-mega p-0" aria-labelledby="megaCountryGuides">
+              <div class="row g-0">
+                <div class="col-lg-12">
+                  <div class="p-3">
+                    <h6 class="dropdown-header">Country & Market Guides</h6>
                     <a class="dropdown-item" href="/country-guides/#exporting-to-usa-eu-china-middle-east">Exporting to USA, EU, China, Middle East</a>
                     <a class="dropdown-item" href="/country-guides/#importing-from-middle-east">Importing from Middle East</a>
                     <a class="dropdown-item" href="/country-guides/#sanctions-sensitive-markets">Sanctions-Sensitive Markets</a>
@@ -164,16 +167,16 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link link-underline{{ if or (eq $currentPage.RelPermalink "/supply-chain/") (hasPrefix $currentPage.RelPermalink "/supply-chain/") }} active{{ end }}" href="/supply-chain/" data-animate="fade-in">Supply Chain</a>
+            <a class="nav-link{{ if or (eq $currentPage.RelPermalink "/supply-chain/") (hasPrefix $currentPage.RelPermalink "/supply-chain/") }} active{{ end }}" href="/supply-chain/">Supply Chain</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-underline{{ if or (eq $currentPage.RelPermalink "/about/") (hasPrefix $currentPage.RelPermalink "/about/") }} active{{ end }}" href="/about/" data-animate="fade-in">About Us</a>
+            <a class="nav-link{{ if or (eq $currentPage.RelPermalink "/about/") (hasPrefix $currentPage.RelPermalink "/about/") }} active{{ end }}" href="/about/">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-underline{{ if or (eq $currentPage.RelPermalink "/suppliers/") (hasPrefix $currentPage.RelPermalink "/suppliers/") }} active{{ end }}" href="/suppliers/" data-animate="fade-in">Suppliers</a>
+            <a class="nav-link{{ if or (eq $currentPage.RelPermalink "/suppliers/") (hasPrefix $currentPage.RelPermalink "/suppliers/") }} active{{ end }}" href="/suppliers/">Suppliers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-underline{{ if or (eq $currentPage.RelPermalink "/contact/") (hasPrefix $currentPage.RelPermalink "/contact/") }} active{{ end }}" href="/contact/" data-animate="fade-in">Contact</a>
+            <a class="nav-link{{ if or (eq $currentPage.RelPermalink "/contact/") (hasPrefix $currentPage.RelPermalink "/contact/") }} active{{ end }}" href="/contact/">Contact</a>
           </li>
         </ul>
       </div>
