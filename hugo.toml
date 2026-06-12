@@ -41,6 +41,13 @@ enableEmoji = true
     [languages.ar_iq.params]
       rtl = true
 
+  [languages.hy_am]
+    languageCode = "hy-AM"
+    languageName = "Հայերեն"
+    weight = 4
+    title = "Global Commerce Council"
+    contentDir = "content/hy_am"
+
 [params]
   # ========================================
   # GLOBAL VARIABLES - SINGLE SOURCE OF TRUTH
