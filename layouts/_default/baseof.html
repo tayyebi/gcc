@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}"{{ if eq .Language.Lang "ar_iq" }} dir="rtl"{{ end }}>
+<html lang="{{ .Site.LanguageCode }}"{{ if .Language.Params.rtl }} dir="rtl"{{ end }}>
 {{ partial "head.html" . }}
-<body{{ if eq .Language.Lang "ar_iq" }} class="rtl"{{ end }}>
+<body{{ if .Language.Params.rtl }} class="rtl"{{ end }}>
   <a class="visually-hidden-focusable p-3 position-absolute top-0 start-0 bg-primary text-white" href="#main-content" style="z-index: 2000;">{{ i18n "skip_to_content" | default "Skip to content" }}</a>
   {{ partial "header.html" . }}
   

@@ -1,4 +1,4 @@
-<head{{ if eq .Language.Lang "ar_iq" }} dir="rtl" lang="ar"{{ end }}>
+<head{{ if .Language.Params.rtl }} dir="rtl" lang="ar"{{ end }}>
   <meta charset="utf-8">
   
   {{ $title := .Title }}
@@ -62,7 +62,7 @@
     {{ end }}
   {{ end }}
   <meta property="og:site_name" content="{{ .Site.Title }}">
-  {{ if eq .Language.Lang "ar_iq" }}<meta property="og:locale" content="ar_IQ">{{ end }}
+  <meta property="og:locale" content="{{ replace .Language.LanguageCode "-" "_" }}">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="{{ .Site.Params.seo.twitter_card }}">

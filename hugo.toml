@@ -48,6 +48,22 @@ enableEmoji = true
     title = "Global Commerce Council"
     contentDir = "content/hy_am"
 
+  [languages.fa_ir]
+    languageCode = "fa-IR"
+    languageName = "فارسی"
+    weight = 5
+    title = "Global Commerce Council"
+    contentDir = "content/fa_ir"
+
+  [languages.ar_ae]
+    languageCode = "ar-AE"
+    languageName = "العربية (الإمارات)"
+    weight = 6
+    title = "مجلس التجارة العالمي"
+    contentDir = "content/ar_ae"
+    [languages.ar_ae.params]
+      rtl = true
+
 [params]
   # ========================================
   # GLOBAL VARIABLES - SINGLE SOURCE OF TRUTH
