@@ -33,7 +33,7 @@ jobs:
         run: hugo --minify
       
       - name: Deploy to Cloudflare Pages
-        run: npx wrangler pages deploy public --project-name=gcc
+        run: npx wrangler pages deploy public --project-name=globalcommercecouncil
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
