@@ -14,27 +14,26 @@ We'd love to hear from you. Whether you have a question about our services, need
 
 ### Send Us a Message
 
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-  <input type="hidden" name="form-name" value="contact">
+<form id="contactForm" class="contact-form" novalidate>
   <p style="display: none;">
-    <label>Don't fill this out: <input name="bot-field"></label>
+    <label>Don't fill this out: <input name="bot-field" autocomplete="off" tabindex="-1"></label>
   </p>
-  
+
   <div class="mb-3">
     <label for="name" class="form-label">Name *</label>
     <input type="text" class="form-control" id="name" name="name" required>
   </div>
-  
+
   <div class="mb-3">
     <label for="email" class="form-label">Email *</label>
     <input type="email" class="form-control" id="email" name="email" required>
   </div>
-  
+
   <div class="mb-3">
     <label for="company" class="form-label">Company</label>
     <input type="text" class="form-control" id="company" name="company">
   </div>
-  
+
   <div class="mb-3">
     <label for="subject" class="form-label">Subject *</label>
     <select class="form-select" id="subject" name="subject" required>
@@ -47,11 +46,11 @@ We'd love to hear from you. Whether you have a question about our services, need
       <option value="other">Other</option>
     </select>
   </div>
-  
+
   <div class="mb-3">
     <label for="message" class="form-label">Message *</label>
     <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
   </div>
-  
-  <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+  <button type="submit" class="btn btn-primary btn-lg" id="contactSubmitBtn">Send Message</button>
+  <div id="contactFeedback" class="mt-3" aria-live="polite"></div>
 </form>

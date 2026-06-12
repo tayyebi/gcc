@@ -1,10 +1,19 @@
 {
-  // Wrangler configuration for Cloudflare Pages deployment
-  // This file is used when deploying via `npx wrangler deploy`
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
   "name": "gcc",
   "compatibility_date": "2026-02-06",
-  "assets": {
-    // Hugo builds the static site to the 'public' directory
-    "directory": "./public"
-  }
+  "pages_build_output_dir": "./public",
+
+  // Email binding for the contact form function.
+  // In production, configure this in Cloudflare Dashboard instead:
+  //   Pages → gcc → Settings → Functions → Add binding
+  //   Type: Send Email | Name: SEND_EMAIL
+  //   Allowed destination addresses: info@globalcommercecouncil.com
+  //
+  // "send_email": [
+  //   {
+  //     "name": "SEND_EMAIL",
+  //     "destination_address": "info@globalcommercecouncil.com"
+  //   }
+  // ]
 }

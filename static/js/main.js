@@ -186,6 +186,55 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ===========================================
+  // Contact Form — Async Submit
+  // ===========================================
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    var feedbackEl = document.getElementById('contactFeedback');
+    var submitBtn = document.getElementById('contactSubmitBtn');
+
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Honeypot check
+      if (contactForm.querySelector('[name="bot-field"]').value) return;
+
+      // Validate (HTML5 checkValidity already shows browser hints)
+      if (!contactForm.checkValidity()) return;
+
+      // Loading state
+      var origText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      feedbackEl.innerHTML = '';
+      feedbackEl.className = 'mt-3';
+
+      try {
+        var resp = await fetch('/api/contact', {
+          method: 'POST',
+          body: new FormData(contactForm)
+        });
+
+        var data = await resp.json();
+
+        if (resp.ok && data.success) {
+          feedbackEl.className = 'mt-3 alert alert-success mb-0';
+          feedbackEl.textContent = 'Thanks, ' + contactForm.name.value + '! Your message has been sent. We\'ll be in touch soon.';
+          contactForm.reset();
+        } else {
+          throw new Error(data.error || 'Server error');
+        }
+      } catch (err) {
+        feedbackEl.className = 'mt-3 alert alert-danger mb-0';
+        feedbackEl.textContent = err.message || 'Something went wrong. Please email us directly at info@globalcommercecouncil.com.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = origText;
+      }
+    });
+  }
+
+  // ===========================================
   // Lazy Load Images with Fade Animation
   // ===========================================
   if ('IntersectionObserver' in window) {
