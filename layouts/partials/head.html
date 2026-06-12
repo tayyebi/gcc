@@ -102,7 +102,10 @@
   <script defer>
     document.addEventListener('DOMContentLoaded', function() {
       mermaid.initialize({ theme: 'default', securityLevel: 'loose' });
-      mermaid.run({ querySelector: '.mermaid' });
+      mermaid.run({ querySelector: '.mermaid' }).then(function() {
+        var svg = document.querySelector('#supplyChainDiagram svg');
+        if (svg) initSupplyChainPanZoom(svg);
+      });
     });
   </script>
   

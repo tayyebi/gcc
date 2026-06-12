@@ -264,6 +264,79 @@ html {
   animation: slideInRight 0.6s ease-out;
 }
 
+/* Supply Chain Diagram */
+.supply-chain-diagram {
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #fff;
+  min-height: 500px;
+  max-height: 700px;
+  position: relative;
+}
+
+.supply-chain-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 900px;
+}
+
+.supply-chain-diagram svg text {
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+.supply-chain-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.supply-chain-controls .btn {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+}
+
+.supply-chain-controls .btn i {
+  font-size: 1rem;
+}
+
+[data-theme="dark"] .supply-chain-diagram {
+  background: #1a1a1d;
+}
+
+[data-theme="dark"] .supply-chain-diagram svg .node rect {
+  fill: #2d2d30 !important;
+  stroke: #555 !important;
+}
+
+[data-theme="dark"] .supply-chain-diagram svg .node .label {
+  fill: #fff !important;
+}
+
+[data-theme="dark"] .supply-chain-diagram svg .edgePath path {
+  stroke: #777 !important;
+}
+
+[data-theme="dark"] .supply-chain-diagram svg .edgeLabel {
+  fill: #ccc !important;
+}
+
+[data-theme="dark"] .supply-chain-diagram svg .cluster rect {
+  fill: #252528 !important;
+  stroke: #444 !important;
+}
+
+[data-theme="dark"] .supply-chain-diagram svg .cluster text {
+  fill: #aaa !important;
+}
+
 /* Card Styles - Clean Surface with enhanced interactions */
 .card, .category-card {
   border: 1px solid var(--border-color);

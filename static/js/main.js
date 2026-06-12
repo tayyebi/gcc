@@ -237,3 +237,77 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, { passive: true });
 });
+
+// ===========================================
+// Supply Chain Diagram Pan / Zoom
+// ===========================================
+var _panZoom = { scale: 1, x: 0, y: 0, svg: null, dragging: false, startX: 0, startY: 0 };
+
+function initSupplyChainPanZoom(svg) {
+  _panZoom.svg = svg;
+  var container = svg.parentElement;
+
+  svg.style.transformOrigin = '0 0';
+  svg.style.cursor = 'grab';
+  svg.style.transition = 'transform 0.1s ease';
+
+  svg.addEventListener('mousedown', function(e) {
+    if (e.button !== 0) return;
+    _panZoom.dragging = true;
+    _panZoom.startX = e.clientX - _panZoom.x;
+    _panZoom.startY = e.clientY - _panZoom.y;
+    svg.style.cursor = 'grabbing';
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (!_panZoom.dragging) return;
+    _panZoom.x = e.clientX - _panZoom.startX;
+    _panZoom.y = e.clientY - _panZoom.startY;
+    applyTransform();
+  });
+
+  document.addEventListener('mouseup', function() {
+    _panZoom.dragging = false;
+    if (_panZoom.svg) _panZoom.svg.style.cursor = 'grab';
+  });
+
+  container.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = container.getBoundingClientRect();
+    var mx = e.clientX - rect.left;
+    var my = e.clientY - rect.top;
+
+    var delta = e.deltaY > 0 ? 0.9 : 1.1;
+    var newScale = Math.max(0.2, Math.min(5, _panZoom.scale * delta));
+
+    _panZoom.x = mx - (mx - _panZoom.x) * (newScale / _panZoom.scale);
+    _panZoom.y = my - (my - _panZoom.y) * (newScale / _panZoom.scale);
+    _panZoom.scale = newScale;
+    applyTransform();
+  }, { passive: false });
+}
+
+function applyTransform() {
+  if (!_panZoom.svg) return;
+  _panZoom.svg.style.transform = 'translate(' + _panZoom.x + 'px, ' + _panZoom.y + 'px) scale(' + _panZoom.scale + ')';
+}
+
+function zoomIn() {
+  if (!_panZoom.svg) return;
+  _panZoom.scale = Math.min(5, _panZoom.scale * 1.3);
+  applyTransform();
+}
+
+function zoomOut() {
+  if (!_panZoom.svg) return;
+  _panZoom.scale = Math.max(0.2, _panZoom.scale / 1.3);
+  applyTransform();
+}
+
+function resetZoom() {
+  if (!_panZoom.svg) return;
+  _panZoom.scale = 1;
+  _panZoom.x = 0;
+  _panZoom.y = 0;
+  applyTransform();
+}
