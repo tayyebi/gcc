@@ -1,2 +1,4 @@
+# Routing is handled by functions/_middleware.js
+# This file is a fallback for direct file access.
 # Root redirect to English (default language)
 / /en_us/ 301
