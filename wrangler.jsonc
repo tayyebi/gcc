@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
-  "name": "gcc",
+  "name": "globalcommercecouncil",
   "compatibility_date": "2026-02-06",
   "pages_build_output_dir": "./public",
 
   // Email binding for the contact form function.
   // In production, configure this in Cloudflare Dashboard instead:
-  //   Pages → gcc → Settings → Functions → Add binding
+  //   Pages → globalcommercecouncil → Settings → Functions → Add binding
   //   Type: Send Email | Name: SEND_EMAIL
   //   Allowed destination addresses: info@globalcommercecouncil.com
   //
