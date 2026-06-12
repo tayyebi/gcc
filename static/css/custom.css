@@ -115,12 +115,10 @@ html {
   border-radius: 2px;
 }
 
-.nav-link:hover::after,
 .nav-link.active::after {
   width: 20px;
 }
 
-.nav-link:hover,
 .nav-link.active {
   color: var(--primary) !important;
 }
@@ -747,12 +745,12 @@ a {
   transition: color var(--transition-base) ease;
 }
 
-a:not(.btn):not(.navbar-brand):not(.nav-link) {
+a:not(.btn):not(.navbar-brand):not(.nav-link):not(.text-white) {
   color: var(--primary);
   text-decoration: none;
 }
 
-a:not(.btn):not(.navbar-brand):not(.nav-link):hover {
+a:not(.btn):not(.navbar-brand):not(.nav-link):not(.text-white):hover {
   color: var(--primary-dark);
   text-decoration: underline;
 }
@@ -1005,13 +1003,13 @@ a:not(.btn):not(.navbar-brand):not(.nav-link):hover {
   color: var(--text-primary) !important;
 }
 
-[data-theme="dark"] a,
-[data-bs-theme="dark"] a {
+[data-theme="dark"] a:not(.text-white),
+[data-bs-theme="dark"] a:not(.text-white) {
   color: var(--primary-light);
 }
 
-[data-theme="dark"] a:hover,
-[data-bs-theme="dark"] a:hover {
+[data-theme="dark"] a:not(.text-white):hover,
+[data-bs-theme="dark"] a:not(.text-white):hover {
   color: #90CAF9;
 }
 

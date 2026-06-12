@@ -100,7 +100,10 @@
   <!-- Mermaid Diagram Support -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
   <script defer>
-    window.mermaidConfig = { startOnLoad: true, theme: 'default', securityLevel: 'loose' };
+    document.addEventListener('DOMContentLoaded', function() {
+      mermaid.initialize({ theme: 'default', securityLevel: 'loose' });
+      mermaid.run({ querySelector: '.mermaid' });
+    });
   </script>
   
   <!-- Structured Data -->
