@@ -36,8 +36,9 @@
       
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
+          {{ $currentPage := .Page }}
           <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle link-underline" href="/products/" id="megaProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Products</a>
+            <a class="nav-link dropdown-toggle link-underline{{ if or (eq $currentPage.RelPermalink "/products/") (hasPrefix $currentPage.RelPermalink "/products/") }} active{{ end }}" href="/products/" id="megaProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Products</a>
             <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaProducts">
               <div class="row g-4">
                 <div class="col-md-4">
@@ -76,7 +77,7 @@
           </li>
 
           <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle link-underline" href="/knowledge-base/" id="megaKnowledge" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Knowledge Base</a>
+            <a class="nav-link dropdown-toggle link-underline{{ if or (eq $currentPage.RelPermalink "/knowledge-base/") (hasPrefix $currentPage.RelPermalink "/knowledge-base/") }} active{{ end }}" href="/knowledge-base/" id="megaKnowledge" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Knowledge Base</a>
             <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaKnowledge">
               <div class="row g-4">
                 <div class="col-md-4">
@@ -126,7 +127,7 @@
           </li>
 
           <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle link-underline" href="/tools/" id="megaTools" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Tools</a>
+            <a class="nav-link dropdown-toggle link-underline{{ if or (eq $currentPage.RelPermalink "/tools/") (hasPrefix $currentPage.RelPermalink "/tools/") }} active{{ end }}" href="/tools/" id="megaTools" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Tools</a>
             <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaTools">
               <div class="row g-4">
                 <div class="col-md-6">
@@ -147,7 +148,7 @@
           </li>
 
           <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle link-underline" href="/country-guides/" id="megaCountryGuides" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Country Guides</a>
+            <a class="nav-link dropdown-toggle link-underline{{ if or (eq $currentPage.RelPermalink "/country-guides/") (hasPrefix $currentPage.RelPermalink "/country-guides/") }} active{{ end }}" href="/country-guides/" id="megaCountryGuides" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-animate="fade-in">Country Guides</a>
             <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="megaCountryGuides">
               <div class="row g-4">
                 <div class="col-md-12">
@@ -163,16 +164,16 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link link-underline" href="/supply-chain/" data-animate="fade-in">Supply Chain</a>
+            <a class="nav-link link-underline{{ if or (eq $currentPage.RelPermalink "/supply-chain/") (hasPrefix $currentPage.RelPermalink "/supply-chain/") }} active{{ end }}" href="/supply-chain/" data-animate="fade-in">Supply Chain</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-underline" href="/about/" data-animate="fade-in">About Us</a>
+            <a class="nav-link link-underline{{ if or (eq $currentPage.RelPermalink "/about/") (hasPrefix $currentPage.RelPermalink "/about/") }} active{{ end }}" href="/about/" data-animate="fade-in">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-underline" href="/suppliers/" data-animate="fade-in">Suppliers</a>
+            <a class="nav-link link-underline{{ if or (eq $currentPage.RelPermalink "/suppliers/") (hasPrefix $currentPage.RelPermalink "/suppliers/") }} active{{ end }}" href="/suppliers/" data-animate="fade-in">Suppliers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-underline" href="/contact/" data-animate="fade-in">Contact</a>
+            <a class="nav-link link-underline{{ if or (eq $currentPage.RelPermalink "/contact/") (hasPrefix $currentPage.RelPermalink "/contact/") }} active{{ end }}" href="/contact/" data-animate="fade-in">Contact</a>
           </li>
         </ul>
       </div>

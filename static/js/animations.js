@@ -382,7 +382,6 @@ document.addEventListener('DOMContentLoaded', () => {
   animationManager.observe('[data-animate]');
   
   // Setup interaction managers
-  InteractionManager.addHoverLift('.card, .category-card');
   InteractionManager.addRippleEffect('.btn');
   InteractionManager.addSmoothScroll('a[href^="#"]');
   InteractionManager.animateInputFocus('.form-control');
