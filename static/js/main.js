@@ -35,10 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     lastScrollTop = scrollTop;
   };
   
-  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
-  
   // ===========================================
-  // Theme Management with Smooth Transition
+  // Theme Management
   // ===========================================
   const themeBtns = document.querySelectorAll('.theme-btn');
   const storedTheme = localStorage.getItem('theme');
@@ -46,20 +44,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const setTheme = (theme) => {
     const htmlElement = document.documentElement;
     
-    // Add transition for smooth color change
-    htmlElement.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-    
     if (theme === 'auto' || !theme) {
-      // Respect system preference
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      htmlElement.removeAttribute('data-theme');
       if (prefersDark) {
+        htmlElement.setAttribute('data-theme', 'dark');
         htmlElement.setAttribute('data-bs-theme', 'dark');
       } else {
+        htmlElement.removeAttribute('data-theme');
         htmlElement.removeAttribute('data-bs-theme');
       }
     } else {
-      // Force user-selected theme
       htmlElement.setAttribute('data-theme', theme);
       htmlElement.setAttribute('data-bs-theme', theme);
     }
@@ -84,11 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
-  // Initial set on page load
-  const initialTheme = storedTheme || 'auto';
-  setTheme(initialTheme);
-
-  // Event Listeners for theme buttons
+  // Event Listeners for theme buttons (initial state already set by blocking <head> script)
   themeBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
