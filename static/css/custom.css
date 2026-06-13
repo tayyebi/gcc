@@ -409,6 +409,10 @@ html {
 }
 
 /* --- Mega Menu (desktop) --- */
+.has-mega {
+  position: static;
+}
+
 .mega-menu {
   display: none;
   position: absolute;
