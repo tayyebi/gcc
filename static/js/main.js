@@ -247,33 +247,57 @@ document.addEventListener('DOMContentLoaded', function() {
   updateThemeButtons(initialTheme);
 
   // ===========================================
-  // Mega Menu Keyboard Accessibility
+  // Mega Menu Hover + Keyboard
   // ===========================================
   var megaItems = document.querySelectorAll('.has-mega');
   megaItems.forEach(function(item) {
     var trigger = item.querySelector('.nav-link');
     var mega = item.querySelector('.mega-menu');
+    var closeTimer = null;
 
-    if (trigger && mega) {
-      trigger.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          var isOpen = item.classList.contains('is-open');
-          item.classList.toggle('is-open', !isOpen);
-          trigger.setAttribute('aria-expanded', !isOpen);
-        }
-        if (e.key === 'Escape') {
-          item.classList.remove('is-open');
-          trigger.setAttribute('aria-expanded', 'false');
-          trigger.focus();
-        }
-      });
+    if (!trigger || !mega) return;
 
-      item.addEventListener('mouseleave', function() {
+    // Desktop: open on mouseenter with delay
+    item.addEventListener('mouseenter', function() {
+      clearTimeout(closeTimer);
+      item.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+    });
+
+    // Desktop: close on mouseleave with delay (allows moving to mega)
+    item.addEventListener('mouseleave', function() {
+      closeTimer = setTimeout(function() {
         item.classList.remove('is-open');
         trigger.setAttribute('aria-expanded', 'false');
-      });
-    }
+      }, 150);
+    });
+
+    // Keep open while hovering the mega menu itself
+    mega.addEventListener('mouseenter', function() {
+      clearTimeout(closeTimer);
+    });
+
+    mega.addEventListener('mouseleave', function() {
+      closeTimer = setTimeout(function() {
+        item.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }, 150);
+    });
+
+    // Keyboard: toggle on Enter/Space
+    trigger.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        var isOpen = item.classList.contains('is-open');
+        item.classList.toggle('is-open', !isOpen);
+        trigger.setAttribute('aria-expanded', !isOpen);
+      }
+      if (e.key === 'Escape') {
+        item.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.focus();
+      }
+    });
   });
 
   // ===========================================
