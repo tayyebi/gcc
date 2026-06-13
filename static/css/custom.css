@@ -63,6 +63,43 @@ html {
    SITE HEADER - Mobile-First, Single Source of Truth
    ========================================= */
 
+/* Override global * transition for header components - these need specific transitions */
+.site-header,
+.site-header *,
+.site-header *::before,
+.site-header *::after {
+  transition-property: none !important;
+  transition-duration: 0ms !important;
+}
+
+.site-header .utility-btn,
+.site-header .lang-chevron,
+.site-header .nav-link,
+.site-header .nav-cta,
+.site-header .mega-link,
+.site-header .mega-all-link,
+.site-header .hamburger-line,
+.site-header .mobile-nav-link,
+.site-header .mobile-sub-link,
+.site-header .mobile-theme-btn,
+.site-header .mobile-close,
+.site-header .search-submit,
+.site-header .search-close {
+  transition-property: background-color, color, border-color, box-shadow, transform, opacity !important;
+  transition-duration: var(--transition-fast) !important;
+  transition-timing-function: ease-in-out !important;
+}
+
+.site-header .mobile-overlay {
+  transition-property: transform !important;
+  transition-duration: 0.3s !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.site-header .mega-menu {
+  transition: none !important;
+}
+
 /* --- Utility Bar --- */
 .utility-bar {
   background: var(--primary);
