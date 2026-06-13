@@ -12,7 +12,7 @@
   
   <!-- Hreflang alternate links -->
   {{ range .AllTranslations }}
-  <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+  <link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">
   {{ end }}
   <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}">
   
@@ -62,7 +62,7 @@
     {{ end }}
   {{ end }}
   <meta property="og:site_name" content="{{ .Site.Title }}">
-  <meta property="og:locale" content="{{ replace .Language.LanguageCode "-" "_" }}">
+  <meta property="og:locale" content="{{ replace .Language.Locale "-" "_" }}">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="{{ .Site.Params.seo.twitter_card }}">

@@ -159,20 +159,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ===========================================
-  // Enhanced Navbar Scroll Shadow
-  // ===========================================
-  const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 50) {
-        navbar.classList.add('shadow', 'scrolled');
-      } else {
-        navbar.classList.remove('shadow', 'scrolled');
-      }
-    }, { passive: true });
-  }
-
-  // ===========================================
   // Form Input Focus States
   // ===========================================
   const formInputs = document.querySelectorAll('.form-control, .form-select, input, textarea, select');

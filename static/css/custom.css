@@ -73,6 +73,10 @@ html {
   padding-bottom: 0.5rem !important;
 }
 
+.header-custom.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
 .navbar-brand {
   color: var(--primary) !important;
   font-weight: 700;
@@ -100,40 +104,27 @@ html {
   font-weight: 600;
 }
 
-/* Dropdown / Mega Menu */
+/* Dropdown / Simple Nav */
 .navbar .dropdown-menu {
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0 12px 40px rgba(0,0,0,0.1);
   background: var(--bg-surface);
-  margin-top: 0;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
 }
 
-.dropdown-header {
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-tertiary);
-  padding: 0 0 0.5rem;
-  margin-bottom: 0.25rem;
-}
-
-.dropdown-mega .dropdown-item {
-  padding: 0.35rem 0;
-  font-size: 0.9rem;
+.navbar .dropdown-menu .dropdown-item {
+  padding: 0.45rem 0.75rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
-  background: transparent;
+  border-radius: 0.25rem;
+  transition: all 0.15s ease;
 }
 
-.dropdown-mega .dropdown-item:hover {
+.navbar .dropdown-menu .dropdown-item:hover {
   color: var(--primary);
-  background: transparent;
-}
-
-.dropdown-mega .border-start {
-  border-color: var(--border-color) !important;
+  background: var(--bg-surface-secondary);
 }
 
 @media (max-width: 991.98px) {
@@ -148,22 +139,10 @@ html {
     margin: 0;
     background: transparent;
     border-radius: 0;
+    border: none;
   }
 
-  .dropdown-mega {
-    min-width: 100% !important;
-  }
-
-  .dropdown-mega .border-start {
-    border-left: none !important;
-  }
-
-  .dropdown-header {
-    padding: 0.75rem 0 0.25rem;
-    font-size: 0.75rem;
-  }
-
-  .dropdown-mega .dropdown-item {
+  .navbar .dropdown-menu .dropdown-item {
     padding: 0.4rem 0;
     font-size: 0.875rem;
   }

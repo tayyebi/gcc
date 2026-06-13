@@ -1,27 +1,26 @@
-<header class="sticky-top header-custom" id="mainHeader">
+<header class="header-custom" id="mainHeader">
   <div class="bg-primary text-white py-2 transition-colors">
     <div class="container">
       <div class="d-flex align-items-center justify-content-between gap-3">
-        <a href="mailto:{{ .Site.Params.globals.email.main }}" class="text-white text-decoration-none" style="font-size: 0.85rem; white-space: nowrap;" title="Send email">
-          {{ .Site.Params.globals.email.main }}
+        <a href="mailto:{{ .Site.Params.globals.email.main }}" class="text-white text-decoration-none small" title="Send email">
+          <i class="bi bi-envelope-fill me-1"></i>{{ .Site.Params.globals.email.main }}
         </a>
         <form class="d-flex" role="search" id="searchForm" style="min-width: 0;">
-          <div class="input-group input-group-sm transition-base" style="max-width: 280px;">
+          <div class="input-group input-group-sm transition-base" style="max-width: 260px;">
             <input class="form-control form-control-sm border-0" type="search" placeholder='{{ i18n "search_placeholder" }}' aria-label='{{ i18n "search_placeholder" }}' id="searchInput" style="font-size: 0.8rem; padding: 0.25rem 0.5rem; height: auto;">
             <button class="btn btn-outline-light icon-hover-bounce" type="submit" title='{{ i18n "search_placeholder" }}' style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">
               <i class="bi bi-search"></i>
             </button>
           </div>
         </form>
-
-        <!-- Language Switcher -->
-        <div class="dropdown d-inline-block ms-2">
-          <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.8rem; padding: 0.25rem 0.5rem;">
+        <div class="dropdown d-inline-block">
+          <button class="btn btn-outline-light btn-sm dropdown-toggle d-flex align-items-center gap-1" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.8rem; padding: 0.25rem 0.5rem;">
             <i class="bi bi-globe"></i>
+            <span class="d-none d-sm-inline">{{ .Language.Label }}</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm" style="min-width: 160px;">
             {{ range $.Site.Home.AllTranslations }}
-            <li><a class="dropdown-item small {{ if eq .Language $.Language }}active disabled{{ end }}" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+            <li><a class="dropdown-item small {{ if eq .Language $.Language }}active disabled{{ end }}" href="{{ .Permalink }}">{{ .Language.Label }}</a></li>
             {{ end }}
           </ul>
         </div>
@@ -29,167 +28,78 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-expand-lg py-3 transition-smooth">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand fw-bold fs-4 d-flex align-items-center transition-smooth" href="{{ "/" | relLangURL }}" title="{{ .Site.Params.globals.name }}" style="gap: 0.75rem;">
-        <img src="/images/logo.svg" alt="{{ .Site.Params.globals.logo.alt }}" width="48" height="48" loading="eager" style="transition: transform var(--transition-base) ease;" class="icon-hover-pulse">
-        <span class="d-none d-sm-inline" style="font-size: 1.1rem; font-weight: 600;">{{ .Site.Params.globals.name }}</span>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="{{ "/" | relLangURL }}" title="{{ .Site.Params.globals.name }}">
+        <img src="/images/logo.svg" alt="{{ .Site.Params.globals.logo.alt }}" width="40" height="40" loading="eager">
+        <span class="fw-bold" style="font-size: 1.05rem;">{{ .Site.Params.globals.name }}</span>
       </a>
 
-      <button class="navbar-toggler transition-base" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
           {{ $currentPage := .Page }}
 
+          {{ with .Site.GetPage "/products" }}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle{{ if in $currentPage.RelPermalink "/products/" }} active{{ end }}" href="{{ "/products/" | relLangURL }}" id="megaProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle{{ if in $currentPage.RelPermalink "/products/" }} active{{ end }}" href="{{ .RelPermalink }}" id="navProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{ i18n "nav_products" }}
             </a>
-            <div class="dropdown-menu dropdown-mega p-0 w-100" aria-labelledby="megaProducts">
-              <div class="row g-0">
-                <div class="col-lg-4">
-                  <div class="p-3">
-                    <h6 class="dropdown-header">{{ i18n "mega_categories" }}</h6>
-                    <a class="dropdown-item" href="{{ "/categories/ceramics/" | relLangURL }}">{{ i18n "mega_ceramics" }}</a>
-                    <a class="dropdown-item" href="{{ "/categories/gypsum/" | relLangURL }}">{{ i18n "mega_gypsum" }}</a>
-                    <a class="dropdown-item" href="{{ "/categories/petroleum/" | relLangURL }}">{{ i18n "mega_petroleum" }}</a>
-                    <a class="dropdown-item" href="{{ "/categories/other/" | relLangURL }}">{{ i18n "mega_other_industries" }}</a>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="p-3 border-start">
-                    <h6 class="dropdown-header">{{ i18n "mega_energy_petro" }}</h6>
-                    <a class="dropdown-item" href="{{ "/products/crude-oil-brent/" | relLangURL }}">Crude Oil (Brent)</a>
-                    <a class="dropdown-item" href="{{ "/products/premium-diesel/" | relLangURL }}">Premium Diesel</a>
-                    <a class="dropdown-item" href="{{ "/products/marine-fuel-oil/" | relLangURL }}">Marine Fuel Oil</a>
-                    <a class="dropdown-item" href="{{ "/products/petroleum-naphtha/" | relLangURL }}">Petroleum Naphtha</a>
-                    <a class="dropdown-item" href="{{ "/products/bitumen-60-70/" | relLangURL }}">Bitumen 60/70</a>
-                    <a class="dropdown-item" href="{{ "/products/white-spirit-solvent-402/" | relLangURL }}">White Spirit 402</a>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="p-3 border-start">
-                    <h6 class="dropdown-header">{{ i18n "mega_construction" }}</h6>
-                    <a class="dropdown-item" href="{{ "/products/standard-gypsum-wallboard/" | relLangURL }}">Standard Gypsum Wallboard</a>
-                    <a class="dropdown-item" href="{{ "/products/fire-resistant-gypsum-board/" | relLangURL }}">Fire-Resistant Gypsum Board</a>
-                    <a class="dropdown-item" href="{{ "/products/moisture-resistant-gypsum-board/" | relLangURL }}">Moisture-Resistant Gypsum Board</a>
-                    <a class="dropdown-item" href="{{ "/products/premium-porcelain-tiles/" | relLangURL }}">Premium Porcelain Tiles</a>
-                    <a class="dropdown-item" href="{{ "/products/decorative-wall-tiles/" | relLangURL }}">Decorative Wall Tiles</a>
-                    <a class="dropdown-item" href="{{ "/products/unglazed-floor-tiles/" | relLangURL }}">Unglazed Floor Tiles</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 rounded-3 py-2" aria-labelledby="navProducts" style="min-width: 200px;">
+              <li><a class="dropdown-item rounded-1" href="{{ "/categories/ceramics/" | relLangURL }}">{{ i18n "mega_ceramics" }}</a></li>
+              <li><a class="dropdown-item rounded-1" href="{{ "/categories/gypsum/" | relLangURL }}">{{ i18n "mega_gypsum" }}</a></li>
+              <li><a class="dropdown-item rounded-1" href="{{ "/categories/petroleum/" | relLangURL }}">{{ i18n "mega_petroleum" }}</a></li>
+              <li><a class="dropdown-item rounded-1" href="{{ "/categories/other/" | relLangURL }}">{{ i18n "mega_other_industries" }}</a></li>
+              <li><hr class="dropdown-divider my-1"></li>
+              <li><a class="dropdown-item rounded-1 fw-medium" href="{{ "/products/" | relLangURL }}">{{ i18n "nav_products" }} →</a></li>
+            </ul>
           </li>
+          {{ end }}
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle{{ if in $currentPage.RelPermalink "/knowledge-base/" }} active{{ end }}" href="{{ "/knowledge-base/" | relLangURL }}" id="megaKnowledge" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {{ i18n "nav_knowledge_base" }}
-            </a>
-            <div class="dropdown-menu dropdown-mega p-0 w-100" aria-labelledby="megaKnowledge">
-              <div class="row g-0">
-                <div class="col-lg-4">
-                  <div class="p-3">
-                    <h6 class="dropdown-header">{{ i18n "mega_intl_trade" }}</h6>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#import-export-fundamentals" | relLangURL }}">Import & Export Fundamentals</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#trade-documentation-compliance" | relLangURL }}">Trade Documentation & Compliance</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#market-research-strategy" | relLangURL }}">Market Research & Strategy</a>
-                  </div>
-                  <div class="p-3 pt-0">
-                    <h6 class="dropdown-header">{{ i18n "mega_logistics" }}</h6>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#transportation-freight-forwarding" | relLangURL }}">Transportation & Freight Forwarding</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#warehousing-inventory-management" | relLangURL }}">Warehousing & Inventory Management</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#supply-chain-optimization" | relLangURL }}">Supply Chain Optimization</a>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="p-3 border-start">
-                    <h6 class="dropdown-header">{{ i18n "mega_trade_finance" }}</h6>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#letters-of-credit-payment-terms" | relLangURL }}">Letters of Credit & Payment Terms</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#currency-risk-management" | relLangURL }}">Currency & Risk Management</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#trade-insurance" | relLangURL }}">Trade Insurance</a>
-                  </div>
-                  <div class="p-3 pt-0 border-start">
-                    <h6 class="dropdown-header">{{ i18n "mega_law_compliance" }}</h6>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#international-trade-law" | relLangURL }}">International Trade Law</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#customs-tariffs" | relLangURL }}">Customs & Tariffs</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#sanctions-restricted-markets" | relLangURL }}">Sanctions & Restricted Markets</a>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="p-3 border-start">
-                    <h6 class="dropdown-header">{{ i18n "mega_marketing" }}</h6>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#global-market-entry" | relLangURL }}">Global Market Entry</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#cross-border-marketing" | relLangURL }}">Cross-Border Marketing</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#branding-negotiation-tactics" | relLangURL }}">Branding & Negotiation Tactics</a>
-                  </div>
-                  <div class="p-3 pt-0 border-start">
-                    <h6 class="dropdown-header">{{ i18n "mega_ecommerce" }}</h6>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#b2b-marketplaces" | relLangURL }}">B2B Marketplaces</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#ecommerce-logistics" | relLangURL }}">E-commerce Logistics</a>
-                    <a class="dropdown-item" href="{{ "/knowledge-base/#digital-payment-systems" | relLangURL }}">Digital Payment Systems</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {{ with .Site.GetPage "/knowledge-base" }}
+          <li class="nav-item">
+            <a class="nav-link{{ if in $currentPage.RelPermalink "/knowledge-base/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_knowledge_base" }}</a>
           </li>
+          {{ end }}
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle{{ if in $currentPage.RelPermalink "/tools/" }} active{{ end }}" href="{{ "/tools/" | relLangURL }}" id="megaTools" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {{ i18n "nav_tools" }}
-            </a>
-            <div class="dropdown-menu dropdown-mega p-0 w-100" aria-labelledby="megaTools">
-              <div class="row g-0">
-                <div class="col-lg-6">
-                  <div class="p-3">
-                    <h6 class="dropdown-header">{{ i18n "mega_trade_utilities" }}</h6>
-                    <a class="dropdown-item" href="{{ "/tools/#trade-cost-calculator" | relLangURL }}">Trade Cost Calculator</a>
-                    <a class="dropdown-item" href="{{ "/tools/#document-templates" | relLangURL }}">Document Templates (Invoice, Packing List, LC)</a>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="p-3 border-start">
-                    <h6 class="dropdown-header">{{ i18n "mega_lookup_tools" }}</h6>
-                    <a class="dropdown-item" href="{{ "/tools/#hs-code-incoterms-lookup" | relLangURL }}">HS Code & Incoterms Lookup</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {{ with .Site.GetPage "/tools" }}
+          <li class="nav-item">
+            <a class="nav-link{{ if in $currentPage.RelPermalink "/tools/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_tools" }}</a>
           </li>
+          {{ end }}
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle{{ if in $currentPage.RelPermalink "/country-guides/" }} active{{ end }}" href="{{ "/country-guides/" | relLangURL }}" id="megaCountryGuides" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {{ i18n "nav_country_guides" }}
-            </a>
-            <div class="dropdown-menu dropdown-mega p-0 w-100" aria-labelledby="megaCountryGuides">
-              <div class="row g-0">
-                <div class="col-lg-12">
-                  <div class="p-3">
-                    <h6 class="dropdown-header">{{ i18n "mega_country_guides" }}</h6>
-                    <a class="dropdown-item" href="{{ "/country-guides/#exporting-to-usa-eu-china-middle-east" | relLangURL }}">Exporting to USA, EU, China, Middle East</a>
-                    <a class="dropdown-item" href="{{ "/country-guides/#importing-from-middle-east" | relLangURL }}">Importing from Middle East</a>
-                    <a class="dropdown-item" href="{{ "/country-guides/#sanctions-sensitive-markets" | relLangURL }}">Sanctions-Sensitive Markets</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {{ with .Site.GetPage "/country-guides" }}
+          <li class="nav-item">
+            <a class="nav-link{{ if in $currentPage.RelPermalink "/country-guides/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_country_guides" }}</a>
           </li>
+          {{ end }}
 
+          {{ with .Site.GetPage "/supply-chain" }}
           <li class="nav-item">
-            <a class="nav-link{{ if in $currentPage.RelPermalink "/supply-chain/" }} active{{ end }}" href="{{ "/supply-chain/" | relLangURL }}">{{ i18n "nav_supply_chain" }}</a>
+            <a class="nav-link{{ if in $currentPage.RelPermalink "/supply-chain/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_supply_chain" }}</a>
           </li>
+          {{ end }}
+
+          {{ with .Site.GetPage "/about" }}
           <li class="nav-item">
-            <a class="nav-link{{ if in $currentPage.RelPermalink "/about/" }} active{{ end }}" href="{{ "/about/" | relLangURL }}">{{ i18n "nav_about" }}</a>
+            <a class="nav-link{{ if in $currentPage.RelPermalink "/about/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_about" }}</a>
           </li>
+          {{ end }}
+
+          {{ with .Site.GetPage "/suppliers" }}
           <li class="nav-item">
-            <a class="nav-link{{ if in $currentPage.RelPermalink "/suppliers/" }} active{{ end }}" href="{{ "/suppliers/" | relLangURL }}">{{ i18n "nav_suppliers" }}</a>
+            <a class="nav-link{{ if in $currentPage.RelPermalink "/suppliers/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_suppliers" }}</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link{{ if in $currentPage.RelPermalink "/contact/" }} active{{ end }}" href="{{ "/contact/" | relLangURL }}">{{ i18n "nav_contact" }}</a>
+          {{ end }}
+
+          {{ with .Site.GetPage "/contact" }}
+          <li class="nav-item ms-lg-2">
+            <a class="nav-link btn btn-primary btn-sm text-white px-3 rounded-pill{{ if in $currentPage.RelPermalink "/contact/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_contact" }}</a>
           </li>
+          {{ end }}
         </ul>
       </div>
     </div>
