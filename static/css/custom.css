@@ -1,15 +1,15 @@
-/* =========================================
-   CUSTOM.CSS — Project-Specific Styles
+/* ============================================================
+   CUSTOM.CSS — Oil & Petroleum Design System
    Imports: design-tokens.css, animations.css
    All values from tokens. Zero inline styles.
-   ========================================= */
+   ============================================================ */
 
 @import url('design-tokens.css');
 @import url('animations.css');
 
-/* =========================================
-   GLOBAL RESETS & BASE
-   ========================================= */
+/* ============================================================
+   1. GLOBAL RESET & BASE
+   ============================================================ */
 
 html {
   scroll-behavior: smooth;
@@ -62,10 +62,16 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   color: var(--primary);
 }
 
-/* =========================================
-   SITE HEADER
-   Scoped transition overrides
-   ========================================= */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   2. SITE HEADER
+   ============================================================ */
+
+/* --- Scoped Transition Overrides --- */
 
 .site-header,
 .site-header *,
@@ -128,13 +134,8 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   gap: var(--space-1);
 }
 
-.utility-email span {
-  opacity: 0.9;
-}
-
-.utility-email:hover span {
-  opacity: 1;
-}
+.utility-email span { opacity: 0.9; }
+.utility-email:hover span { opacity: 1; }
 
 .utility-actions {
   display: flex;
@@ -156,17 +157,12 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   background: rgba(255, 255, 255, 0.15);
 }
 
-.lang-label {
-  display: none;
-}
+/* --- Language Dropdown --- */
 
-.lang-chevron {
-  font-size: 0.65rem;
-}
+.lang-label { display: none; }
+.lang-chevron { font-size: 0.65rem; }
 
-.utility-dropdown {
-  position: relative;
-}
+.utility-dropdown { position: relative; }
 
 .utility-dropdown .dropdown-panel {
   display: none;
@@ -189,13 +185,8 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   left: 0;
 }
 
-.utility-dropdown.is-open .dropdown-panel {
-  display: block;
-}
-
-.utility-dropdown.is-open .lang-chevron {
-  transform: rotate(180deg);
-}
+.utility-dropdown.is-open .dropdown-panel { display: block; }
+.utility-dropdown.is-open .lang-chevron { transform: rotate(180deg); }
 
 .dropdown-entry {
   display: block;
@@ -222,9 +213,7 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   padding: var(--space-3) 0;
 }
 
-.search-overlay.is-open {
-  display: block;
-}
+.search-overlay.is-open { display: block; }
 
 .search-form {
   display: flex;
@@ -303,10 +292,7 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   flex-shrink: 0;
 }
 
-.nav-logo img {
-  width: 36px;
-  height: 36px;
-}
+.nav-logo img { width: 36px; height: 36px; }
 
 .nav-logo-text {
   font-family: var(--font-heading);
@@ -325,9 +311,7 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   gap: var(--space-1);
 }
 
-.nav-item {
-  position: relative;
-}
+.nav-item { position: relative; }
 
 .nav-link {
   display: flex;
@@ -353,9 +337,7 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   font-weight: var(--font-semibold);
 }
 
-.nav-chevron {
-  font-size: 0.6rem;
-}
+.nav-chevron { font-size: 0.6rem; }
 
 .nav-cta {
   background: var(--primary);
@@ -409,9 +391,7 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
 
 /* --- Mega Menu --- */
 
-.has-mega {
-  position: static;
-}
+.has-mega { position: static; }
 
 .mega-menu {
   display: none;
@@ -431,9 +411,7 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   right: 0;
 }
 
-.has-mega.is-open .mega-menu {
-  display: block;
-}
+.has-mega.is-open .mega-menu { display: block; }
 
 .mega-grid {
   display: grid;
@@ -563,6 +541,8 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   overflow-y: auto;
 }
 
+/* --- Mobile Search --- */
+
 .mobile-search {
   position: relative;
   margin-bottom: var(--space-6);
@@ -601,6 +581,8 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   border-color: var(--primary);
   box-shadow: var(--focus-ring);
 }
+
+/* --- Mobile Navigation --- */
 
 .mobile-nav-list {
   list-style: none;
@@ -674,6 +656,8 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   border-color: var(--primary);
 }
 
+/* --- Mobile Overlay Footer --- */
+
 .mobile-overlay-footer {
   padding: var(--space-4) var(--space-5);
   border-top: 1px solid var(--border-color);
@@ -742,35 +726,9 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   border-color: var(--primary);
 }
 
-/* --- Desktop Breakpoint --- */
-
-@media (min-width: 992px) {
-  .utility-email {
-    display: flex;
-  }
-
-  .lang-label {
-    display: inline;
-  }
-
-  .nav-links {
-    display: flex;
-  }
-
-  .nav-hamburger {
-    display: none;
-  }
-
-  .nav-inner {
-    height: auto;
-    padding-top: var(--space-2);
-    padding-bottom: var(--space-2);
-  }
-}
-
-/* =========================================
-   HERO SECTION
-   ========================================= */
+/* ============================================================
+   3. HERO SECTION
+   ============================================================ */
 
 .hero-section {
   background: var(--gradient-crude-flow);
@@ -810,11 +768,12 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   max-width: 600px;
 }
 
-/* =========================================
-   CARDS
-   ========================================= */
+/* ============================================================
+   4. CARDS
+   ============================================================ */
 
-.card, .category-card {
+.card,
+.category-card {
   border: var(--card-border-width) solid var(--border-color);
   background: var(--bg-surface);
   border-radius: var(--card-border-radius);
@@ -824,7 +783,8 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
               border-color var(--duration-base) var(--ease-standard);
 }
 
-.card:hover, .category-card:hover {
+.card:hover,
+.category-card:hover {
   box-shadow: var(--shadow-lg);
   border-color: var(--primary);
 }
@@ -842,9 +802,9 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   color: var(--primary);
 }
 
-/* =========================================
-   BUTTONS
-   ========================================= */
+/* ============================================================
+   5. BUTTONS
+   ============================================================ */
 
 .btn {
   font-family: var(--font-body);
@@ -935,9 +895,9 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   font-size: var(--text-base);
 }
 
-/* =========================================
-   FORMS
-   ========================================= */
+/* ============================================================
+   6. FORMS
+   ============================================================ */
 
 .form-control {
   border: 1px solid var(--input-border);
@@ -961,14 +921,9 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   opacity: 0.6;
 }
 
-:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-/* =========================================
-   SUPPLY CHAIN DIAGRAM
-   ========================================= */
+/* ============================================================
+   7. SUPPLY CHAIN DIAGRAM
+   ============================================================ */
 
 .supply-chain-diagram {
   border: 1px solid var(--border-color);
@@ -1038,9 +993,9 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   fill: var(--color-steel-light) !important;
 }
 
-/* =========================================
-   CONTENT
-   ========================================= */
+/* ============================================================
+   8. CONTENT & COMPONENTS
+   ============================================================ */
 
 .content {
   font-size: var(--text-md);
@@ -1056,18 +1011,14 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   box-shadow: var(--shadow-md);
 }
 
-/* =========================================
-   BADGES
-   ========================================= */
+/* --- Badges --- */
 
 .badge {
   font-weight: var(--font-semibold);
   letter-spacing: var(--tracking-wide);
 }
 
-/* =========================================
-   STATS
-   ========================================= */
+/* --- Stats --- */
 
 .stat-mini {
   padding: var(--space-4);
@@ -1079,9 +1030,7 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   margin-bottom: var(--space-1);
 }
 
-/* =========================================
-   FEATURES
-   ========================================= */
+/* --- Feature List --- */
 
 .feature-list .d-flex {
   padding: var(--space-4);
@@ -1107,9 +1056,7 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   box-shadow: var(--shadow-sm);
 }
 
-/* =========================================
-   CTA SECTION
-   ========================================= */
+/* --- CTA Section --- */
 
 .cta-section {
   background: var(--gradient-steel);
@@ -1165,9 +1112,11 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   font-weight: var(--font-semibold);
 }
 
-/* =========================================
-   SITE FOOTER
-   ========================================= */
+/* ============================================================
+   9. SITE FOOTER
+   ============================================================ */
+
+/* --- Scoped Transition Overrides --- */
 
 .site-footer,
 .site-footer *,
@@ -1183,6 +1132,8 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   transition-duration: var(--duration-fast) !important;
   transition-timing-function: var(--ease-standard) !important;
 }
+
+/* --- Footer Base --- */
 
 .site-footer {
   background: var(--color-crude-deep);
@@ -1201,6 +1152,8 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
 .site-footer a:hover {
   color: var(--color-white);
 }
+
+/* --- Footer Top --- */
 
 .footer-top {
   display: grid;
@@ -1228,10 +1181,7 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   width: fit-content;
 }
 
-.footer-logo img {
-  width: 28px;
-  height: 28px;
-}
+.footer-logo img { width: 28px; height: 28px; }
 
 .footer-tagline {
   color: var(--color-steel-mid);
@@ -1261,6 +1211,8 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   background: var(--primary);
   color: var(--text-inverse);
 }
+
+/* --- Footer Newsletter --- */
 
 .footer-newsletter {
   display: flex;
@@ -1303,6 +1255,12 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   min-width: 0;
 }
 
+[dir="rtl"] .footer-input {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: none;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
 .footer-input::placeholder {
   color: var(--color-steel-mid);
 }
@@ -1326,9 +1284,15 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   font-size: 1rem;
 }
 
+[dir="rtl"] .footer-btn {
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
 .footer-btn:hover {
   background: var(--primary-dark);
 }
+
+/* --- Footer Links --- */
 
 .footer-links {
   display: grid;
@@ -1364,6 +1328,11 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   padding-left: 4px;
 }
 
+[dir="rtl"] .footer-list a:hover {
+  padding-left: 0;
+  padding-right: 4px;
+}
+
 .footer-contact li {
   display: flex;
   align-items: center;
@@ -1374,6 +1343,8 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   color: var(--color-steel-mid);
   font-size: 0.85rem;
 }
+
+/* --- Footer Bottom --- */
 
 .footer-bottom {
   display: flex;
@@ -1413,6 +1384,60 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   font-family: var(--font-mono);
 }
 
+/* ============================================================
+   10. UTILITIES
+   ============================================================ */
+
+.shadow-custom-lg {
+  box-shadow: var(--shadow-xl);
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  from { opacity: 0.6; }
+  to   { opacity: 1; }
+}
+
+/* ============================================================
+   11. RESPONSIVE
+   ============================================================ */
+
+/* --- Desktop: Header --- */
+@media (min-width: 992px) {
+  .utility-email { display: flex; }
+  .lang-label { display: inline; }
+  .nav-links { display: flex; }
+  .nav-hamburger { display: none; }
+
+  .nav-inner {
+    height: auto;
+    padding-top: var(--space-2);
+    padding-bottom: var(--space-2);
+  }
+}
+
+/* --- Tablet & Below --- */
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+
+  .hero-section {
+    min-height: 500px;
+  }
+
+  .btn-lg {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-base);
+  }
+
+  .cta-card { padding: var(--space-8); }
+  .cta-title { font-size: var(--text-xl); }
+}
+
+/* --- Footer Responsive --- */
 @media (min-width: 768px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;
@@ -1445,187 +1470,15 @@ a:not(.btn):not(.nav-link):not(.footer-list a):not(.mobile-nav-link):not(.mobile
   }
 }
 
-[data-theme="dark"] .site-footer {
-  background: var(--color-crude);
-  border-top-color: rgba(255, 255, 255, 0.08);
-}
-
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-
-@media (max-width: 768px) {
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-
-  .hero-section {
-    min-height: 500px;
-  }
-
-  .btn-lg {
-    padding: var(--space-3) var(--space-6);
-    font-size: var(--text-base);
-  }
-
-  .cta-card { padding: var(--space-8); }
-  .cta-title { font-size: var(--text-xl); }
-}
-
-/* =========================================
-   PRINT
-   ========================================= */
+/* ============================================================
+   12. PRINT
+   ============================================================ */
 
 @media print {
-  .site-header, .site-footer, .btn, [class*="shadow"] {
+  .site-header,
+  .site-footer,
+  .btn,
+  [class*="shadow"] {
     display: none;
   }
-}
-
-/* =========================================
-   UTILITIES
-   ========================================= */
-
-.shadow-custom-lg {
-  box-shadow: var(--shadow-xl);
-}
-
-.skeleton {
-  animation: skeleton-loading 1s linear infinite alternate;
-}
-
-/* =========================================
-   DARK MODE COMPONENT OVERRIDES
-   Only for Bootstrap classes that need them
-   ========================================= */
-
-[data-theme="dark"] .form-control,
-[data-bs-theme="dark"] .form-control {
-  background-color: var(--input-bg);
-  border-color: var(--input-border);
-  color: var(--text-primary);
-}
-
-[data-theme="dark"] .form-control:focus,
-[data-bs-theme="dark"] .form-control:focus {
-  border-color: var(--input-border-focus);
-  box-shadow: 0 0 0 0.2rem rgba(200, 112, 10, 0.3);
-}
-
-[data-theme="dark"] .form-control::placeholder,
-[data-bs-theme="dark"] .form-control::placeholder {
-  color: var(--text-tertiary);
-  opacity: 1;
-}
-
-[data-theme="dark"] .card,
-[data-bs-theme="dark"] .card {
-  background-color: var(--bg-surface);
-  border-color: var(--border-color);
-  color: var(--text-primary);
-}
-
-[data-theme="dark"] .card-header,
-[data-bs-theme="dark"] .card-header {
-  background-color: var(--bg-surface-secondary);
-  border-color: var(--border-color);
-}
-
-[data-theme="dark"] .btn-outline-light,
-[data-bs-theme="dark"] .btn-outline-light {
-  color: var(--text-primary);
-  border-color: var(--border-color);
-}
-
-[data-theme="dark"] .btn-outline-light:hover,
-[data-bs-theme="dark"] .btn-outline-light:hover {
-  background-color: var(--border-color);
-  border-color: var(--border-color);
-  color: var(--bg-body);
-}
-
-[data-theme="dark"] .bg-light,
-[data-bs-theme="dark"] .bg-light {
-  background-color: var(--bg-surface) !important;
-}
-
-[data-theme="dark"] .text-muted,
-[data-bs-theme="dark"] .text-muted {
-  color: var(--text-secondary) !important;
-}
-
-[data-theme="dark"] .border,
-[data-bs-theme="dark"] .border {
-  border-color: var(--border-color) !important;
-}
-
-[data-theme="dark"] hr,
-[data-bs-theme="dark"] hr {
-  border-color: var(--border-color);
-  opacity: 1;
-}
-
-[data-theme="dark"] .site-header,
-[data-bs-theme="dark"] .site-header {
-  background-color: var(--navbar-bg);
-}
-
-[data-theme="dark"] .main-nav,
-[data-bs-theme="dark"] .main-nav {
-  background-color: var(--navbar-bg);
-  border-bottom: 1px solid var(--border-color);
-}
-
-[data-theme="dark"] .utility-bar,
-[data-bs-theme="dark"] .utility-bar {
-  background: var(--primary);
-}
-
-[data-theme="dark"] .mobile-overlay,
-[data-bs-theme="dark"] .mobile-overlay {
-  background: var(--bg-surface);
-}
-
-[data-theme="dark"] .hamburger-line,
-[data-bs-theme="dark"] .hamburger-line {
-  background: var(--text-primary);
-}
-
-[data-theme="dark"] .mobile-close,
-[data-bs-theme="dark"] .mobile-close {
-  background: var(--bg-surface-secondary);
-  color: var(--text-primary);
-}
-
-[data-theme="dark"] .btn-primary,
-[data-bs-theme="dark"] .btn-primary {
-  background-color: var(--color-petroleum-bright);
-  border-color: var(--color-petroleum-bright);
-  color: var(--color-crude);
-}
-
-[data-theme="dark"] .btn-primary:hover,
-[data-bs-theme="dark"] .btn-primary:hover {
-  background-color: var(--primary);
-  border-color: var(--primary);
-  color: var(--text-inverse);
-}
-
-[data-theme="dark"] .bg-primary,
-[data-bs-theme="dark"] .bg-primary {
-  background-color: var(--primary) !important;
-}
-
-[data-theme="dark"] .text-white,
-[data-bs-theme="dark"] .text-white {
-  color: var(--text-primary) !important;
-}
-
-[data-theme="dark"] a:not(.text-white),
-[data-bs-theme="dark"] a:not(.text-white) {
-  color: var(--color-petroleum-light);
-}
-
-[data-theme="dark"] a:not(.text-white):hover,
-[data-bs-theme="dark"] a:not(.text-white):hover {
-  color: var(--color-petroleum-bright);
 }
