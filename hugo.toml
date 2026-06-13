@@ -19,22 +19,22 @@ enableEmoji = true
 
 [languages]
   [languages.en_us]
-    locale = "en-US"
-    label = "English"
+    languageCode = "en-US"
+    languageName = "English"
     weight = 1
     title = "Global Commerce Council"
     contentDir = "content/en_us"
 
   [languages.ru_ru]
-    locale = "ru-RU"
-    label = "Русский"
+    languageCode = "ru-RU"
+    languageName = "Русский"
     weight = 2
     title = "Global Commerce Council"
     contentDir = "content/ru_ru"
 
   [languages.ar_iq]
-    locale = "ar-IQ"
-    label = "العربية (العراق)"
+    languageCode = "ar-IQ"
+    languageName = "العربية (العراق)"
     weight = 3
     title = "مجلس التجارة العالمي"
     contentDir = "content/ar_iq"
@@ -42,22 +42,22 @@ enableEmoji = true
       rtl = true
 
   [languages.hy_am]
-    locale = "hy-AM"
-    label = "Հայերեն"
+    languageCode = "hy-AM"
+    languageName = "Հայերեն"
     weight = 4
     title = "Global Commerce Council"
     contentDir = "content/hy_am"
 
   [languages.fa_ir]
-    locale = "fa-IR"
-    label = "فارسی"
+    languageCode = "fa-IR"
+    languageName = "فارسی"
     weight = 5
     title = "Global Commerce Council"
     contentDir = "content/fa_ir"
 
   [languages.ar_ae]
-    locale = "ar-AE"
-    label = "العربية (الإمارات)"
+    languageCode = "ar-AE"
+    languageName = "العربية (الإمارات)"
     weight = 6
     title = "مجلس التجارة العالمي"
     contentDir = "content/ar_ae"

@@ -16,11 +16,11 @@
         <div class="dropdown d-inline-block">
           <button class="btn btn-outline-light btn-sm dropdown-toggle d-flex align-items-center gap-1" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.8rem; padding: 0.25rem 0.5rem;">
             <i class="bi bi-globe"></i>
-            <span class="d-none d-sm-inline">{{ .Language.Label }}</span>
+            <span class="d-none d-sm-inline">{{ .Language.LanguageName }}</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm" style="min-width: 160px;">
             {{ range $.Site.Home.AllTranslations }}
-            <li><a class="dropdown-item small {{ if eq .Language $.Language }}active disabled{{ end }}" href="{{ .Permalink }}">{{ .Language.Label }}</a></li>
+            <li><a class="dropdown-item small {{ if eq .Language $.Language }}active disabled{{ end }}" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
             {{ end }}
           </ul>
         </div>
