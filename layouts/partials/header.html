@@ -1,26 +1,31 @@
-<header class="header-custom" id="mainHeader">
-  <div class="bg-primary text-white py-2 transition-colors">
-    <div class="container">
-      <div class="d-flex align-items-center justify-content-between gap-3">
-        <a href="mailto:{{ .Site.Params.globals.email.main }}" class="text-white text-decoration-none small" title="Send email">
-          <i class="bi bi-envelope-fill me-1"></i>{{ .Site.Params.globals.email.main }}
-        </a>
-        <form class="d-flex" role="search" id="searchForm" style="min-width: 0;">
-          <div class="input-group input-group-sm transition-base" style="max-width: 260px;">
-            <input class="form-control form-control-sm border-0" type="search" placeholder='{{ i18n "search_placeholder" }}' aria-label='{{ i18n "search_placeholder" }}' id="searchInput" style="font-size: 0.8rem; padding: 0.25rem 0.5rem; height: auto;">
-            <button class="btn btn-outline-light icon-hover-bounce" type="submit" title='{{ i18n "search_placeholder" }}' style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">
-              <i class="bi bi-search"></i>
-            </button>
-          </div>
-        </form>
-        <div class="dropdown d-inline-block">
-          <button class="btn btn-outline-light btn-sm dropdown-toggle d-flex align-items-center gap-1" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.8rem; padding: 0.25rem 0.5rem;">
-            <i class="bi bi-globe"></i>
-            <span class="d-none d-sm-inline">{{ .Language.LanguageName }}</span>
+{{ $currentPage := .Page }}
+{{ $isRTL := .Language.Params.rtl }}
+
+<header class="site-header" id="siteHeader"{{ if $isRTL }} dir="rtl"{{ end }}>
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="mailto:{{ .Site.Params.globals.email.main }}" class="utility-email" title="Send email">
+        <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+        <span>{{ .Site.Params.globals.email.main }}</span>
+      </a>
+      <div class="utility-actions">
+        <button class="utility-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+          <i class="bi bi-moon-fill" aria-hidden="true"></i>
+        </button>
+        <button class="utility-btn" id="searchToggle" type="button" aria-label="Open search" title="Search">
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+        <div class="utility-dropdown" id="langDropdown">
+          <button class="utility-btn" id="langToggle" type="button" aria-label="Change language" title="Language" aria-expanded="false" aria-haspopup="true">
+            <i class="bi bi-globe" aria-hidden="true"></i>
+            <span class="lang-label">{{ .Language.LanguageName }}</span>
+            <i class="bi bi-chevron-down lang-chevron" aria-hidden="true"></i>
           </button>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm" style="min-width: 160px;">
+          <ul class="dropdown-panel" role="menu">
             {{ range $.Site.Home.AllTranslations }}
-            <li><a class="dropdown-item small {{ if eq .Language $.Language }}active disabled{{ end }}" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+            <li role="none"><a class="dropdown-entry{{ if eq .Language $.Language }} is-active{{ end }}" role="menuitem" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
             {{ end }}
           </ul>
         </div>
@@ -28,80 +33,177 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-expand-lg">
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="{{ "/" | relLangURL }}" title="{{ .Site.Params.globals.name }}">
-        <img src="/images/logo.svg" alt="{{ .Site.Params.globals.logo.alt }}" width="40" height="40" loading="eager">
-        <span class="fw-bold" style="font-size: 1.05rem;">{{ .Site.Params.globals.name }}</span>
+      <form class="search-form" role="search" id="siteSearchForm">
+        <label for="siteSearchInput" class="visually-hidden">{{ i18n "search_placeholder" }}</label>
+        <input class="search-input" type="search" placeholder='{{ i18n "search_placeholder" }}' aria-label='{{ i18n "search_placeholder" }}' id="siteSearchInput" autocomplete="off">
+        <button class="search-submit" type="submit" title='{{ i18n "search_placeholder" }}'>
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+        <button class="search-close" type="button" id="searchClose" aria-label="Close search">
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+
+      <a class="nav-logo" href="{{ "/" | relLangURL }}" title="{{ .Site.Params.globals.name }}">
+        <img src="{{ .Site.Params.globals.logo.path }}" alt="{{ .Site.Params.globals.logo.alt }}" width="36" height="36" loading="eager">
+        <span class="nav-logo-text">{{ .Site.Params.globals.name }}</span>
       </a>
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <ul class="nav-links" role="menubar">
+        {{ range .Site.Menus.main }}
+          {{ if eq .Identifier "products" }}
+          <li class="nav-item has-mega" role="none">
+            <a class="nav-link{{ if in $currentPage.RelPermalink "/products/" }} is-active{{ end }}" href="{{ .URL | relLangURL }}" role="menuitem" aria-haspopup="true" aria-expanded="false" id="megaProductsBtn">
+              {{ i18n (printf "nav_%s" .Identifier) | default .Name }}
+              <i class="bi bi-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-menu" role="menu" aria-labelledby="megaProductsBtn">
+              <div class="container">
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <a class="mega-link" href="{{ "/categories/ceramics/" | relLangURL }}" role="menuitem">
+                      <span class="mega-icon"><i class="bi bi-bricks" aria-hidden="true"></i></span>
+                      <span class="mega-text">
+                        <span class="mega-title">{{ i18n "mega_ceramics" }}</span>
+                        <span class="mega-desc">Tiles, porcelain, sanitary ware</span>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-link" href="{{ "/categories/gypsum/" | relLangURL }}" role="menuitem">
+                      <span class="mega-icon"><i class="bi bi-building" aria-hidden="true"></i></span>
+                      <span class="mega-text">
+                        <span class="mega-title">{{ i18n "mega_gypsum" }}</span>
+                        <span class="mega-desc">Boards, plaster, compounds</span>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-link" href="{{ "/categories/petroleum/" | relLangURL }}" role="menuitem">
+                      <span class="mega-icon"><i class="bi bi-droplet" aria-hidden="true"></i></span>
+                      <span class="mega-text">
+                        <span class="mega-title">{{ i18n "mega_petroleum" }}</span>
+                        <span class="mega-desc">Crude oil, diesel, bitumen</span>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-link" href="{{ "/categories/other/" | relLangURL }}" role="menuitem">
+                      <span class="mega-icon"><i class="bi bi-grid" aria-hidden="true"></i></span>
+                      <span class="mega-text">
+                        <span class="mega-title">{{ i18n "mega_other_industries" }}</span>
+                        <span class="mega-desc">Chemicals, rubber, metals</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div class="mega-footer">
+                  <a class="mega-all-link" href="{{ .URL | relLangURL }}" role="menuitem">
+                    {{ i18n (printf "nav_%s" .Identifier) | default .Name }} <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          {{ else if eq .Identifier "contact" }}
+          <li class="nav-item nav-item-cta" role="none">
+            <a class="nav-link nav-cta{{ if in $currentPage.RelPermalink "/contact/" }} is-active{{ end }}" href="{{ .URL | relLangURL }}" role="menuitem">
+              {{ i18n (printf "nav_%s" .Identifier) | default .Name }}
+            </a>
+          </li>
+          {{ else }}
+          <li class="nav-item" role="none">
+            <a class="nav-link{{ if in $currentPage.RelPermalink (printf "/%s/" .Identifier) }} is-active{{ end }}" href="{{ .URL | relLangURL }}" role="menuitem">
+              {{ i18n (printf "nav_%s" .Identifier) | default .Name }}
+            </a>
+          </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+
+      <button class="nav-hamburger" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileOverlay">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-          {{ $currentPage := .Page }}
-
-          {{ with .Site.GetPage "/products" }}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle{{ if in $currentPage.RelPermalink "/products/" }} active{{ end }}" href="{{ .RelPermalink }}" id="navProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {{ i18n "nav_products" }}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 rounded-3 py-2" aria-labelledby="navProducts" style="min-width: 200px;">
-              <li><a class="dropdown-item rounded-1" href="{{ "/categories/ceramics/" | relLangURL }}">{{ i18n "mega_ceramics" }}</a></li>
-              <li><a class="dropdown-item rounded-1" href="{{ "/categories/gypsum/" | relLangURL }}">{{ i18n "mega_gypsum" }}</a></li>
-              <li><a class="dropdown-item rounded-1" href="{{ "/categories/petroleum/" | relLangURL }}">{{ i18n "mega_petroleum" }}</a></li>
-              <li><a class="dropdown-item rounded-1" href="{{ "/categories/other/" | relLangURL }}">{{ i18n "mega_other_industries" }}</a></li>
-              <li><hr class="dropdown-divider my-1"></li>
-              <li><a class="dropdown-item rounded-1 fw-medium" href="{{ "/products/" | relLangURL }}">{{ i18n "nav_products" }} →</a></li>
-            </ul>
-          </li>
-          {{ end }}
-
-          {{ with .Site.GetPage "/knowledge-base" }}
-          <li class="nav-item">
-            <a class="nav-link{{ if in $currentPage.RelPermalink "/knowledge-base/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_knowledge_base" }}</a>
-          </li>
-          {{ end }}
-
-          {{ with .Site.GetPage "/tools" }}
-          <li class="nav-item">
-            <a class="nav-link{{ if in $currentPage.RelPermalink "/tools/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_tools" }}</a>
-          </li>
-          {{ end }}
-
-          {{ with .Site.GetPage "/country-guides" }}
-          <li class="nav-item">
-            <a class="nav-link{{ if in $currentPage.RelPermalink "/country-guides/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_country_guides" }}</a>
-          </li>
-          {{ end }}
-
-          {{ with .Site.GetPage "/supply-chain" }}
-          <li class="nav-item">
-            <a class="nav-link{{ if in $currentPage.RelPermalink "/supply-chain/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_supply_chain" }}</a>
-          </li>
-          {{ end }}
-
-          {{ with .Site.GetPage "/about" }}
-          <li class="nav-item">
-            <a class="nav-link{{ if in $currentPage.RelPermalink "/about/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_about" }}</a>
-          </li>
-          {{ end }}
-
-          {{ with .Site.GetPage "/suppliers" }}
-          <li class="nav-item">
-            <a class="nav-link{{ if in $currentPage.RelPermalink "/suppliers/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_suppliers" }}</a>
-          </li>
-          {{ end }}
-
-          {{ with .Site.GetPage "/contact" }}
-          <li class="nav-item ms-lg-2">
-            <a class="nav-link btn btn-primary btn-sm text-white px-3 rounded-pill{{ if in $currentPage.RelPermalink "/contact/" }} active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "nav_contact" }}</a>
-          </li>
-          {{ end }}
-        </ul>
-      </div>
     </div>
   </nav>
+
+  <!-- Mobile Full-Screen Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+    <div class="mobile-overlay-header">
+      <a class="nav-logo" href="{{ "/" | relLangURL }}" title="{{ .Site.Params.globals.name }}">
+        <img src="{{ .Site.Params.globals.logo.path }}" alt="{{ .Site.Params.globals.logo.alt }}" width="32" height="32" loading="eager">
+        <span class="nav-logo-text">{{ .Site.Params.globals.name }}</span>
+      </a>
+      <button class="mobile-close" id="menuClose" type="button" aria-label="Close menu">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="mobile-overlay-body">
+      <form class="mobile-search" role="search">
+        <label for="mobileSearchInput" class="visually-hidden">{{ i18n "search_placeholder" }}</label>
+        <i class="bi bi-search mobile-search-icon" aria-hidden="true"></i>
+        <input class="mobile-search-input" type="search" placeholder='{{ i18n "search_placeholder" }}' aria-label='{{ i18n "search_placeholder" }}' id="mobileSearchInput" autocomplete="off">
+      </form>
+
+      <ul class="mobile-nav-list" role="menubar">
+        {{ range .Site.Menus.main }}
+          {{ if eq .Identifier "products" }}
+          <li class="mobile-nav-item" role="none">
+            <a class="mobile-nav-link{{ if in $currentPage.RelPermalink "/products/" }} is-active{{ end }}" href="{{ .URL | relLangURL }}" role="menuitem">
+              {{ i18n (printf "nav_%s" .Identifier) | default .Name }}
+              <i class="bi bi-plus mobile-expand-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="mobile-sub-list" role="menu">
+              <li role="none"><a class="mobile-sub-link" href="{{ "/categories/ceramics/" | relLangURL }}" role="menuitem">{{ i18n "mega_ceramics" }}</a></li>
+              <li role="none"><a class="mobile-sub-link" href="{{ "/categories/gypsum/" | relLangURL }}" role="menuitem">{{ i18n "mega_gypsum" }}</a></li>
+              <li role="none"><a class="mobile-sub-link" href="{{ "/categories/petroleum/" | relLangURL }}" role="menuitem">{{ i18n "mega_petroleum" }}</a></li>
+              <li role="none"><a class="mobile-sub-link" href="{{ "/categories/other/" | relLangURL }}" role="menuitem">{{ i18n "mega_other_industries" }}</a></li>
+            </ul>
+          </li>
+          {{ else }}
+          <li class="mobile-nav-item" role="none">
+            <a class="mobile-nav-link{{ if in $currentPage.RelPermalink (printf "/%s/" .Identifier) }} is-active{{ end }}" href="{{ .URL | relLangURL }}" role="menuitem">
+              {{ i18n (printf "nav_%s" .Identifier) | default .Name }}
+            </a>
+          </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="mobile-overlay-footer">
+      <div class="mobile-footer-actions">
+        <div class="mobile-theme-toggle" role="group" aria-label="Theme toggle">
+          <button class="mobile-theme-btn" data-theme-value="light" type="button" aria-label="Light mode">
+            <i class="bi bi-sun-fill" aria-hidden="true"></i>
+          </button>
+          <button class="mobile-theme-btn" data-theme-value="dark" type="button" aria-label="Dark mode">
+            <i class="bi bi-moon-fill" aria-hidden="true"></i>
+          </button>
+          <button class="mobile-theme-btn" data-theme-value="auto" type="button" aria-label="Auto theme">
+            <i class="bi bi-display" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="mobile-lang-list">
+          {{ range $.Site.Home.AllTranslations }}
+          <a class="mobile-lang-link{{ if eq .Language $.Language }} is-active{{ end }}" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
 </header>

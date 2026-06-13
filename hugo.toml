@@ -223,26 +223,44 @@ enableEmoji = true
     weight = 1
 
   [[menu.main]]
+    identifier = "knowledge-base"
+    name = "Knowledge Base"
+    url = "/knowledge-base/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "tools"
+    name = "Tools"
+    url = "/tools/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "country-guides"
+    name = "Country Guides"
+    url = "/country-guides/"
+    weight = 4
+
+  [[menu.main]]
     identifier = "supply-chain"
     name = "Supply Chain"
     url = "/supply-chain/"
-    weight = 2
+    weight = 5
 
   [[menu.main]]
     identifier = "about"
     name = "About Us"
     url = "/about/"
-    weight = 3
+    weight = 6
 
   [[menu.main]]
     identifier = "suppliers"
     name = "Suppliers"
     url = "/suppliers/"
-    weight = 4
+    weight = 7
 
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 5
+    weight = 8
 
