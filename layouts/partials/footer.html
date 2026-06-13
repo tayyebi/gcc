@@ -1,137 +1,86 @@
-<footer class="footer-custom mt-5 transition-colors">
-  <div class="container py-5">
-    
-    <!-- Subscription Section with Animation -->
-    <div class="row mb-5 pb-4 border-bottom border-light border-opacity-10 animate-fade-in-up">
-      <div class="col-lg-5 mb-4 mb-lg-0">
-        <h4 class="fw-bold mb-2 text-white">
-          <i class="bi bi-bell-fill me-2 icon-hover-bounce" aria-hidden="true"></i>{{ i18n "footer_intelligence" }}
-        </h4>
-        <p class="text-white-50 mb-0">{{ i18n "footer_subscribe_text" }}</p>
+<footer class="site-footer">
+  <div class="container">
+
+    <!-- Top Section: Brand + Newsletter -->
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo" href="{{ "/" | relLangURL }}" title="{{ .Site.Params.globals.name }}">
+          <img src="{{ .Site.Params.globals.logo.path }}" alt="{{ .Site.Params.globals.logo.alt }}" width="28" height="28">
+          <span>{{ .Site.Params.globals.name }}</span>
+        </a>
+        <p class="footer-tagline">{{ .Site.Params.globals.tagline }}</p>
+        <div class="footer-social">
+          <a href="https://twitter.com/{{ trim .Site.Params.globals.social.twitter "@" }}" class="footer-social-link" aria-label="Twitter" target="_blank" rel="noopener">
+            <i class="bi bi-twitter-x" aria-hidden="true"></i>
+          </a>
+          <a href="https://linkedin.com/company/{{ .Site.Params.globals.social.linkedin }}" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <i class="bi bi-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="{{ .Site.Params.globals.social.rss }}" class="footer-social-link" aria-label="RSS Feed">
+            <i class="bi bi-rss" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
-      <div class="col-lg-7">
-        <form class="subscription-form" onsubmit="event.preventDefault();">
-          <div class="row g-3">
-            <div class="col-md-8">
-              <div class="input-group transition-smooth">
-                <label for="email-subscribe" class="visually-hidden">{{ i18n "email_address" | default "Email address" }}</label>
-                <input type="email" id="email-subscribe" class="form-control form-control-focus form-control-lg border-0" placeholder='{{ i18n "footer_email_placeholder" }}' aria-label="Email address" required>
-                <button class="btn btn-primary px-4 icon-hover-pulse" type="submit">
-                  <i class="bi bi-send me-2" aria-hidden="true"></i>{{ i18n "footer_subscribe" }}
-                </button>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="d-flex gap-2 flex-wrap mt-2">
-                <span class="text-white-50 small me-2 my-auto">{{ i18n "footer_interests" }}</span>
-                
-                <label class="form-check-label custom-toggle-pill transition-base">
-                  <input type="checkbox" class="form-check-input visually-hidden" checked>
-                  <span class="pill-content">
-                    <i class="bi bi-bricks me-1" aria-hidden="true"></i>{{ i18n "mega_ceramics" }}
-                  </span>
-                </label>
-                
-                <label class="form-check-label custom-toggle-pill transition-base">
-                  <input type="checkbox" class="form-check-input visually-hidden" checked>
-                  <span class="pill-content">
-                    <i class="bi bi-building me-1" aria-hidden="true"></i>{{ i18n "mega_gypsum" }}
-                  </span>
-                </label>
-                
-                <label class="form-check-label custom-toggle-pill transition-base">
-                  <input type="checkbox" class="form-check-input visually-hidden">
-                  <span class="pill-content">
-                    <i class="bi bi-droplet me-1" aria-hidden="true"></i>{{ i18n "mega_petroleum" }}
-                  </span>
-                </label>
-                
-              </div>
-            </div>
-          </div>
+
+      <div class="footer-newsletter">
+        <h4 class="footer-heading">{{ i18n "footer_intelligence" }}</h4>
+        <p class="footer-newsletter-desc">{{ i18n "footer_subscribe_text" }}</p>
+        <form class="footer-form" onsubmit="event.preventDefault();">
+          <label for="footer-subscribe-email" class="visually-hidden">{{ i18n "footer_email_placeholder" }}</label>
+          <input type="email" id="footer-subscribe-email" class="footer-input" placeholder='{{ i18n "footer_email_placeholder" }}' required>
+          <button class="footer-btn" type="submit">
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </button>
         </form>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-4 mb-4 animate-fade-in-up delay-100">
-        <h5 class="fw-bold mb-3 text-white">
-          <img src="{{ .Site.Params.globals.logo.path }}" alt="{{ .Site.Params.globals.logo.alt }}" width="24" height="24" style="margin-right: 0.5rem; vertical-align: -0.25em;">{{ .Site.Params.globals.name }}
-        </h5>
-        <p class="text-white-50 small">{{ .Site.Params.globals.description }}</p>
-        <div class="mt-3">
-          <a href="#" class="text-white text-decoration-none link-underline" title="RSS Feed"><i class="bi bi-rss fs-5"></i></a>
-        </div>
-      </div>
-      
-      <div class="col-md-2 mb-4 animate-fade-in-up delay-200">
-        <h6 class="fw-bold mb-3 text-white">{{ i18n "footer_quick_links" }}</h6>
-        <ul class="list-unstyled">
-          {{ range first 6 .Site.Menus.main }}
-          <li class="mb-2"><a href="{{ .URL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n (printf "nav_%s" .Identifier) | default .Name }}</a></li>
+    <!-- Middle Section: Link Columns -->
+    <div class="footer-links">
+      <div class="footer-col">
+        <h5 class="footer-heading">{{ i18n "footer_quick_links" }}</h5>
+        <ul class="footer-list">
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relLangURL }}">{{ i18n (printf "nav_%s" .Identifier) | default .Name }}</a></li>
           {{ end }}
         </ul>
       </div>
-      
-      <div class="col-md-3 mb-4 animate-fade-in-up delay-300">
-        <h6 class="fw-bold mb-3 text-white">
-          <i class="bi bi-collection me-2"></i>{{ i18n "footer_categories" }}
-        </h6>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="{{ "/categories/ceramics/" | relLangURL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n "mega_ceramics" }}</a></li>
-          <li class="mb-2"><a href="{{ "/categories/gypsum/" | relLangURL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n "mega_gypsum" }}</a></li>
-          <li class="mb-2"><a href="{{ "/categories/petroleum/" | relLangURL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n "mega_petroleum" }}</a></li>
-          <li class="mb-2"><a href="{{ "/categories/other/" | relLangURL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n "mega_other_industries" }}</a></li>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">{{ i18n "footer_categories" }}</h5>
+        <ul class="footer-list">
+          <li><a href="{{ "/categories/ceramics/" | relLangURL }}">{{ i18n "mega_ceramics" }}</a></li>
+          <li><a href="{{ "/categories/gypsum/" | relLangURL }}">{{ i18n "mega_gypsum" }}</a></li>
+          <li><a href="{{ "/categories/petroleum/" | relLangURL }}">{{ i18n "mega_petroleum" }}</a></li>
+          <li><a href="{{ "/categories/other/" | relLangURL }}">{{ i18n "mega_other_industries" }}</a></li>
         </ul>
       </div>
-      
-      <div class="col-md-3 mb-4 animate-fade-in-up delay-400">
-        <h6 class="fw-bold mb-3 text-white">
-          <i class="bi bi-chat-dots me-2"></i>{{ i18n "footer_contact_us" }}
-        </h6>
-        <ul class="list-unstyled text-white-50 small">
-          <li class="mb-2">
-            <i class="bi bi-envelope me-2"></i>
-            <a href="mailto:{{ .Site.Params.globals.email.main }}" class="text-white-50 text-decoration-none link-underline">
-              {{ .Site.Params.globals.email.main }}
-            </a>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">{{ i18n "footer_contact_us" }}</h5>
+        <ul class="footer-list footer-contact">
+          <li>
+            <i class="bi bi-envelope" aria-hidden="true"></i>
+            <a href="mailto:{{ .Site.Params.globals.email.main }}">{{ .Site.Params.globals.email.main }}</a>
+          </li>
+          <li>
+            <i class="bi bi-envelope" aria-hidden="true"></i>
+            <a href="mailto:{{ .Site.Params.globals.email.support }}">{{ .Site.Params.globals.email.support }}</a>
           </li>
         </ul>
       </div>
     </div>
-    
-    <hr class="border-light border-opacity-10 my-4">
-    
-    <div class="row align-items-center">
-      <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-        <small class="text-white-50">&copy; {{ now.Year }} {{ .Site.Params.globals.name }}. {{ i18n "footer_all_rights" }}</small>
-      </div>
-      
-      <div class="col-md-4 text-center mb-3 mb-md-0">
-        <div class="theme-toggle btn-group btn-group-sm rounded-pill p-1 border border-secondary transition-smooth" role="group" aria-label="Theme Toggle">
-          <button type="button" class="btn btn-link text-white theme-btn active icon-hover-bounce" data-theme-value="auto" aria-label="System Auto" title="Use system preference">
-            <i class="bi bi-display" aria-hidden="true"></i>
-          </button>
-          <button type="button" class="btn btn-link text-white-50 theme-btn icon-hover-bounce" data-theme-value="light" aria-label="Light Mode" title="Force light mode">
-            <i class="bi bi-sun-fill" aria-hidden="true"></i>
-          </button>
-          <button type="button" class="btn btn-link text-white-50 theme-btn icon-hover-bounce" data-theme-value="dark" aria-label="Dark Mode" title="Force dark mode">
-            <i class="bi bi-moon-fill" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
 
-      <div class="col-md-4 text-center text-md-end">
-        <small>
-          <a href="{{ "/privacy/" | relLangURL }}" class="text-white-50 text-decoration-none me-3 link-underline">{{ i18n "footer_privacy" }}</a>
-          <a href="{{ "/terms/" | relLangURL }}" class="text-white-50 text-decoration-none link-underline">{{ i18n "footer_terms" }}</a>
-        </small>
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; {{ now.Year }} {{ .Site.Params.globals.name }}. {{ i18n "footer_all_rights" }}</p>
+      <div class="footer-legal">
+        <a href="{{ "/privacy/" | relLangURL }}">{{ i18n "footer_privacy" }}</a>
+        <a href="{{ "/terms/" | relLangURL }}">{{ i18n "footer_terms" }}</a>
+        <span class="footer-version">v{{ .Site.Params.version.semantic }}</span>
       </div>
     </div>
-    
-    <div class="text-center mt-3 pt-2 border-top border-light border-opacity-10">
-      <small class="text-white-50">v{{ .Site.Params.version.semantic }}</small>
-    </div>
+
   </div>
 </footer>
 
