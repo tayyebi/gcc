@@ -272,7 +272,7 @@ class InteractionManager {
     inputs.forEach(input => {
       input.addEventListener('focus', function() {
         this.style.transform = 'translateY(-1px)';
-        this.style.boxShadow = '0 0 0 3px rgba(37, 99, 235, 0.1)';
+        this.style.boxShadow = '0 0 0 3px rgba(33, 94, 97, 0.1)';
       });
       input.addEventListener('blur', function() {
         this.style.transform = 'translateY(0)';
