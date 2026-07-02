@@ -598,8 +598,8 @@ html {
 
 /* Hero Section */
 .hero-section {
-  background: radial-gradient(circle at top right, var(--primary-light), transparent),
-              linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, rgba(29,33,40,0.85), rgba(21,94,97,0.70), rgba(29,33,40,0.80)),
+              url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center / cover no-repeat;
   min-height: 600px;
   position: relative;
   overflow: hidden;
@@ -607,10 +607,10 @@ html {
   align-items: center;
 }
 
-/* Dark mode adjustment for hero */
+/* Dark mode hero */
 [data-theme="dark"] .hero-section {
-  background: radial-gradient(circle at top right, var(--primary), transparent),
-              linear-gradient(135deg, #1D2128 0%, #1A4A4D 100%);
+  background: linear-gradient(135deg, rgba(29,33,40,0.92), rgba(21,94,97,0.65), rgba(29,33,40,0.88)),
+              url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center / cover no-repeat;
 }
 
 .hero-section::before {
