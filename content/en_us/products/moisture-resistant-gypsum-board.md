@@ -5,6 +5,12 @@ description: "Moisture-resistant gypsum board for wet areas"
 categories: ["gypsum"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "6809.11"
+product_category: "Gypsum Products"
+origin: "Iran"
+packaging: "Pallets, shrink-wrapped"
+moq: "1 x 20ft container"
+availability: "In Stock"
+status: "Available"
 cid: "24928"
 smiles: "[Ca+2].[O-]S(=O)(=O)[O-].O.O"
 specifications:

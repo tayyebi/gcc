@@ -5,6 +5,12 @@ description: "High-purity industrial salt for various applications"
 categories: ["other"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "2501.00"
+product_category: "Industrial Minerals"
+origin: "Iran / India"
+packaging: "Bulk / 50 kg bags"
+moq: "25 MT"
+availability: "In Stock"
+status: "Available"
 cid: "5234"
 smiles: "[Na+].[Cl-]"
 specifications:

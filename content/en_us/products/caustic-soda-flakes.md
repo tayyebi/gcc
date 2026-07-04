@@ -5,6 +5,12 @@ description: "High-purity sodium hydroxide flakes for chemical manufacturing, wa
 categories: ["other"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "2815.11"
+product_category: "Industrial Chemicals"
+origin: "Middle East / China"
+packaging: "25 kg bags"
+moq: "20 MT"
+availability: "In Stock"
+status: "Available"
 cid: "14798"
 smiles: "[OH-].[Na+]"
 specifications:

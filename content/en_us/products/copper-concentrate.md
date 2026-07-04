@@ -5,6 +5,12 @@ description: "High-grade copper concentrate for smelting"
 categories: ["other"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "7401.00"
+product_category: "Mining & Minerals"
+origin: "Chile / Zambia"
+packaging: "Bulk bags (1-2 MT)"
+moq: "100 MT"
+availability: "Available"
+status: "In Sourcing"
 specifications:
   copper_cu: "Min 25.0%"
   moisture: "Max 10.0%"

@@ -5,6 +5,12 @@ description: "High-strength calcium hypochlorite granules and tablets for water 
 categories: ["other"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "2828.10"
+product_category: "Water Treatment Chemicals"
+origin: "China"
+packaging: "45 kg HDPE drums"
+moq: "10 MT"
+availability: "In Stock"
+status: "Available"
 cid: "24847"
 smiles: "[Ca+2].[O-]Cl.[O-]Cl"
 specifications:

@@ -5,6 +5,12 @@ description: "High-quality porcelain tiles for residential and commercial applic
 categories: ["ceramics"]
 images: ["/images/products/porcelain-tiles.jpg"]
 hscode: "6907.21"
+product_category: "Ceramic Tiles"
+origin: "Iran / Italy"
+packaging: "Cartons on pallets"
+moq: "300 sqm"
+availability: "In Stock"
+status: "Available"
 specifications:
   water_absorption: "< 0.5% (Group BIa)"
   breaking_strength: "Min 1300 N"

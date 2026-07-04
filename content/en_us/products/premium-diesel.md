@@ -5,6 +5,12 @@ description: "High-quality diesel fuel for automotive and industrial use"
 categories: ["petroleum"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "2710.12"
+product_category: "Refined Fuels"
+origin: "Middle East"
+packaging: "Bulk tanker"
+moq: "1,000 MT"
+availability: "In Stock"
+status: "Available"
 cid: "11006"
 smiles: "CCCCCCCCCCCCCCCC"
 specifications:

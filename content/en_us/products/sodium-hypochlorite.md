@@ -5,6 +5,12 @@ description: "Industrial-grade sodium hypochlorite solution for water disinfecti
 categories: ["other"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "2828.90"
+product_category: "Water Treatment Chemicals"
+origin: "China / India"
+packaging: "200 L HDPE drums"
+moq: "10 MT"
+availability: "In Stock"
+status: "Available"
 cid: "23665760"
 smiles: "[Na+].[O-]Cl"
 specifications:

@@ -2,6 +2,12 @@
 title: "Bitumen 60/70 – Penetration Grade Paving Bitumen"
 description: "Bitumen 60/70 is a standard penetration-grade paving bitumen widely used in road construction and asphalt production. Export quality, compliant with ASTM and EN standards."
 hscode: "2713.20"
+product_category: "Petroleum & Bitumen"
+origin: "Middle East (Iran/Iraq)"
+packaging: "New steel drums (180 kg) / Bulk tanker"
+moq: "1 x 20ft container (~20 MT)"
+availability: "In Stock"
+status: "Custom Order"
 cas_number: "8052-42-4"
 featured: true
 ---

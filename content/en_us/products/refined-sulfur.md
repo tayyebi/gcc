@@ -5,6 +5,12 @@ description: "High-purity refined sulfur for industrial use"
 categories: ["other"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "2503.00"
+product_category: "Petrochemicals"
+origin: "Middle East"
+packaging: "Bulk / 25 kg bags / big bags"
+moq: "20 MT"
+availability: "In Stock"
+status: "In Sourcing"
 cid: "26943"
 smiles: "S1SSSSSSS1"
 specifications:

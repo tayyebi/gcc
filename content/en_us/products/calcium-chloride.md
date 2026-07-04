@@ -5,6 +5,12 @@ description: "Anhydrous and flake-form calcium chloride for de-icing, dust contr
 categories: ["other"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "2827.20"
+product_category: "Industrial Chemicals"
+origin: "China / India"
+packaging: "25 kg bags / 1,000 kg bulk bags"
+moq: "20 MT"
+availability: "In Stock"
+status: "Available"
 cid: "5284359"
 smiles: "[Ca+2].[Cl-].[Cl-]"
 specifications:

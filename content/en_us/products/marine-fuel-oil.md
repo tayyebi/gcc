@@ -5,6 +5,12 @@ description: "Compliant marine fuel oil for shipping industry"
 categories: ["petroleum"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "2710.19"
+product_category: "Marine Fuels"
+origin: "Middle East"
+packaging: "Bulk tanker"
+moq: "1,000 MT"
+availability: "Available"
+status: "Available"
 specifications:
   viscosity_at_50c: "Max 180 cSt / 380 cSt (RME/RMG)"
   sulfur_content: "Max 0.5% (VLSFO) / 3.5% (HSFO with Scrubber)"

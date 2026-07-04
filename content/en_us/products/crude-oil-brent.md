@@ -5,6 +5,12 @@ description: "Premium Brent crude oil from North Sea for refining and energy pro
 categories: ["petroleum"]
 images: ["/images/products/crude-oil.jpg"]
 hscode: "2709.00"
+product_category: "Crude Oil"
+origin: "North Sea / Middle East"
+packaging: "Bulk tanker / pipeline"
+moq: "500,000 barrels"
+availability: "Available"
+status: "Available"
 specifications:
   api_gravity: "38.3° (Light)"
   sulfur_content: "0.37% Mass (Sweet)"

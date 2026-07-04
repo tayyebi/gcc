@@ -5,6 +5,12 @@ description: "Stylish decorative wall tiles for interior design applications"
 categories: ["ceramics"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "6907.23"
+product_category: "Ceramic Tiles"
+origin: "Iran / Italy"
+packaging: "Cartons on pallets"
+moq: "500 sqm"
+availability: "In Stock"
+status: "Available"
 specifications:
   surface: "Glossy Glazed / Satin / 3D Structured"
   water_absorption: "> 10% (Group BIII)"

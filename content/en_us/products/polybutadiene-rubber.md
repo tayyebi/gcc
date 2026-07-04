@@ -5,6 +5,12 @@ description: "High-cis Polybutadiene Rubber known for excellent elasticity and a
 categories: ["petrochemicals", "rubber"]
 images: ["/images/products/polybutadiene-rubber.jpg"]
 hscode: "4002.20"
+product_category: "Synthetic Rubber"
+origin: "South Korea / China"
+packaging: "25 kg bales on pallets"
+moq: "10 MT"
+availability: "Available"
+status: "Custom Order"
 cid: "7845"
 smiles: "C=CC=C"
 featured: true

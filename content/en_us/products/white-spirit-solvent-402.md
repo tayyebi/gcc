@@ -5,6 +5,12 @@ description: "High-quality mineral spirit solvent, ideal for paint thinning, deg
 categories: ["petrochemicals", "solvents"]
 images: ["/images/products/white-spirit.jpg"]
 hscode: "2710.12"
+product_category: "Industrial Solvents"
+origin: "Middle East"
+packaging: "200 L steel drums"
+moq: "10 MT"
+availability: "In Stock"
+status: "Available"
 featured: true
 specifications:
   aromatic_content: "15-20%"

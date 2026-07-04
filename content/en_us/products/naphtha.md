@@ -5,6 +5,12 @@ description: "Versatile intermediate hydrocarbon liquid feedstock for petrochemi
 categories: ["petroleum", "petrochemicals"]
 images: ["/images/products/naphtha.jpg"]
 hscode: "2710.16"
+product_category: "Petrochemical Feedstock"
+origin: "Middle East"
+packaging: "Bulk tanker / ISO tank"
+moq: "500 MT"
+availability: "In Stock"
+status: "Available"
 featured: true
 specifications:
   density: "0.65 - 0.75 g/cm³"

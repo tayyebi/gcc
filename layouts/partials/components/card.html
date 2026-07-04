@@ -1,5 +1,12 @@
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 shadow-sm">
+        {{ if .Params.status }}
+        <span class="card-status
+          {{- if eq .Params.status "Available" }} card-status--available
+          {{- else if eq .Params.status "In Sourcing" }} card-status--sourcing
+          {{- else }} card-status--custom
+          {{- end }}">{{ .Params.status }}</span>
+        {{ end }}
         {{ with .Params.images }}
         <img src="{{ index . 0 }}" class="card-img-top" alt="{{ $.Title }}" loading="lazy" onerror="this.src='/images/placeholder-gradient.svg'">
         {{ else }}
@@ -8,7 +15,19 @@
         <div class="card-body">
           <h5 class="card-title">{{ .Title }}</h5>
           <p class="card-text text-muted small">{{ .Description | default .Summary | truncate 50 }}</p>
-          <a href="{{ .Permalink }}" class="btn btn-primary btn-sm">Learn More</a>
+          {{ if .Params.product_category }}
+          <div class="card-meta">
+            <div class="meta-item"><span class="meta-label">Category</span><span class="meta-value">{{ .Params.product_category }}</span></div>
+            <div class="meta-item"><span class="meta-label">Origin</span><span class="meta-value">{{ .Params.origin }}</span></div>
+            <div class="meta-item"><span class="meta-label">Packaging</span><span class="meta-value">{{ .Params.packaging }}</span></div>
+            <div class="meta-item"><span class="meta-label">MOQ</span><span class="meta-value">{{ .Params.moq }}</span></div>
+            <div class="meta-item"><span class="meta-label">Availability</span><span class="meta-value {{ if eq .Params.availability "In Stock" }}text-success{{ end }}">{{ .Params.availability }}</span></div>
+          </div>
+          {{ end }}
+          <div class="d-flex gap-2 mt-2">
+            <a href="{{ "/contact/" | relLangURL }}" class="btn btn-primary btn-sm flex-fill">Request Quote</a>
+            <a href="{{ .Permalink }}" class="btn btn-outline-primary btn-sm flex-fill">View Specs</a>
+          </div>
         </div>
       </div>
     </div>

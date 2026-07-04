@@ -5,6 +5,12 @@ description: "Durable unglazed ceramic floor tiles suitable for heavy traffic ar
 categories: ["ceramics"]
 images: ["/images/placeholder-gradient.svg"]
 hscode: "6907.22"
+product_category: "Ceramic Tiles"
+origin: "Iran"
+packaging: "Cartons on pallets"
+moq: "500 sqm"
+availability: "In Stock"
+status: "Available"
 specifications:
   slip_resistance: "R10 / R11 / R12 (DIN 51130)"
   scratch_hardness: "Mohs 7-8"
