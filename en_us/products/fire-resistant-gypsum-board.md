@@ -1,0 +1,60 @@
+---
+title: "Fire-Resistant Gypsum Board"
+date: 2024-02-01
+description: "Type X fire-resistant gypsum board for enhanced fire protection"
+hscode: "6809.11"
+product_category: "Gypsum Products"
+origin: "Iran"
+packaging: "Pallets, shrink-wrapped"
+moq: "1 x 20ft container"
+availability: "In Stock"
+status: "Available"
+cid: "24928"
+smiles: "[Ca+2].[O-]S(=O)(=O)[O-].O.O"
+specifications:
+  core: "Gypsum reinforced with glass fibers"
+  fire_rating: "30min to 240min (System Dependent)"
+  standard_compliance: "ASTM C1396 Type X / EN 520 Type F"
+  surface_burning: "Class A (ASTM E84)"
+---
+
+# Fire-Resistant Gypsum Board
+
+Professional-grade fire-resistant gypsum board designed to provide superior fire protection in commercial and residential buildings.
+
+### Product Specifications
+
+- **Type**: Type X (Fire-Resistant)
+- **Thickness**: 5/8" (15.9mm)
+- **Size**: 4' x 8', 4' x 10', 4' x 12'
+- **Fire Rating**: Up to 1 hour
+- **Edge Type**: Tapered
+
+### Key Features
+
+- Enhanced fire resistance with glass fibers
+- Mold and moisture resistant core
+- Easy to cut and install
+- Smooth surface ready for finishing
+- Environmentally friendly manufacturing
+
+### Applications
+
+- Fire-rated wall assemblies
+- Ceiling applications
+- Commercial buildings
+- Multi-family residential
+- Corridor and stairwell protection
+
+### Compliance
+
+- ASTM C1396 Type X
+- UL Certified
+- EN 520 Type F
+- LEED Certified
+
+### Installation
+
+Compatible with standard drywall installation methods. For fire-rated assemblies, follow approved UL designs.
+
+[Contact for Availability](../contact.md?subject=gypsum-board)
