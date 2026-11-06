@@ -2,7 +2,6 @@
 title: "Marine Fuel Oil"
 date: 2026-02-07
 description: "Compliant marine fuel oil for shipping industry"
-categories: ["petroleum"]
 hscode: "2710.19"
 product_category: "Marine Fuels"
 origin: "Middle East"
@@ -18,6 +17,7 @@ specifications:
   water_content: "Max 0.5%"
 ---
 
+# Marine Fuel Oil
 
 We supply compliant Marine Fuel Oil essential for the global shipping industry. Our portfolio includes Very Low Sulfur Fuel Oil (VLSFO 0.5%) complying with IMO 2020 regulations, as well as High Sulfur Fuel Oil (HSFO) for vessels equipped with exhaust gas cleaning systems (scrubbers).
 

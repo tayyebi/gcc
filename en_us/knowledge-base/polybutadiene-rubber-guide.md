@@ -2,8 +2,9 @@
 title: "Polybutadiene Rubber (PBR) Guide"
 date: 2026-06-12
 description: "Overview of Polybutadiene Rubber (BR) - types, properties, applications, and production process."
-categories: ["petrochemicals", "rubber"]
 ---
+
+# Polybutadiene Rubber (PBR) Guide
 
 Polybutadiene Rubber (BR) is a synthetic rubber polymerized from 1,3-butadiene. It accounts for ~28% of global synthetic rubber consumption, second only to SBR. About 70% is used in tire manufacturing and 25% in plastics modification.
 

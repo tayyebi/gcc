@@ -1,5 +1,3 @@
-<a href="https://github.com/tayyebi/serve-md"><img src="https://raw.githubusercontent.com/tayyebi/serve-md/main/docs/logo.svg" alt="serve-md" width="565"></a>
-
 # Global Commerce Council
 
 Product catalogue, trade knowledge base, HS code directory, country guides and
@@ -91,7 +89,3 @@ reading the source on GitHub:
    `%%{init}%%` lines are ignored rather than fatal — the flowchart still draws,
    just flat and uncoloured. A fence the renderer cannot parse at all is left as
    an ordinary code block.
-
-## License
-
-MIT — see [LICENSE](LICENSE).

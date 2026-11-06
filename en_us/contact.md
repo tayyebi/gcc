@@ -3,6 +3,8 @@ title: "Contact Us"
 description: "Get in touch with Global Commerce Council for inquiries, support, or partnership opportunities"
 ---
 
+# Contact Us
+
 ## Get in Touch
 
 We'd love to hear from you. Whether you have a question about our services, need support, or want to explore partnership opportunities, our team is here to help.

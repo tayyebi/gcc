@@ -2,7 +2,6 @@
 title: "Calcium Hypochlorite"
 date: 2026-02-26
 description: "High-strength calcium hypochlorite granules and tablets for water disinfection, pool treatment, and industrial bleaching."
-categories: ["other"]
 hscode: "2828.10"
 product_category: "Water Treatment Chemicals"
 origin: "China"
@@ -21,6 +20,7 @@ specifications:
   insoluble_matter: "Max 0.5%"
 ---
 
+# Calcium Hypochlorite
 
 Calcium Hypochlorite (Ca(OCl)₂), commonly known as bleaching powder or "Perchloron," is a white crystalline solid with a strong chlorine odor. It is manufactured by reacting chlorine gas with slaked lime (calcium hydroxide). With an available chlorine content of 65–70%, it offers significantly higher disinfecting power per unit weight than liquid sodium hypochlorite, making it cost-effective for large-scale or remote applications.
 

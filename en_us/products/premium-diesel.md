@@ -2,7 +2,6 @@
 title: "Premium Diesel"
 date: 2026-02-07
 description: "High-quality diesel fuel for automotive and industrial use"
-categories: ["petroleum"]
 hscode: "2710.12"
 product_category: "Refined Fuels"
 origin: "Middle East"
@@ -20,6 +19,7 @@ specifications:
   water_content: "Max 200 mg/kg"
 ---
 
+# Premium Diesel
 
 Our Premium Diesel is a high-performance, ultra-low sulfur diesel (ULSD) fuel engineered to meet the stringent demands of modern diesel engines. It ensures cleaner combustion, reduced emissions, and improved fuel economy.
 

@@ -2,7 +2,6 @@
 title: "Sodium Hypochlorite (Javelle Water)"
 date: 2026-02-26
 description: "Industrial-grade sodium hypochlorite solution for water disinfection, bleaching, and sanitation applications."
-categories: ["other"]
 hscode: "2828.90"
 product_category: "Water Treatment Chemicals"
 origin: "China / India"
@@ -21,6 +20,7 @@ specifications:
   ph: "11 – 13"
 ---
 
+# Sodium Hypochlorite (Javelle Water)
 
 Sodium Hypochlorite (NaOCl), historically known as Javelle Water (Eau de Javel), is a clear to pale yellow aqueous solution with a characteristic chlorine odor. It is produced by reacting chlorine gas with a cold, dilute sodium hydroxide solution. As the most widely used liquid bleach and disinfectant worldwide, it provides broad-spectrum antimicrobial activity at low concentrations and is the active ingredient in household bleach (3–5%) and industrial-grade products (10–16%).
 

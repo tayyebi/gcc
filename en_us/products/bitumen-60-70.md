@@ -9,8 +9,9 @@ moq: "1 x 20ft container (~20 MT)"
 availability: "In Stock"
 status: "Custom Order"
 cas_number: "8052-42-4"
-featured: true
 ---
+
+# Bitumen 60/70 – Penetration Grade Paving Bitumen
 
 ## Product Overview
 

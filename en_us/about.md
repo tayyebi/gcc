@@ -3,6 +3,8 @@ title: "About Us"
 description: "Learn about Global Commerce Council and our mission to connect businesses worldwide"
 ---
 
+# About Us
+
 ## Our Mission
 
 The Global Commerce Council is dedicated to facilitating international trade and commerce across diverse industries. We connect suppliers, manufacturers, and buyers worldwide, ensuring quality products and sustainable business practices.

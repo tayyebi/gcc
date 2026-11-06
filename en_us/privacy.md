@@ -3,6 +3,8 @@ title: "Privacy Policy"
 description: "Privacy policy for Global Commerce Council"
 ---
 
+# Privacy Policy
+
 ## Privacy Policy
 
 **Last Updated: February 6, 2026**

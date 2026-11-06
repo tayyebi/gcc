@@ -2,7 +2,6 @@
 title: "Calcium Chloride"
 date: 2026-02-26
 description: "Anhydrous and flake-form calcium chloride for de-icing, dust control, desiccation, and industrial processing."
-categories: ["other"]
 hscode: "2827.20"
 product_category: "Industrial Chemicals"
 origin: "China / India"
@@ -21,6 +20,7 @@ specifications:
   iron_fe: "Max 20 ppm"
 ---
 
+# Calcium Chloride
 
 Calcium Chloride (CaCl₂) is an inorganic salt available as white hygroscopic flakes, pellets, or a concentrated aqueous solution. It is produced either as a by-product of the Solvay soda ash process or via the direct reaction of calcium carbonate with hydrochloric acid. Its strong exothermic dissolution and high water-absorption capacity make it indispensable across diverse industrial and infrastructure applications.
 

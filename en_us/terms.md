@@ -3,6 +3,8 @@ title: "Terms of Service"
 description: "Terms of service for Global Commerce Council"
 ---
 
+# Terms of Service
+
 ## Terms of Service
 
 **Last Updated: February 6, 2026**

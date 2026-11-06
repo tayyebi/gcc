@@ -2,7 +2,6 @@
 title: "Petroleum Naphtha"
 date: 2026-02-07
 description: "Versatile intermediate hydrocarbon liquid feedstock for petrochemical cracking and solvent applications."
-categories: ["petroleum", "petrochemicals"]
 hscode: "2710.16"
 product_category: "Petrochemical Feedstock"
 origin: "Middle East"
@@ -10,7 +9,6 @@ packaging: "Bulk tanker / ISO tank"
 moq: "500 MT"
 availability: "In Stock"
 status: "Available"
-featured: true
 specifications:
   density: "0.65 - 0.75 g/cm³"
   sulfur: "Max 500 ppm"
@@ -18,6 +16,7 @@ specifications:
   final_boiling_point: "Max 200°C"
 ---
 
+# Petroleum Naphtha
 
 Petroleum Naphtha is a flammable liquid hydrocarbon mixture. It is a key intermediate in the oil refining process and serves as a primary feedstock for the petrochemical industry. We offer both Light Naphtha (paraffin-rich) and Heavy Naphtha (naphthene/aromatic-rich) to suit various industrial requirements.
 

@@ -2,7 +2,6 @@
 title: "Refined Sulfur"
 date: 2026-02-07
 description: "High-purity refined sulfur for industrial use"
-categories: ["other"]
 hscode: "2503.00"
 product_category: "Petrochemicals"
 origin: "Middle East"
@@ -20,6 +19,7 @@ specifications:
   organic_matter: "Max 0.03%"
 ---
 
+# Refined Sulfur
 
 High-purity Refined Sulfur recovered from efficient desulfurization of Natural Gas and Crude Oil. It appears as bright yellow granules or prills and is a fundamental raw material for the chemical and agricultural industries.
 

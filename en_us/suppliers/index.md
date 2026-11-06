@@ -3,6 +3,8 @@ title: "Supplier Directory"
 description: "Browse our network of verified suppliers across all product categories"
 ---
 
+# Supplier Directory
+
 ## Verified Supplier Network
 
 Connect with our global network of verified suppliers. All suppliers in our directory have been carefully vetted for quality, reliability, and compliance.

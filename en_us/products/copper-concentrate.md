@@ -2,7 +2,6 @@
 title: "Copper Concentrate"
 date: 2026-02-07
 description: "High-grade copper concentrate for smelting"
-categories: ["other"]
 hscode: "7401.00"
 product_category: "Mining & Minerals"
 origin: "Chile / Zambia"
@@ -18,6 +17,7 @@ specifications:
   arsenic_as: "Max 0.20%"
 ---
 
+# Copper Concentrate
 
 High-grade Sulfide Copper Concentrate obtained through flotation processing of copper ores. It serves as the primary raw material for copper smelters worldwide to produce copper anodes and cathodes.
 

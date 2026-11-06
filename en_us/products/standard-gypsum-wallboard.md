@@ -2,7 +2,6 @@
 title: "Standard Gypsum Wallboard"
 date: 2026-02-07
 description: "Standard gypsum wallboard for general interior construction"
-categories: ["gypsum"]
 hscode: "6809.11"
 product_category: "Gypsum Products"
 origin: "Iran"
@@ -20,6 +19,7 @@ specifications:
   standard_compliance: "ASTM C1396 / EN 520 Type A"
 ---
 
+# Standard Gypsum Wallboard
 
 Standard Gypsum Wallboard is the premier solution for residential and commercial drylining applications. Composed of a non-combustible gypsum core encased in high-quality 100% recycled paper, it provides a cost-effective, durable surface for painting, wallpapering, or tiling.
 

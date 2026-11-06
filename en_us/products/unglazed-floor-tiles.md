@@ -2,7 +2,6 @@
 title: "Unglazed Floor Tiles"
 date: 2026-02-07
 description: "Durable unglazed ceramic floor tiles suitable for heavy traffic areas"
-categories: ["ceramics"]
 hscode: "6907.22"
 product_category: "Ceramic Tiles"
 origin: "Iran"
@@ -17,6 +16,7 @@ specifications:
   chemical_resistance: "Acid & Alkali Resistant"
 ---
 
+# Unglazed Floor Tiles
 
 Technical ceramic tiles designed for the most demanding environments. With no glaze to wear off, the surface texture is integral to the tile body, providing enduring slip resistance and durability even under constant heavy footfall or industrial machinery.
 

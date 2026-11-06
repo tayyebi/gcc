@@ -2,7 +2,6 @@
 title: "Decorative Wall Tiles"
 date: 2026-02-07
 description: "Stylish decorative wall tiles for interior design applications"
-categories: ["ceramics"]
 hscode: "6907.23"
 product_category: "Ceramic Tiles"
 origin: "Iran / Italy"
@@ -17,6 +16,7 @@ specifications:
   edge: "Rectified / Non-Rectified"
 ---
 
+# Decorative Wall Tiles
 
 A curated collection of glazed ceramic wall tiles designed to transform interior spaces. From vibrant majolica patterns to subtle textured reliefs, these tiles add character and depth to any vertical surface.
 

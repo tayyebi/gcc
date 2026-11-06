@@ -2,7 +2,6 @@
 title: "Fire-Resistant Gypsum Board"
 date: 2024-02-01
 description: "Type X fire-resistant gypsum board for enhanced fire protection"
-categories: ["gypsum"]
 hscode: "6809.11"
 product_category: "Gypsum Products"
 origin: "Iran"
@@ -19,6 +18,7 @@ specifications:
   surface_burning: "Class A (ASTM E84)"
 ---
 
+# Fire-Resistant Gypsum Board
 
 Professional-grade fire-resistant gypsum board designed to provide superior fire protection in commercial and residential buildings.
 

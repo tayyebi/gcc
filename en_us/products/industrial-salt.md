@@ -2,7 +2,6 @@
 title: "Industrial Salt"
 date: 2026-02-07
 description: "High-purity industrial salt for various applications"
-categories: ["other"]
 hscode: "2501.00"
 product_category: "Industrial Minerals"
 origin: "Iran / India"
@@ -20,6 +19,7 @@ specifications:
   grain_size: "0.2mm - 0.8mm (Industrial Grade)"
 ---
 
+# Industrial Salt
 
 High-grade Industrial Salt (NaCl) produced through solar evaporation or rock salt mining. It is processed to achieve high chemical purity, making it suitable for demanding industrial processes, specifically Chlor-Alkali production.
 

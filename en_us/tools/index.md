@@ -3,6 +3,8 @@ title: "Tools"
 description: "Trade utilities, templates, and lookup tools."
 ---
 
+# Tools
+
 Use these tools to streamline your international trade workflow.
 
 ## Trade Cost Calculator {#trade-cost-calculator}

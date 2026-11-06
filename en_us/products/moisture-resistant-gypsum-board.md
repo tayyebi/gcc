@@ -2,7 +2,6 @@
 title: "Moisture-Resistant Gypsum Board"
 date: 2026-02-07
 description: "Moisture-resistant gypsum board for wet areas"
-categories: ["gypsum"]
 hscode: "6809.11"
 product_category: "Gypsum Products"
 origin: "Iran"
@@ -19,6 +18,7 @@ specifications:
   standard_compliance: "ASTM C1396 / EN 520 Type H1"
 ---
 
+# Moisture-Resistant Gypsum Board
 
 A high-performance gypsum board specifically engineered for humid and wet environments. The core is reinforced with water-repellent additives and encased in moisture-resistant green liner paper, drastically reducing water absorption and preventing mold growth.
 

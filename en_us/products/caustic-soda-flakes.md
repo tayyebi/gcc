@@ -2,7 +2,6 @@
 title: "Caustic Soda Flakes"
 date: 2026-02-26
 description: "High-purity sodium hydroxide flakes for chemical manufacturing, water treatment, and industrial processing."
-categories: ["other"]
 hscode: "2815.11"
 product_category: "Industrial Chemicals"
 origin: "Middle East / China"
@@ -22,6 +21,7 @@ specifications:
   iron_fe: "Max 5 ppm"
 ---
 
+# Caustic Soda Flakes
 
 Caustic Soda Flakes (Sodium Hydroxide, NaOH) is a white, hygroscopic solid produced primarily by the chlor-alkali electrolysis of sodium chloride brine. The flake form offers easy handling, fast dissolution, and convenient dosing compared to liquid grades, making it one of the most widely traded industrial alkalis in global markets.
 

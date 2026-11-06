@@ -3,6 +3,8 @@ title: "Knowledge Base"
 description: "Practical guidance for global trade, logistics, compliance, and market growth."
 ---
 
+# Knowledge Base
+
 Explore curated guides for international trade operations, risk management, and global expansion.
 
 ## International Trade & Business

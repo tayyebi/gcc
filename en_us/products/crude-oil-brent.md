@@ -2,7 +2,6 @@
 title: "Brent Crude Oil"
 date: 2024-01-30
 description: "Premium Brent crude oil from North Sea for refining and energy production"
-categories: ["petroleum"]
 hscode: "2709.00"
 product_category: "Crude Oil"
 origin: "North Sea / Middle East"
@@ -18,6 +17,7 @@ specifications:
   nickel: "< 2 ppm"
 ---
 
+# Brent Crude Oil
 
 Brent Crude is the leading global price benchmark for Atlantic basin crude oils. Sourced from the North Sea, it is a light, sweet crude oil that is ideal for refining into high-value products like gasoline, middle distillates, and diesel.
 
