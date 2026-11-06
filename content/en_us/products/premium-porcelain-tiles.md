@@ -55,4 +55,4 @@ Our Premium Porcelain Tiles offer the perfect blend of aesthetic sophistication 
 - Resistance to Chemicals: Class A
 - Slip Resistance: R10-R11
 
-[Request a Quote](/contact/?subject=porcelain-tiles)
+[Request a Quote](../contact.md?subject=porcelain-tiles)

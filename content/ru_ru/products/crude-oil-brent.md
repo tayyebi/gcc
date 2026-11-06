@@ -56,4 +56,4 @@ specifications:
 - Сертификат происхождения
 - Сертификаты качества
 
-[Запросить цену](/contact/?subject=brent-crude)
+[Запросить цену](../contact.md?subject=brent-crude)

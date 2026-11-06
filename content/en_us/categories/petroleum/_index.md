@@ -62,4 +62,4 @@ Comprehensive petroleum and energy solutions for various industries.
 
 All petroleum products are handled according to international safety standards and environmental regulations.
 
-[Browse Suppliers](/suppliers/?category=petroleum)
+[Browse Suppliers](../../suppliers/_index.md?category=petroleum)

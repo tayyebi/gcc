@@ -62,4 +62,4 @@ hscodes:
 
 جميع المنتجات النفطية يتم التعامل معها وفقاً لمعايير السلامة الدولية واللوائح البيئية.
 
-[تصفح الموردين](/suppliers/?category=petroleum)
+[تصفح الموردين](../../suppliers/_index.md?category=petroleum)

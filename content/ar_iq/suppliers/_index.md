@@ -39,7 +39,7 @@ description: "تصفح شبكتنا من الموردين المعتمدين ع�
 
 هل أنت مورد تتطلع إلى توسيع نطاق وصولك؟
 
-[تقديم طلب لتصبح مورداً معتمداً](/contact/?subject=supplier-application)
+[تقديم طلب لتصبح مورداً معتمداً](../contact.md?subject=supplier-application)
 
 ### البحث عن موردين
 

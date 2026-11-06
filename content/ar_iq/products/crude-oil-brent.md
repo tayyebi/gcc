@@ -55,4 +55,4 @@ specifications:
 - شهادة المنشأ
 - شهادات الجودة
 
-[طلب عرض سعر](/contact/?subject=brent-crude)
+[طلب عرض سعر](../contact.md?subject=brent-crude)

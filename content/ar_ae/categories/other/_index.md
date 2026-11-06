@@ -25,9 +25,14 @@ description: "منتجات صناعية متنوعة تشمل المواد ال�
 - شحن دولي موثوق
 - شهادات تحليل مع كل شحنة
 
-{% for product in site.products %}
-{% if product.category == "other" %}
-### [{{ product.title }}]({{ product.url }})
-{{ product.description }}
-{% endif %}
-{% endfor %}
+## المنتجات الصناعية المتوفرة
+
+- [كلوريد الكالسيوم](../../products/calcium-chloride.md) - مادة كيميائية متعددة الاستخدامات
+- [هيبوكلوريت الكالسيوم](../../products/calcium-hypochlorite.md) - مادة معقمة ومطهرة عالية الفعالية
+- [رقائق الصودا الكاوية](../../products/caustic-soda-flakes.md) - مادة قلوية قوية للتطبيقات الصناعية
+- [الملح الصناعي](../../products/industrial-salt.md) - ملح عالي النقاء للاستخدامات الصناعية
+- [الكبريت المكرر](../../products/refined-sulfur.md) - كبريت عالي النقاء للتطبيقات الصناعية
+- [هيبوكلوريت الصوديوم](../../products/sodium-hypochlorite.md) - محلول مطهر ومعقم
+- [مركزات النحاس](../../products/copper-concentrate.md) - مركزات نحاس للتطبيقات المعدنية
+
+[تصفح جميع المنتجات](../../products/_index.md)

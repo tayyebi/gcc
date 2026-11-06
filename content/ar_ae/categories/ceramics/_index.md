@@ -22,9 +22,10 @@ description: "مجموعة شاملة من بلاط السيراميك والخ�
 - أسعار تنافسية للجملة وكميات التصدير
 - شحن مباشر إلى جميع أنحاء العالم
 
-{% for product in site.products %}
-{% if product.category == "ceramics" %}
-### [{{ product.title }}]({{ product.url }})
-{{ product.description }}
-{% endif %}
-{% endfor %}
+## منتجات السيراميك المتوفرة
+
+- [بلاط بورسلين فاخر](../../products/premium-porcelain-tiles.md) - بلاط بورسلين عالي الجودة للأرضيات والجدران
+- [بلاط حائط ديكوري](../../products/decorative-wall-tiles.md) - بلاط حائط بتصاميم عصرية وتقليدية
+- [بلاط أرضيات غير مطلي](../../products/unglazed-floor-tiles.md) - بلاط أرضيات متين للاستخدام التجاري
+
+[تصفح جميع المنتجات](../../products/_index.md)

@@ -69,4 +69,4 @@ With partners in over 50 countries, we facilitate trade across:
 
 Whether you're a supplier looking to expand your market reach or a buyer seeking quality products, the Global Commerce Council is your trusted partner in international trade.
 
-[Contact us today](/contact/) to learn how we can help your business grow.
+[Contact us today](contact.md) to learn how we can help your business grow.

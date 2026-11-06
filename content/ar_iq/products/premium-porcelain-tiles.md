@@ -48,4 +48,4 @@ specifications:
 - مقاومة المواد الكيميائية: الفئة A
 - مقاومة الانزلاق: R11-R10
 
-[طلب عرض سعر](/contact/?subject=porcelain-tiles)
+[طلب عرض سعر](../contact.md?subject=porcelain-tiles)

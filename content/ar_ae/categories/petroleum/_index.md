@@ -25,9 +25,14 @@ description: "النفط الخام والمنتجات المكررة والمو
 - شهادات منشأ ومطابقة
 - أسعار تنافسية مع عقود طويلة الأجل
 
-{% for product in site.products %}
-{% if product.category == "petroleum" %}
-### [{{ product.title }}]({{ product.url }})
-{{ product.description }}
-{% endif %}
-{% endfor %}
+## المنتجات البترولية والبتروكيماوية المتوفرة
+
+- [النفط الخام (برنت)](../../products/crude-oil-brent.md) - نفط خام عالي الجودة من بحر الشمال
+- [الديزل الممتاز](../../products/premium-diesel.md) - وقود ديزل منخفض الكبريت
+- [النافثا](../../products/naphtha.md) - مادة وسيطة بتروكيماوية عالية النقاء
+- [زيت الوقود البحري](../../products/marine-fuel-oil.md) - وقود مخصص للاستخدام البحري
+- [البيتومين 60/70](../../products/bitumen-60-70.md) - بيتومين طرق عالي الجودة
+- [مطاط بولي بيوتادايين](../../products/polybutadiene-rubber.md) - مطاط صناعي للتطبيقات المتخصصة
+- [روح بيضاء مذيب 402](../../products/white-spirit-solvent-402.md) - مذيب بترولي عالي النقاء
+
+[تصفح جميع المنتجات](../../products/_index.md)

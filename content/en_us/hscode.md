@@ -54,10 +54,10 @@ Our trade specialists can assist you in:
 - Compliance documentation
 - Country-specific requirements
 
-[Contact our specialists](/contact/) for HS code assistance.
+[Contact our specialists](contact.md) for HS code assistance.
 
 ### Resources
 
 - [WCO HS Database](https://www.wcoomd.org/)
-- [Country-specific tariff schedules](/insights/tariff-schedules/)
-- [Trade agreement information](/insights/trade-agreements/)
+- [Country-specific tariff schedules](country-guides/_index.md)
+- [Trade agreement information](knowledge-base/_index.md)

@@ -22,7 +22,7 @@ graph TD
 
   subgraph raw["RAW MATERIALS"]
     direction TB
-    R1["Crude Oil<br/><small>Brent</small>"]
+    R1["Crude Oil Brent"]
     R2["Copper Ore"]
     R3["Salt Brine"]
     R4["Gypsum Rock"]
@@ -30,16 +30,16 @@ graph TD
     R6["Limestone"]
   end
 
-  subgraph refining["REFINING &amp; PROCESSING"]
+  subgraph refining["REFINING & PROCESSING"]
     direction TB
     P1["Distillation Unit"]
     P2["Desulfurization"]
     P3["Cracking Unit"]
-    P4["Flotation<br/>Concentration"]
+    P4["Flotation Concentration"]
     P5["Crystallization"]
-    P6["Gypsum Board<br/>Manufacturing"]
-    P7["Ceramic Kiln<br/>Firing"]
-    P8["Chemical<br/>Synthesis"]
+    P6["Gypsum Board Manufacturing"]
+    P7["Ceramic Kiln Firing"]
+    P8["Chemical Synthesis"]
   end
 
   subgraph products["OUR PRODUCTS"]
@@ -50,35 +50,35 @@ graph TD
     D4["Bitumen 60/70"]
     D5["White Spirit 402"]
     D6["Refined Sulfur"]
-    D7["Polybutadiene<br/>Rubber"]
-    D8["Copper<br/>Concentrate"]
+    D7["Polybutadiene Rubber"]
+    D8["Copper Concentrate"]
     D9["Industrial Salt"]
-    D10["Caustic Soda<br/>Flakes"]
-    D11["Calcium<br/>Chloride"]
-    D12["Calcium<br/>Hypochlorite"]
-    D13["Sodium<br/>Hypochlorite"]
-    D14["Standard Gypsum<br/>Wallboard"]
-    D15["Fire-Resistant<br/>Gypsum Board"]
-    D16["Moisture-Resistant<br/>Gypsum Board"]
-    D17["Premium Porcelain<br/>Tiles"]
-    D18["Decorative Wall<br/>Tiles"]
-    D19["Unglazed Floor<br/>Tiles"]
+    D10["Caustic Soda Flakes"]
+    D11["Calcium Chloride"]
+    D12["Calcium Hypochlorite"]
+    D13["Sodium Hypochlorite"]
+    D14["Standard Gypsum Wallboard"]
+    D15["Fire-Resistant Gypsum Board"]
+    D16["Moisture-Resistant Gypsum Board"]
+    D17["Premium Porcelain Tiles"]
+    D18["Decorative Wall Tiles"]
+    D19["Unglazed Floor Tiles"]
   end
 
   subgraph markets["END MARKETS"]
     direction TB
-    M1["Transportation<br/>&amp; Fuel"]
-    M2["Construction<br/>&amp; Infrastructure"]
-    M3["Chemical<br/>Manufacturing"]
-    M4["Industrial<br/>Processing"]
-    M5["Water Treatment<br/>&amp; Sanitation"]
-    M6["Marine &amp;<br/>Shipping"]
+    M1["Transportation & Fuel"]
+    M2["Construction & Infrastructure"]
+    M3["Chemical Manufacturing"]
+    M4["Industrial Processing"]
+    M5["Water Treatment & Sanitation"]
+    M6["Marine & Shipping"]
   end
 
   subgraph logistics["GLOBAL LOGISTICS"]
-    L1["Distribution<br/>Centers"]
-    L2["Ocean &amp; Air<br/>Freight"]
-    L3["Regional<br/>Warehousing"]
+    L1["Distribution Centers"]
+    L2["Ocean & Air Freight"]
+    L3["Regional Warehousing"]
   end
 
   R1 --> P1

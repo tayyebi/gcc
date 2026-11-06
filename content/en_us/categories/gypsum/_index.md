@@ -52,4 +52,4 @@ High-quality gypsum materials for construction and finishing applications.
 - EN 520
 - ISO 6308
 
-[Browse Suppliers](/suppliers/?category=gypsum)
+[Browse Suppliers](../../suppliers/_index.md?category=gypsum)

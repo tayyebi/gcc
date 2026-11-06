@@ -56,4 +56,4 @@ Explore our diverse range of additional products and materials.
 
 We also facilitate sourcing for specialized products and custom requirements.
 
-[Contact us](/contact/) to discuss your specific needs.
+[Contact us](../../contact.md) to discuss your specific needs.

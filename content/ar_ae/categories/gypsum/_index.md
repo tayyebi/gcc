@@ -22,9 +22,10 @@ description: "ألواح الجبس وأنظمة البناء الجاف عال�
 - عزل حراري وصوتي ممتاز
 - خيارات متعددة للأحجام والسماكات
 
-{% for product in site.products %}
-{% if product.category == "gypsum" %}
-### [{{ product.title }}]({{ product.url }})
-{{ product.description }}
-{% endif %}
-{% endfor %}
+## منتجات الجبس المتوفرة
+
+- [ألواح جبس مقاومة للحريق](../../products/fire-resistant-gypsum-board.md) - ألواح جبس مصممة خصيصاً لمقاومة الحرائق
+- [ألواح جبس مقاومة للرطوبة](../../products/moisture-resistant-gypsum-board.md) - ألواح جبس معالجة لمقاومة الرطوبة والعفن
+- [ألواح جبس عادية](../../products/standard-gypsum-wallboard.md) - ألواح جبس قياسية للاستخدام العام في البناء
+
+[تصفح جميع المنتجات](../../products/_index.md)

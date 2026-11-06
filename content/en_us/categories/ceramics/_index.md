@@ -50,4 +50,4 @@ All our ceramic products meet international standards including:
 - ASTM C1027
 - EN 14411
 
-[Browse Suppliers](/suppliers/?category=ceramics)
+[Browse Suppliers](../../suppliers/_index.md?category=ceramics)

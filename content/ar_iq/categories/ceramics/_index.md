@@ -50,4 +50,4 @@ hscodes:
 - ASTM C1027
 - EN 14411
 
-[تصفح الموردين](/suppliers/?category=ceramics)
+[تصفح الموردين](../../suppliers/_index.md?category=ceramics)

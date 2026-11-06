@@ -62,4 +62,4 @@ Brent Crude is the leading global price benchmark for Atlantic basin crude oils.
 - Certificate of origin
 - Quality certificates
 
-[Request Quote](/contact/?subject=brent-crude)
+[Request Quote](../contact.md?subject=brent-crude)

@@ -52,4 +52,4 @@ hscodes:
 - EN 520
 - ISO 6308
 
-[تصفح الموردين](/suppliers/?category=gypsum)
+[تصفح الموردين](../../suppliers/_index.md?category=gypsum)

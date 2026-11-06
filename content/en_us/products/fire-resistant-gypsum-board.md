@@ -58,4 +58,4 @@ Professional-grade fire-resistant gypsum board designed to provide superior fire
 
 Compatible with standard drywall installation methods. For fire-rated assemblies, follow approved UL designs.
 
-[Contact for Availability](/contact/?subject=gypsum-board)
+[Contact for Availability](../contact.md?subject=gypsum-board)

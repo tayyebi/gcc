@@ -39,7 +39,7 @@ Work with our verified suppliers to:
 
 Are you a supplier looking to expand your reach?
 
-[Apply to become a verified supplier](/contact/?subject=supplier-application)
+[Apply to become a verified supplier](../contact.md?subject=supplier-application)
 
 ### Search Suppliers
 

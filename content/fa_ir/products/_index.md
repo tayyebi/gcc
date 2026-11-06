@@ -9,29 +9,29 @@ description: "لیست کامل محصولات قابل صادرات شامل م
 
 ### محصولات ساختمانی
 
-- [کاشی دیوار دکوراتیو]({{< relref "decorative-wall-tiles" >}})
-- [کاشی پرسلان ممتاز]({{< relref "premium-porcelain-tiles" >}})
-- [کاشی کف بدون لعاب]({{< relref "unglazed-floor-tiles" >}})
-- [تخته گچی استاندارد]({{< relref "standard-gypsum-wallboard" >}})
-- [تخته گچی ضد حریق]({{< relref "fire-resistant-gypsum-board" >}})
-- [تخته گچی ضد رطوبت]({{< relref "moisture-resistant-gypsum-board" >}})
+- [کاشی دیوار دکوراتیو](decorative-wall-tiles.md)
+- [کاشی پرسلان ممتاز](premium-porcelain-tiles.md)
+- [کاشی کف بدون لعاب](unglazed-floor-tiles.md)
+- [تخته گچی استاندارد](standard-gypsum-wallboard.md)
+- [تخته گچی ضد حریق](fire-resistant-gypsum-board.md)
+- [تخته گچی ضد رطوبت](moisture-resistant-gypsum-board.md)
 
 ### فرآورده‌های نفتی
 
-- [قیر ۶۰/۷۰]({{< relref "bitumen-60-70" >}})
-- [گازوئیل ممتاز]({{< relref "premium-diesel" >}})
-- [نفت کوره دریایی]({{< relref "marine-fuel-oil" >}})
-- [نفتا]({{< relref "naphtha" >}})
-- [حلال ۴۰۲ (وایت اسپیریت)]({{< relref "white-spirit-solvent-402" >}})
-- [نفت خام برنت]({{< relref "crude-oil-brent" >}})
+- [قیر ۶۰/۷۰](bitumen-60-70.md)
+- [گازوئیل ممتاز](premium-diesel.md)
+- [نفت کوره دریایی](marine-fuel-oil.md)
+- [نفتا](naphtha.md)
+- [حلال ۴۰۲ (وایت اسپیریت)](white-spirit-solvent-402.md)
+- [نفت خام برنت](crude-oil-brent.md)
 
 ### محصولات شیمیایی و صنعتی
 
-- [سود سوزآور (پرک)]({{< relref "caustic-soda-flakes" >}})
-- [گوگرد تصفیه شده]({{< relref "refined-sulfur" >}})
-- [نمک صنعتی]({{< relref "industrial-salt" >}})
-- [هیپوکلریت کلسیم]({{< relref "calcium-hypochlorite" >}})
-- [کلسیم کلرید]({{< relref "calcium-chloride" >}})
-- [کنسانتره مس]({{< relref "copper-concentrate" >}})
-- [لاستیک پلی‌بوتادین]({{< relref "polybutadiene-rubber" >}})
-- [هیپوکلریت سدیم]({{< relref "sodium-hypochlorite" >}})
+- [سود سوزآور (پرک)](caustic-soda-flakes.md)
+- [گوگرد تصفیه شده](refined-sulfur.md)
+- [نمک صنعتی](industrial-salt.md)
+- [هیپوکلریت کلسیم](calcium-hypochlorite.md)
+- [کلسیم کلرید](calcium-chloride.md)
+- [کنسانتره مس](copper-concentrate.md)
+- [لاستیک پلی‌بوتادین](polybutadiene-rubber.md)
+- [هیپوکلریت سدیم](sodium-hypochlorite.md)

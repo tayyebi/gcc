@@ -49,4 +49,4 @@ specifications:
 - Химическая стойкость: Класс A
 - Устойчивость к скольжению: R10-R11
 
-[Запросить цену](/contact/?subject=porcelain-tiles)
+[Запросить цену](../contact.md?subject=porcelain-tiles)
