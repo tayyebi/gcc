@@ -9,135 +9,135 @@
 This repository is the documentation. It is served straight from the working
 tree by serve-md (see `compose.yaml`), so what a reader sees here is exactly
 what is in Git. Links are relative to the file that contains them, and YAML
-front matter is metadata for the Hugo build rather than prose for the reader.
+front matter is metadata only: the server strips it before rendering.
 
 ## English (en_us)
 
-- [Home](content/en_us/_index.md): Global Commerce Council overview
-- [About us](content/en_us/about.md): mission, what we do, values, global reach
-- [Products](content/en_us/products/_index.md): the full catalogue, by category
-- [Product categories](content/en_us/categories/_index.md): Ceramics, Gypsum, Petroleum, other industries
-- [Ceramics](content/en_us/categories/ceramics/_index.md): tiles, sanitary ware, industrial ceramics
-- [Gypsum](content/en_us/categories/gypsum/_index.md): standard, fire-resistant and moisture-resistant board
-- [Petroleum & petrochemicals](content/en_us/categories/petroleum/_index.md): crude, fuels, naphtha, bitumen, rubber
-- [Other industries](content/en_us/categories/other/_index.md): chemicals, industrial salts, sulfur, copper concentrate
-- [Knowledge base](content/en_us/knowledge-base/_index.md): trade, logistics, finance, law and marketing topics
-- [Polybutadiene rubber guide](content/en_us/knowledge-base/polybutadiene-rubber-guide.md): applications, specifications, standards
-- [HS code directory](content/en_us/hscode.md): how goods are classified for customs
-- [Country & market guides](content/en_us/country-guides/_index.md): regional export and import playbooks
-- [Tools](content/en_us/tools/_index.md): duty calculator, freight calculator, document templates, HS lookup
-- [Supply chain network](content/en_us/supply-chain/index.md): raw materials through processing to end markets
-- [Supplier directory](content/en_us/suppliers/_index.md): the verified supplier network
-- [Contact](content/en_us/contact.md): how to reach the team
-- [Terms of service](content/en_us/terms.md)
-- [Privacy policy](content/en_us/privacy.md)
+- [Home](en_us): Global Commerce Council overview
+- [About us](en_us/about.md): mission, what we do, values, global reach
+- [Products](en_us/products): the full catalogue, by category
+- [Product categories](en_us/categories): Ceramics, Gypsum, Petroleum, other industries
+- [Ceramics](en_us/categories/ceramics): tiles, sanitary ware, industrial ceramics
+- [Gypsum](en_us/categories/gypsum): standard, fire-resistant and moisture-resistant board
+- [Petroleum & petrochemicals](en_us/categories/petroleum): crude, fuels, naphtha, bitumen, rubber
+- [Other industries](en_us/categories/other): chemicals, industrial salts, sulfur, copper concentrate
+- [Knowledge base](en_us/knowledge-base): trade, logistics, finance, law and marketing topics
+- [Polybutadiene rubber guide](en_us/knowledge-base/polybutadiene-rubber-guide.md): applications, specifications, standards
+- [HS code directory](en_us/hscode.md): how goods are classified for customs
+- [Country & market guides](en_us/country-guides): regional export and import playbooks
+- [Tools](en_us/tools): duty calculator, freight calculator, document templates, HS lookup
+- [Supply chain network](en_us/supply-chain): raw materials through processing to end markets
+- [Supplier directory](en_us/suppliers): the verified supplier network
+- [Contact](en_us/contact.md): how to reach the team
+- [Terms of service](en_us/terms.md)
+- [Privacy policy](en_us/privacy.md)
 
 ## Русский (ru_ru)
 
-- [Домашняя страница](content/ru_ru/_index.md)
-- [О нас](content/ru_ru/about.md)
-- [Продукция](content/ru_ru/products/_index.md)
-- [Категории продукции](content/ru_ru/categories/_index.md)
-- [Керамика](content/ru_ru/categories/ceramics/_index.md)
-- [Гипс](content/ru_ru/categories/gypsum/_index.md)
-- [Нефтепродукты и нефтехимия](content/ru_ru/categories/petroleum/_index.md)
-- [Другие отрасли](content/ru_ru/categories/other/_index.md)
-- [База знаний](content/ru_ru/knowledge-base/_index.md)
-- [Руководство по полибутадиеновому каучуку](content/ru_ru/knowledge-base/polybutadiene-rubber-guide.md)
-- [Справочник кодов ТН ВЭД](content/ru_ru/hscode.md)
-- [Страновые руководства](content/ru_ru/country-guides/_index.md)
-- [Инструменты](content/ru_ru/tools/_index.md)
-- [Сеть цепочки поставок](content/ru_ru/supply-chain/index.md)
-- [Каталог поставщиков](content/ru_ru/suppliers/_index.md)
-- [Контакты](content/ru_ru/contact.md)
-- [Условия обслуживания](content/ru_ru/terms.md)
-- [Политика конфиденциальности](content/ru_ru/privacy.md)
+- [Домашняя страница](ru_ru)
+- [О нас](ru_ru/about.md)
+- [Продукция](ru_ru/products)
+- [Категории продукции](ru_ru/categories)
+- [Керамика](ru_ru/categories/ceramics)
+- [Гипс](ru_ru/categories/gypsum)
+- [Нефтепродукты и нефтехимия](ru_ru/categories/petroleum)
+- [Другие отрасли](ru_ru/categories/other)
+- [База знаний](ru_ru/knowledge-base)
+- [Руководство по полибутадиеновому каучуку](ru_ru/knowledge-base/polybutadiene-rubber-guide.md)
+- [Справочник кодов ТН ВЭД](ru_ru/hscode.md)
+- [Страновые руководства](ru_ru/country-guides)
+- [Инструменты](ru_ru/tools)
+- [Сеть цепочки поставок](ru_ru/supply-chain)
+- [Каталог поставщиков](ru_ru/suppliers)
+- [Контакты](ru_ru/contact.md)
+- [Условия обслуживания](ru_ru/terms.md)
+- [Политика конфиденциальности](ru_ru/privacy.md)
 
 ## العربية (ar_iq)
 
-- [الصفحة الرئيسية](content/ar_iq/_index.md)
-- [من نحن](content/ar_iq/about.md)
-- [المنتجات](content/ar_iq/products/_index.md)
-- [فئات المنتجات](content/ar_iq/categories/_index.md)
-- [السيراميك](content/ar_iq/categories/ceramics/_index.md)
-- [الجبس](content/ar_iq/categories/gypsum/_index.md)
-- [المنتجات البترولية](content/ar_iq/categories/petroleum/_index.md)
-- [الصناعات الأخرى](content/ar_iq/categories/other/_index.md)
-- [قاعدة المعرفة](content/ar_iq/knowledge-base/_index.md)
-- [دليل مطاط البولي بوتادين](content/ar_iq/knowledge-base/polybutadiene-rubber-guide.md)
-- [دليل رموز النظام المنسق](content/ar_iq/hscode.md)
-- [أدلة الدول](content/ar_iq/country-guides/_index.md)
-- [الأدوات](content/ar_iq/tools/_index.md)
-- [شبكة سلسلة التوريد](content/ar_iq/supply-chain/index.md)
-- [دليل الموردين](content/ar_iq/suppliers/_index.md)
-- [اتصل بنا](content/ar_iq/contact.md)
-- [شروط الخدمة](content/ar_iq/terms.md)
-- [سياسة الخصوصية](content/ar_iq/privacy.md)
+- [الصفحة الرئيسية](ar_iq)
+- [من نحن](ar_iq/about.md)
+- [المنتجات](ar_iq/products)
+- [فئات المنتجات](ar_iq/categories)
+- [السيراميك](ar_iq/categories/ceramics)
+- [الجبس](ar_iq/categories/gypsum)
+- [المنتجات البترولية](ar_iq/categories/petroleum)
+- [الصناعات الأخرى](ar_iq/categories/other)
+- [قاعدة المعرفة](ar_iq/knowledge-base)
+- [دليل مطاط البولي بوتادين](ar_iq/knowledge-base/polybutadiene-rubber-guide.md)
+- [دليل رموز النظام المنسق](ar_iq/hscode.md)
+- [أدلة الدول](ar_iq/country-guides)
+- [الأدوات](ar_iq/tools)
+- [شبكة سلسلة التوريد](ar_iq/supply-chain)
+- [دليل الموردين](ar_iq/suppliers)
+- [اتصل بنا](ar_iq/contact.md)
+- [شروط الخدمة](ar_iq/terms.md)
+- [سياسة الخصوصية](ar_iq/privacy.md)
 
 ## Հայերեն (hy_am)
 
-- [Գլխավոր էջ](content/hy_am/_index.md)
-- [Մեր մասին](content/hy_am/about.md)
-- [Ապրանքներ](content/hy_am/products/_index.md)
-- [Ապրանքների կատեգորիաներ](content/hy_am/categories/_index.md)
-- [Կերամիկա](content/hy_am/categories/ceramics/_index.md)
-- [Գիպս](content/hy_am/categories/gypsum/_index.md)
-- [Պետրոլեումի և պետրաքիմիայի ապրանքներ](content/hy_am/categories/petroleum/_index.md)
-- [Այլ ծավալներ](content/hy_am/categories/other/_index.md)
-- [Գիտելիքների բազա](content/hy_am/knowledge-base/_index.md)
-- [Պոլիբուտադիենային ռետինի ուղեցույց](content/hy_am/knowledge-base/polybutadiene-rubber-guide.md)
-- [Մաքսային կոդերի ձեռնարկ](content/hy_am/hscode.md)
-- [Երկրների ուղեցույցներ](content/hy_am/country-guides/_index.md)
-- [Գործիքներ](content/hy_am/tools/_index.md)
-- [Մատակարարման շղթայի ցանց](content/hy_am/supply-chain/index.md)
-- [Մատակարարների գրացուցակ](content/hy_am/suppliers/_index.md)
-- [Կապ](content/hy_am/contact.md)
-- [Օգտագործման պայմաններ](content/hy_am/terms.md)
-- [Գաղտնիության քաղաքականություն](content/hy_am/privacy.md)
+- [Գլխավոր էջ](hy_am)
+- [Մեր մասին](hy_am/about.md)
+- [Ապրանքներ](hy_am/products)
+- [Ապրանքների կատեգորիաներ](hy_am/categories)
+- [Կերամիկա](hy_am/categories/ceramics)
+- [Գիպս](hy_am/categories/gypsum)
+- [Պետրոլեումի և պետրաքիմիայի ապրանքներ](hy_am/categories/petroleum)
+- [Այլ ծավալներ](hy_am/categories/other)
+- [Գիտելիքների բազա](hy_am/knowledge-base)
+- [Պոլիբուտադիենային ռետինի ուղեցույց](hy_am/knowledge-base/polybutadiene-rubber-guide.md)
+- [Մաքսային կոդերի ձեռնարկ](hy_am/hscode.md)
+- [Երկրների ուղեցույցներ](hy_am/country-guides)
+- [Գործիքներ](hy_am/tools)
+- [Մատակարարման շղթայի ցանց](hy_am/supply-chain)
+- [Մատակարարների գրացուցակ](hy_am/suppliers)
+- [Կապ](hy_am/contact.md)
+- [Օգտագործման պայմաններ](hy_am/terms.md)
+- [Գաղտնիության քաղաքականություն](hy_am/privacy.md)
 
 ## فارسی (fa_ir)
 
-- [صفحه اصلی](content/fa_ir/_index.md)
-- [درباره ما](content/fa_ir/about.md)
-- [محصولات](content/fa_ir/products/_index.md)
-- [دسته‌بندی محصولات](content/fa_ir/categories/_index.md)
-- [سیرامیک](content/fa_ir/categories/ceramics/_index.md)
-- [گچ](content/fa_ir/categories/gypsum/_index.md)
-- [فرآورده‌های نفتی](content/fa_ir/categories/petroleum/_index.md)
-- [صنایع دیگر](content/fa_ir/categories/other/_index.md)
-- [پایگاه دانش](content/fa_ir/knowledge-base/_index.md)
-- [راهنمای جامع لاستیک پلی‌بوتادین](content/fa_ir/knowledge-base/polybutadiene-rubber-guide.md)
-- [راهنمای کدهای تعرفه](content/fa_ir/hscode.md)
-- [راهنمای کشورها](content/fa_ir/country-guides/_index.md)
-- [ابزارها](content/fa_ir/tools/_index.md)
-- [شبکه زنجیره تأمین](content/fa_ir/supply-chain/index.md)
-- [تأمین‌کنندگان](content/fa_ir/suppliers/_index.md)
-- [تماس با ما](content/fa_ir/contact.md)
-- [شرایط استفاده](content/fa_ir/terms.md)
-- [سیاست حفظ حریم خصوصی](content/fa_ir/privacy.md)
+- [صفحه اصلی](fa_ir)
+- [درباره ما](fa_ir/about.md)
+- [محصولات](fa_ir/products)
+- [دسته‌بندی محصولات](fa_ir/categories)
+- [سیرامیک](fa_ir/categories/ceramics)
+- [گچ](fa_ir/categories/gypsum)
+- [فرآورده‌های نفتی](fa_ir/categories/petroleum)
+- [صنایع دیگر](fa_ir/categories/other)
+- [پایگاه دانش](fa_ir/knowledge-base)
+- [راهنمای جامع لاستیک پلی‌بوتادین](fa_ir/knowledge-base/polybutadiene-rubber-guide.md)
+- [راهنمای کدهای تعرفه](fa_ir/hscode.md)
+- [راهنمای کشورها](fa_ir/country-guides)
+- [ابزارها](fa_ir/tools)
+- [شبکه زنجیره تأمین](fa_ir/supply-chain)
+- [تأمین‌کنندگان](fa_ir/suppliers)
+- [تماس با ما](fa_ir/contact.md)
+- [شرایط استفاده](fa_ir/terms.md)
+- [سیاست حفظ حریم خصوصی](fa_ir/privacy.md)
 
 ## العربية (ar_ae)
 
-- [الصفحة الرئيسية](content/ar_ae/_index.md)
-- [من نحن](content/ar_ae/about.md)
-- [المنتجات](content/ar_ae/products/_index.md)
-- [فئات المنتجات](content/ar_ae/categories/_index.md)
-- [السيراميك ومنتجات الخزف](content/ar_ae/categories/ceramics/_index.md)
-- [الجبس ومنتجاته](content/ar_ae/categories/gypsum/_index.md)
-- [المنتجات البترولية والبتروكيماوية](content/ar_ae/categories/petroleum/_index.md)
-- [الصناعات الأخرى](content/ar_ae/categories/other/_index.md)
-- [قاعدة المعرفة](content/ar_ae/knowledge-base/_index.md)
-- [دليل شامل للمطاط البولي بيوتادايين](content/ar_ae/knowledge-base/polybutadiene-rubber-guide.md)
-- [البحث برمز النظام المنسق](content/ar_ae/hscode.md)
-- [دليل الدول](content/ar_ae/country-guides/_index.md)
-- [أدوات التجارة](content/ar_ae/tools/_index.md)
-- [شبكة سلسلة التوريد العالمية](content/ar_ae/supply-chain/index.md)
-- [دليل الموردين](content/ar_ae/suppliers/_index.md)
-- [اتصل بنا](content/ar_ae/contact.md)
-- [شروط الخدمة](content/ar_ae/terms.md)
-- [سياسة الخصوصية](content/ar_ae/privacy.md)
+- [الصفحة الرئيسية](ar_ae)
+- [من نحن](ar_ae/about.md)
+- [المنتجات](ar_ae/products)
+- [فئات المنتجات](ar_ae/categories)
+- [السيراميك ومنتجات الخزف](ar_ae/categories/ceramics)
+- [الجبس ومنتجاته](ar_ae/categories/gypsum)
+- [المنتجات البترولية والبتروكيماوية](ar_ae/categories/petroleum)
+- [الصناعات الأخرى](ar_ae/categories/other)
+- [قاعدة المعرفة](ar_ae/knowledge-base)
+- [دليل شامل للمطاط البولي بيوتادايين](ar_ae/knowledge-base/polybutadiene-rubber-guide.md)
+- [البحث برمز النظام المنسق](ar_ae/hscode.md)
+- [دليل الدول](ar_ae/country-guides)
+- [أدوات التجارة](ar_ae/tools)
+- [شبكة سلسلة التوريد العالمية](ar_ae/supply-chain)
+- [دليل الموردين](ar_ae/suppliers)
+- [اتصل بنا](ar_ae/contact.md)
+- [شروط الخدمة](ar_ae/terms.md)
+- [سياسة الخصوصية](ar_ae/privacy.md)
 
 ## Optional
 
-- [Repository index](index.md): the same tree with a short orientation for human readers
-- [Hugo configuration](hugo.toml): site parameters, languages and menus behind the Markdown build
+- [Repository index](.): the same tree with a short orientation for human readers
+- [README](README.md): how the tree is laid out and how it is served
