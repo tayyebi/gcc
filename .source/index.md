@@ -1,118 +1,52 @@
 ---
-title: "Global Commerce Council"
-description: "Documentation index for the Global Commerce Council, served from the repository root."
+title: Home
+description: Global Commerce Council - Connecting businesses worldwide through commerce
+  in Ceramics, Gypsum, Petroleum, and more.
 ---
 
-# Global Commerce Council
+# Connecting Global Markets Through Innovation
 
-Connecting global markets through innovation. This repository holds the
-council's product catalogue, knowledge base and trade tools, written in six
-languages and served directly from the files you are reading now.
+Trusted sourcing and international trade solutions for petrochemical, carbon-based and industrial raw materials.
 
-Everything below is plain Markdown. A link takes you to the rendered page; ask
-for the same URL with `Accept: text/markdown` and you get the source back.
+**ISO Certified** · **Global Export** · **Quality Assured** · **Reliable Supply Chain**
 
-## Documentation by language
+**4+** Countries Served · **100+** Active Partners · **45%** Growth Rate · **98%** Satisfaction · **10K+** Transactions · **72hrs** Avg. Response
 
-| Language | Code | Home |
-|---|---|---|
-| English | `en_us` | [English home](en_us) |
-| Русский | `ru_ru` | [Домашняя страница](ru_ru) |
-| العربية (العراق) | `ar_iq` | [الصفحة الرئيسية](ar_iq) |
-| Հայերեն | `hy_am` | [Գլխավոր էջ](hy_am) |
-| فارسی | `fa_ir` | [صفحه اصلی](fa_ir) |
-| العربية (الإمارات) | `ar_ae` | [الصفحة الرئيسية](ar_ae) |
+## Industry-Leading Solutions
 
-Each language carries the same set of sections:
+Discover comprehensive product portfolios across strategic global markets.
 
-- **Products** — the full catalogue, grouped by category
-- **Categories** — Ceramics, Gypsum, Petroleum & petrochemicals, other industries
-- **Knowledge base** — trade, logistics, compliance and market guides
-- **HS code directory** — how goods are classified for customs
-- **Country guides** — import and export requirements market by market
-- **Tools** — duty and freight calculators
-- **Supply chain** — raw materials through to end markets
-- **Suppliers** — the verified supplier network
-- **About, contact, terms and privacy**
+- **[Ceramics](en_us/categories/ceramics/)** — High-performance ceramic products for construction and industrial applications
+- **[Gypsum](en_us/categories/gypsum/)** — Premium gypsum materials and advanced building solutions
+- **[Petroleum](en_us/categories/petroleum/)** — Energy solutions and refined petroleum products
+- **[Specialty Products](en_us/categories/other/)** — Diverse industrial materials and custom solutions
 
-## Where to start
+## Featured Products
 
-- New here? Read [About us](en_us/about.md).
-- Buying? Start at [Products](en_us/products) or
-  [Categories](en_us/categories).
-- Shipping across a border? [HS code directory](en_us/hscode.md) and
-  [Country guides](en_us/country-guides).
-- Working out landed cost? [Tools](en_us/tools).
-- Curious how it all fits together? [Supply chain](en_us/supply-chain).
+Top-tier commodities driving global industries. Carefully selected for our premium clients.
 
-## How this site is served
+- **[Bitumen 60/70 – Penetration Grade Paving Bitumen](en_us/products/bitumen-60-70/)** — `HS 2713.20` — Bitumen 60/70 is a standard penetration-grade paving bitumen widely used in road construction and asphalt production. Export quality, compliant with ASTM and EN standards.
+- **[Petroleum Naphtha](en_us/products/naphtha/)** — `HS 2710.16` — Versatile intermediate hydrocarbon liquid feedstock for petrochemical cracking and solvent applications.
+- **[Polybutadiene Rubber (PBR)](en_us/products/polybutadiene-rubber/)** — `HS 4002.20` — High-cis Polybutadiene Rubber known for excellent elasticity and abrasion resistance, ideal for tire manufacturing.
+- **[White Spirit (Solvent 402)](en_us/products/white-spirit-solvent-402/)** — `HS 2710.12` — High-quality mineral spirit solvent, ideal for paint thinning, degreasing, and industrial cleaning applications.
 
-`compose.yaml` runs [serve-md](https://github.com/tayyebi/serve-md) against this
-directory. There is nothing to build and nothing to install:
+## Why Industry Leaders Choose Us
 
-```sh
-docker compose up -d          # then browse http://localhost:8019/
-```
+### Global Network
 
-The repository root is mounted read-only at `/docs`, so the server never writes
-to the working tree, and `--fresh` re-scans every second so edits to these
-files appear without a restart. Four plugins are enabled:
+Connected with verified suppliers and buyers across 50+ countries with real-time market intelligence.
 
-| Plugin | What it does here |
-|---|---|
-| `x-headers` | Response headers naming each document's title, word count and headings |
-| `math` | Renders `$…$` and `$$…$$` as MathML, server-side |
-| `mermaid` | Draws mermaid flowcharts as inline SVG, server-side |
-| `webmcp` | Publishes this same tree to AI agents at `/mcp`, `/llms.txt` and `/llms-full.txt` |
+### Quality Assurance
 
-Point an agent at it with:
+Rigorous vetting process ensuring compliance with international standards and certifications.
 
-```jsonc
-// claude_desktop_config.json
-{
-  "mcpServers": {
-    "gcc-docs": { "type": "http", "url": "http://localhost:8019/mcp" }
-  }
-}
-```
+### Expert Support
 
-## How the tree is laid out
+Dedicated specialists providing market insights, logistics coordination and trade guidance.
 
-```
-index.md                  this page
-llms.txt                  the index AI agents read first
-README.md                 the repository readme
-en_us/  ru_ru/  ar_iq/  hy_am/  fa_ir/  ar_ae/
-  index.md                the language home
-  about.md  contact.md  hscode.md  privacy.md  terms.md
-  products/  categories/  knowledge-base/  country-guides/
-  tools/  supply-chain/  suppliers/  search/
-```
+## Ready to Transform Your Global Trade?
 
-One directory is one page. serve-md resolves a directory to its `index.md`, so
-`/en_us/products` serves `en_us/products/index.md` and
-`/en_us/products/bitumen-60-70.md` serves that file. A directory without an
-`index.md` would fall back to a file listing, which is why every directory here
-has one.
+Join thousands of businesses leveraging our platform for seamless international commerce, real-time market intelligence and trusted supplier networks.
 
-## Writing documents for this site
-
-Three rules keep a document readable by the server, by an agent, and by anyone
-reading the source on GitHub:
-
-1. **Start the body with a `#` heading.** serve-md reads a document's title from
-   its first heading, and that title is what appears in `llms.txt`, in the
-   `list_docs` tool and in the `Doc-Title` response header. A leading `---`
-   front matter block is stripped before rendering, so it is safe to keep for
-   metadata but it is not what names the page.
-2. **Link with paths relative to the file that holds them.** The server has no
-   idea what the site's root URL is, so `/contact/` is a 404 here. A section is
-   linked by its bare directory name — `products`, `../categories/ceramics` —
-   because that is the one canonical URL serve-md gives it; `products/index.md`
-   redirects there with a `301`.
-3. **Mermaid labels are plain text.** No `<br/>`, no HTML tags and no HTML
-   entities inside them — the renderer escapes whatever it reads, so
-   `Crude Oil<br/>Brent` would be printed literally. Subgraphs, `style` and
-   `%%{init}%%` lines are ignored rather than fatal: the flowchart still draws,
-   just flat and uncoloured. A fence the renderer cannot parse at all is left as
-   an ordinary code block.
+- [Browse Suppliers](en_us/suppliers/)
+- [Schedule Consultation](en_us/contact/)

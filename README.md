@@ -135,10 +135,14 @@ en_us/  ru_ru/  …          the generated site
 Three rules keep a document readable in the source, in the generated page, and by
 an agent:
 
-1. **Start the body with a `#` heading.** The generator takes that heading as the
-   page title, emits it as the styled `<h1>`, and uses it in `<title>`. A leading
-   `---` front matter block is metadata only — the server strips it, and the
-   generator reads `description` and `date` from it.
+1. **Start the body with a `#` heading.** The generator emits it as the styled
+   `<h1>` and uses it in `<title>`. A leading `---` front matter block is
+   metadata only — the server strips it, and the generator reads `description`
+   and `date` from it. The two exceptions are the home pages: they keep the
+   front-matter `title` for `<title>` (the "Home" / "Главная" / … wording the
+   old build used) while their `#` heading becomes the visible hero headline,
+   because that heading used to come from a layout partial rather than the
+   document itself.
 2. **Link with paths relative to the file that holds them**, exactly as if the
    page were still a Markdown file. `../contact.md`, `../products` and
    `../../index.md` are all fine: the generator resolves each one against the

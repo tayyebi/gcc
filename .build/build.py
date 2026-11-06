@@ -188,14 +188,20 @@ def source_to_output(src_file: Path) -> Path:
 
 
 def output_for(target: str, src_dir: Path, out_dir: Path) -> str:
-    """Map a link found in the source to the URL of the page it names.
+    """Map a link found in the source to the root-relative URL it names.
 
-    The generator writes every page next to its source with a ``.html``
-    extension, so a link to ``../contact.md`` becomes ``../contact.html`` and a
-    link to a section by directory name -- ``../products``, which names
-    ``products/index.md`` -- becomes ``../products.html``. Anything that is not
-    a generated page (an external URL, an anchor, a real file such as
-    ``llms.txt``) is returned untouched.
+    ``../contact.md`` -> ``/en_us/contact/``
+    ``../products``   -> ``/en_us/products/``   (names products/index.md)
+    ``../../index.md``-> ``/``
+    ``../../llms.txt``-> ``/llms.txt``
+
+    The result is always written from the site root, never relative to the
+    page. That is deliberate: serve-md canonicalises a directory URL by
+    *dropping* the trailing slash, so a page served from
+    ``en_us/products/x/index.html`` lives at ``/en_us/products/x`` and a browser
+    resolves its relative links against ``/en_us/products/``. A link written as
+    ``../products/`` therefore points one level too high and 404s. Root-relative
+    URLs cannot drift with depth, which is also what the Hugo theme used.
     """
     if target.startswith(("http://", "https://", "mailto:", "#", "/")):
         return target
@@ -224,7 +230,13 @@ def output_for(target: str, src_dir: Path, out_dir: Path) -> str:
         except OSError:
             continue
         if src_file.is_file():
-            return os.path.relpath(source_to_output(src_file), out_dir) + sep + frag + query
+            # A directory URL, not the file behind it: the theme linked
+            # ``/products/`` rather than ``/products/index.html``, and both
+            # resolve to the same page. The site root becomes just ``/``.
+            out = source_to_output(src_file).relative_to(ROOT).as_posix()
+            if out.endswith("/index.html"):
+                out = out[: -len("/index.html")] + "/"
+            return "/" + out + sep + frag + query
 
     # Not a generated page. It may still be a real file at the repository root
     # (llms.txt, README.md, compose.yaml). The source tree mirrors the served
@@ -234,7 +246,7 @@ def output_for(target: str, src_dir: Path, out_dir: Path) -> str:
         os.path.join(str(src_dir.relative_to(SRC)), path)
     )
     if (ROOT / intended).is_file():
-        return os.path.relpath(ROOT / intended, out_dir) + sep + frag + query
+        return "/" + intended.replace(os.sep, "/") + sep + frag + query
     return target
 
 
@@ -297,9 +309,8 @@ def chrome(t: dict, key: str, default: str = "") -> str:
 def build_page(
     lang: str,
     rel: str,            # path relative to the language root, no extension
-    base: str,           # relative URL from this page to its language root
-    home: str,           # relative URL to the language home page
     title: str,
+    h1: str | None,      # visible page heading; defaults to the title
     description: str,
     date: str | None,
     body_html: str,
@@ -310,7 +321,10 @@ def build_page(
     rtl = lang in RTL
     site_title = AR_SITE_TITLE if lang in ("ar_iq", "ar_ae") else SITE["name"]
     full_title = f"{title} | {site_title}"
-    up = base
+    heading = h1 or title
+    # Root-relative: the language the page belongs to, which is also where the
+    # root landing page points, since it is the English one.
+    up = "/" + lang + "/"
     # Absolute asset URLs: the stylesheet must resolve from any depth.
     css = "/static/css/custom.css"
     favicon = "/static/favicon.svg"
@@ -319,13 +333,18 @@ def build_page(
     html_dir = f' dir="rtl"' if rtl else ""
     body_cls = ' class="rtl"' if rtl else ""
 
+    # Every link in the shell is written from the site root, so nothing depends
+    # on how deep this page sits. The language prefix is also the prefix the
+    # root landing page uses, since that page is the English one.
+    home = "/" + lang + "/"
+
     # ---- language switcher -------------------------------------------------
     lang_items = []
     for code, name, _, _ in LANGS:
         active = " is-active" if code == lang else ""
         # The entry for the language you are reading goes to that language's
         # home page rather than to "./", which on a page like
-        # products/bitumen-60-70.html would name a directory with no index.
+        # /en_us/products/bitumen-60-70 would name a directory with no index.
         href = home if code == lang else lang_hrefs[code]
         lang_items.append(
             f'<li role="none"><a class="dropdown-entry{active}" role="menuitem" '
@@ -608,7 +627,7 @@ def build_page(
     <div class="container my-5">
       <article>
         <header class="mb-4">
-          <h1 class="display-4 fw-bold">{esc(title)}</h1>{date_html}
+          <h1 class="display-4 fw-bold">{esc(heading)}</h1>{date_html}
         </header>
         <div class="content">
           {body_html}
@@ -765,7 +784,14 @@ def build() -> int:
         # could name the document). The template emits the styled one instead,
         # so take the body's wording when it is the better title and drop it.
         body_h1 = first_h1(body)
-        title = body_h1 or str(meta.get("title") or rel.rsplit("/", 1)[-1])
+        if rel == "":
+            # The home page keeps the front-matter title for <title>, which is
+            # what Hugo used ("Home", "Главная", …), while its visible H1 is
+            # the hero headline — that came from the hero partial, not the
+            # document, so the two are allowed to differ.
+            title = str(meta.get("title") or SITE["name"])
+        else:
+            title = body_h1 or str(meta.get("title") or rel.rsplit("/", 1)[-1])
         body = strip_first_h1(body)
 
         description = str(meta.get("description") or SITE["description"])
@@ -777,18 +803,14 @@ def build() -> int:
         out_file = ROOT / lang / rel / "index.html"
         html = rewrite_links(html, path.parent, out_file.parent)
 
-        # Steps back from this page's directory to the language root. The
-        # output path is <lang>/<rel>/index.html, so its segment count minus
-        # the language segment and the filename is the depth.
-        base = "../" * (len(out_file.relative_to(ROOT).parts) - 2)
         hrefs = language_hrefs(lang, rel, is_root=False)
 
         page = build_page(
             lang=lang,
             rel=rel,
-            base=base,
-            home=base or "./",
+
             title=title,
+            h1=body_h1,
             description=description,
             date=date,
             body_html=html,
@@ -806,7 +828,7 @@ def build() -> int:
     if root_src.exists():
         meta, body = split_doc(root_src.read_text(encoding="utf-8"))
         body_h1 = first_h1(body)
-        title = body_h1 or str(meta.get("title") or SITE["name"])
+        title = str(meta.get("title") or SITE["name"])
         body = strip_first_h1(body)
         html = markdown_to_html(body)
         html, has_mermaid = protect_mermaid(html)
@@ -816,9 +838,9 @@ def build() -> int:
         page = build_page(
             lang="en_us",
             rel="",
-            base="en_us/",
-            home="./",
+
             title=title,
+            h1=body_h1,
             description=str(meta.get("description") or SITE["description"]),
             date=None,
             body_html=html,
