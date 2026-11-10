@@ -1,0 +1,59 @@
+# Navigation
+nav_products = "محصولات"
+nav_knowledge_base = "پایگاه دانش"
+nav_tools = "ابزارها"
+nav_country_guides = "راهنمای کشورها"
+nav_supply_chain = "زنجیره تأمین"
+nav_about = "درباره ما"
+nav_suppliers = "تأمین‌کنندگان"
+nav_contact = "تماس"
+
+# Mega Menu - Categories
+mega_categories = "دسته‌بندی‌ها"
+mega_ceramics = "سرامیک"
+mega_gypsum = "گچ"
+mega_petroleum = "محصولات نفتی"
+mega_other_industries = "سایر صنایع"
+
+# Mega Menu - Energy & Petrochemicals
+mega_energy_petro = "انرژی و پتروشیمی"
+
+# Mega Menu - Construction Materials
+mega_construction = "مصالح ساختمانی"
+
+# Mega Menu - Knowledge Base
+mega_intl_trade = "تجارت بین‌الملل و کسب‌وکار"
+mega_logistics = "لجستیک و زنجیره تأمین"
+mega_trade_finance = "تامین مالی تجارت و پرداخت‌ها"
+mega_law_compliance = "حقوق و انطباق"
+mega_marketing = "بازاریابی و استراتژی جهانی"
+mega_ecommerce = "تجارت الکترونیک و پلتفرم‌های دیجیتال"
+
+# Mega Menu - Tools
+mega_trade_utilities = "ابزارهای تجاری"
+mega_lookup_tools = "ابزارهای جستجو"
+
+# Mega Menu - Country Guides
+mega_country_guides = "راهنمای کشورها و بازارها"
+
+# Footer
+footer_intelligence = "به‌روزرسانی‌های اطلاعات بازار"
+footer_subscribe_text = "برای دریافت تحلیل‌های روندهای تجارت جهانی، کدهای HS و شبکه‌های تأمین‌کنندگان معتبر مشترک شوید."
+footer_quick_links = "لینک‌های سریع"
+footer_categories = "دسته‌بندی‌ها"
+footer_contact_us = "تماس با ما"
+footer_all_rights = "تمامی حقوق محفوظ است."
+footer_privacy = "حریم خصوصی"
+footer_terms = "شرایط خدمات"
+footer_subscribe = "اشتراک"
+footer_interests = "علاقه‌مندی‌ها:"
+footer_email_placeholder = "ایمیل@شرکت شما.com"
+
+# Common
+search_placeholder = "جستجو..."
+search_results = "نتایج جستجو"
+skip_to_content = "پرش به محتوا"
+send_email = "ارسال ایمیل"
+learn_more = "بیشتر بدانید"
+read_more = "ادامه مطلب"
+home = "خانه"

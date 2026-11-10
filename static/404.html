@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <script>
+    (function() {
+      var path = window.location.pathname.replace(/\/+$/, '') || '';
+      var langs = ['/en_us', '/ru_ru', '/ar_iq', '/ar_ae', '/hy_am', '/fa_ir'];
+      var hasLang = langs.some(function(l) {
+        return path === l || path.indexOf(l + '/') === 0;
+      });
+      if (!hasLang) {
+        window.location.replace('/en_us' + path + '/');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="/en_us/">English version</a>…</p>
+</body>
+</html>

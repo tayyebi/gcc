@@ -1,0 +1,59 @@
+# Navigation
+nav_products = "المنتجات"
+nav_knowledge_base = "قاعدة المعرفة"
+nav_tools = "الأدوات"
+nav_country_guides = "أدلة الدول"
+nav_supply_chain = "سلسلة التوريد"
+nav_about = "من نحن"
+nav_suppliers = "الموردون"
+nav_contact = "اتصل بنا"
+
+# Mega Menu - Categories
+mega_categories = "الفئات"
+mega_ceramics = "السيراميك"
+mega_gypsum = "الجبس"
+mega_petroleum = "النفط"
+mega_other_industries = "صناعات أخرى"
+
+# Mega Menu - Energy & Petrochemicals
+mega_energy_petro = "الطاقة والبتروكيماويات"
+
+# Mega Menu - Construction Materials
+mega_construction = "مواد البناء"
+
+# Mega Menu - Knowledge Base
+mega_intl_trade = "التجارة الدولية والأعمال"
+mega_logistics = "اللوجستيات وسلسلة التوريد"
+mega_trade_finance = "التمويل التجاري والمدفوعات"
+mega_law_compliance = "القانون والامتثال"
+mega_marketing = "التسويق والاستراتيجية العالمية"
+mega_ecommerce = "التجارة الإلكترونية والمنصات الرقمية"
+
+# Mega Menu - Tools
+mega_trade_utilities = "الأدوات التجارية"
+mega_lookup_tools = "أدوات البحث"
+
+# Mega Menu - Country Guides
+mega_country_guides = "أدلة الدول والأسواق"
+
+# Footer
+footer_intelligence = "تحديثات معلومات السوق"
+footer_subscribe_text = "اشترك للحصول على تحليلات منسقة حول اتجاهات التجارة العالمية ورموز النظام المنسق وشبكات الموردين المعتمدين."
+footer_quick_links = "روابط سريعة"
+footer_categories = "الفئات"
+footer_contact_us = "اتصل بنا"
+footer_all_rights = "جميع الحقوق محفوظة."
+footer_privacy = "سياسة الخصوصية"
+footer_terms = "شروط الخدمة"
+footer_subscribe = "اشتراك"
+footer_interests = "الاهتمامات:"
+footer_email_placeholder = "بريدك@business.email"
+
+# Common
+search_placeholder = "بحث..."
+search_results = "نتائج البحث"
+skip_to_content = "تخطى إلى المحتوى"
+send_email = "إرسال بريد إلكتروني"
+learn_more = "اعرف المزيد"
+read_more = "اقرأ المزيد"
+home = "الرئيسية"
