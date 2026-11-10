@@ -1,0 +1,40 @@
+<!-- Featured Products Section -->
+<section class="py-5">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <span class="badge bg-warning text-dark mb-3 px-3 py-2">
+        <i class="bi bi-star-fill me-2"></i>Highlight
+      </span>
+      <h2 class="display-5 fw-bold mb-3">Featured Products</h2>
+      <p class="lead text-muted col-lg-8 mx-auto">Top-tier commodities driving global industries. Carefully selected for our premium clients.</p>
+    </div>
+    
+    <div class="row g-4 justify-content-center">
+      {{ $featured := where .Site.RegularPages "Params.featured" true }}
+      {{ range $featured }}
+      <div class="col-md-6 col-lg-3 fade-in-up">
+        <div class="card h-100 border-0 shadow-sm transition-hover">
+          <div class="card-body text-center d-flex flex-column">
+             <div class="mb-4 mt-2">
+                 <i class="bi bi-gem fs-2 text-warning"></i>
+             </div>
+            <h5 class="card-title fw-bold mb-3">{{ .Title }}</h5>
+            <p class="card-text small text-muted mb-4 flex-grow-1">{{ .Description | truncate 80 }}</p>
+            
+            <div class="mb-3">
+                {{ if .Params.hscode }}
+                <span class="badge bg-light text-dark border me-1">HS: {{ .Params.hscode }}</span>
+                {{ end }}
+            </div>
+
+            <a href="{{ .RelPermalink }}" class="btn btn-outline-dark w-100 mt-auto">
+              View Product
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

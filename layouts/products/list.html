@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="container my-5">
+  <header class="mb-5 text-center">
+    <h1 class="display-4 fw-bold">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="lead text-muted">{{ . }}</p>
+    {{ end }}
+  </header>
+  
+  <div class="row g-4">
+    {{/* Explicitly sort by date descending (newer first) */}}
+    {{ $paginator := .Paginate (.Pages.ByDate.Reverse) }}
+    {{ range $paginator.Pages }}
+      {{ partial "components/card.html" . }}
+    {{ end }}
+  </div>
+  
+  {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}

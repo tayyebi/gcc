@@ -1,0 +1,59 @@
+# Navigation
+nav_products = "Products"
+nav_knowledge_base = "Knowledge Base"
+nav_tools = "Tools"
+nav_country_guides = "Country Guides"
+nav_supply_chain = "Supply Chain"
+nav_about = "About Us"
+nav_suppliers = "Suppliers"
+nav_contact = "Contact"
+
+# Mega Menu - Categories
+mega_categories = "Categories"
+mega_ceramics = "Ceramics"
+mega_gypsum = "Gypsum"
+mega_petroleum = "Petroleum"
+mega_other_industries = "Other Industries"
+
+# Mega Menu - Energy & Petrochemicals
+mega_energy_petro = "Energy & Petrochemicals"
+
+# Mega Menu - Construction Materials
+mega_construction = "Construction Materials"
+
+# Mega Menu - Knowledge Base
+mega_intl_trade = "International Trade & Business"
+mega_logistics = "Logistics & Supply Chain"
+mega_trade_finance = "Trade Finance & Payments"
+mega_law_compliance = "Law & Compliance"
+mega_marketing = "Marketing & Global Strategy"
+mega_ecommerce = "E-commerce & Digital Platforms"
+
+# Mega Menu - Tools
+mega_trade_utilities = "Trade Utilities"
+mega_lookup_tools = "Lookup Tools"
+
+# Mega Menu - Country Guides
+mega_country_guides = "Country & Market Guides"
+
+# Footer
+footer_intelligence = "Market Intelligence Updates"
+footer_subscribe_text = "Subscribe to receive curated insights on global trade trends, HS codes, and verified supplier networks."
+footer_quick_links = "Quick Links"
+footer_categories = "Categories"
+footer_contact_us = "Contact Us"
+footer_all_rights = "All rights reserved."
+footer_privacy = "Privacy Policy"
+footer_terms = "Terms of Service"
+footer_subscribe = "Subscribe"
+footer_interests = "Interests:"
+footer_email_placeholder = "your@business.email"
+
+# Common
+search_placeholder = "Search..."
+search_results = "Search Results"
+skip_to_content = "Skip to content"
+send_email = "Send email"
+learn_more = "Learn More"
+read_more = "Read More"
+home = "Home"

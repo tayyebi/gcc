@@ -1,0 +1,59 @@
+# Navigation
+nav_products = "Ապրանքներ"
+nav_knowledge_base = "Գիտելիքների բազա"
+nav_tools = "Գործիքներ"
+nav_country_guides = "Երկրների ուղեցույցներ"
+nav_supply_chain = "Մատակարարման շղթա"
+nav_about = "Մեր մասին"
+nav_suppliers = "Մատակարարներ"
+nav_contact = "Կապ"
+
+# Mega Menu - Categories
+mega_categories = "Կատեգորիաներ"
+mega_ceramics = "Կերամիկա"
+mega_gypsum = "Գիպս"
+mega_petroleum = "Նավթամթերք"
+mega_other_industries = "Այլ ոլորտներ"
+
+# Mega Menu - Energy & Petrochemicals
+mega_energy_petro = "Էներգետիկա և նավթաքիմիա"
+
+# Mega Menu - Construction Materials
+mega_construction = "Շինանյութեր"
+
+# Mega Menu - Knowledge Base
+mega_intl_trade = "Միջազգային առևտուր և բիզնես"
+mega_logistics = "Լոգիստիկա և մատակարարման շղթա"
+mega_trade_finance = "Առևտրային ֆինանսավորում և վճարումներ"
+mega_law_compliance = "Իրավունք և համապատասխանություն"
+mega_marketing = "Մարկետինգ և գլոբալ ռազմավարություն"
+mega_ecommerce = "Էլեկտրոնային առևտուր և թվային հարթակներ"
+
+# Mega Menu - Tools
+mega_trade_utilities = "Առևտրային գործիքներ"
+mega_lookup_tools = "Տեղեկատու գործիքներ"
+
+# Mega Menu - Country Guides
+mega_country_guides = "Երկրների և շուկաների ուղեցույցներ"
+
+# Footer
+footer_intelligence = "Շուկայական տեղեկատվության թարմացումներ"
+footer_subscribe_text = "Բաժանորդագրվեք՝ ստանալու գլոբալ առևտրի միտումների, HS կոդերի և վստահելի մատակարարների ցանցերի վերլուծություններ:"
+footer_quick_links = "Արագ հղումներ"
+footer_categories = "Կատեգորիաներ"
+footer_contact_us = "Կապ մեզ հետ"
+footer_all_rights = "Բոլոր իրավունքները պաշտպանված են:"
+footer_privacy = "Գաղտնիության քաղաքականություն"
+footer_terms = "Ծառայությունների պայմաններ"
+footer_subscribe = "Բաժանորդագրվել"
+footer_interests = "Հետաքրքրություններ:"
+footer_email_placeholder = "Ձեր@բիզնես.email"
+
+# Common
+search_placeholder = "Որոնել..."
+search_results = "Որոնման արդյունքներ"
+skip_to_content = "Անցնել բովանդակությանը"
+send_email = "Ուղարկել նամակ"
+learn_more = "Իմանալ ավելին"
+read_more = "Կարդալ ավելին"
+home = "Գլխավոր"

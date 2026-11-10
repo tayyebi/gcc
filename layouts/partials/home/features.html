@@ -1,0 +1,92 @@
+<!-- Features Section -->
+<section class="py-5">
+  <div class="container py-4">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <span class="badge bg-primary text-white mb-3 px-3 py-2">Our Advantages</span>
+        <h2 class="display-6 fw-bold mb-4">Why Industry Leaders Choose Us</h2>
+        
+        <div class="feature-list">
+          <div class="d-flex mb-4">
+            <div class="me-4 flex-shrink-0">
+              <div class="bg-primary bg-opacity-10 rounded-circle p-3">
+                <i class="bi bi-globe-americas text-primary fs-4"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-2">Global Network</h5>
+              <p class="text-muted mb-0">Connected with verified suppliers and buyers across 50+ countries with real-time market intelligence</p>
+            </div>
+          </div>
+          
+          <div class="d-flex mb-4">
+            <div class="me-4 flex-shrink-0">
+              <div class="bg-success bg-opacity-10 rounded-circle p-3">
+                <i class="bi bi-shield-check text-success fs-4"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-2">Quality Assurance</h5>
+              <p class="text-muted mb-0">Rigorous vetting process ensuring compliance with international standards and certifications</p>
+            </div>
+          </div>
+          
+          <div class="d-flex mb-4">
+            <div class="me-4 flex-shrink-0">
+              <div class="bg-info bg-opacity-10 rounded-circle p-3">
+                <i class="bi bi-headset text-info fs-4"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-2">Expert Support</h5>
+              <p class="text-muted mb-0">Dedicated specialists providing market insights, logistics coordination, and trade guidance</p>
+            </div>
+          </div>
+        </div>
+        
+        <a href="/about/" class="btn btn-primary btn-lg mt-3">
+          Learn More About Us
+          <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="data-viz-container">
+          <h3 class="fw-bold mb-4 text-uppercase small text-muted h6">Trade Performance 2024</h3>
+          <div class="row g-3 mb-4">
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3">
+                <div class="h4 fw-bold text-primary mb-1">{{ .Site.Params.stats.growth_rate }}</div>
+                <div class="small text-muted">Growth Rate</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3">
+                <div class="h4 fw-bold text-success mb-1">{{ .Site.Params.stats.satisfaction }}</div>
+                <div class="small text-muted">Satisfaction</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3">
+                <div class="h4 fw-bold text-info mb-1">{{ .Site.Params.stats.transactions }}</div>
+                <div class="small text-muted">Transactions</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3">
+                <div class="h4 fw-bold text-warning mb-1">{{ .Site.Params.stats.avg_response }}</div>
+                <div class="small text-muted">Avg. Response</div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mb-4">
+            <div class="line-graph"></div>
+          </div>
+          <div class="text-center">
+            <p class="small text-muted mb-0">Real-time trade performance indicators</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

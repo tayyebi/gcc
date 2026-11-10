@@ -1,0 +1,59 @@
+# Navigation
+nav_products = "Продукция"
+nav_knowledge_base = "База знаний"
+nav_tools = "Инструменты"
+nav_country_guides = "Страновые руководства"
+nav_supply_chain = "Цепочка поставок"
+nav_about = "О нас"
+nav_suppliers = "Поставщики"
+nav_contact = "Контакты"
+
+# Mega Menu - Categories
+mega_categories = "Категории"
+mega_ceramics = "Керамика"
+mega_gypsum = "Гипс"
+mega_petroleum = "Нефтепродукты"
+mega_other_industries = "Другие отрасли"
+
+# Mega Menu - Energy & Petrochemicals
+mega_energy_petro = "Энергетика и нефтехимия"
+
+# Mega Menu - Construction Materials
+mega_construction = "Строительные материалы"
+
+# Mega Menu - Knowledge Base
+mega_intl_trade = "Международная торговля и бизнес"
+mega_logistics = "Логистика и цепочка поставок"
+mega_trade_finance = "Торговое финансирование и платежи"
+mega_law_compliance = "Право и соответствие"
+mega_marketing = "Маркетинг и глобальная стратегия"
+mega_ecommerce = "Электронная коммерция и цифровые платформы"
+
+# Mega Menu - Tools
+mega_trade_utilities = "Торговые утилиты"
+mega_lookup_tools = "Справочные инструменты"
+
+# Mega Menu - Country Guides
+mega_country_guides = "Страновые и рыночные руководства"
+
+# Footer
+footer_intelligence = "Обновления рыночной информации"
+footer_subscribe_text = "Подпишитесь, чтобы получать аналитику по глобальным торговым трендам, кодам ТН ВЭД и проверенным сетям поставщиков."
+footer_quick_links = "Быстрые ссылки"
+footer_categories = "Категории"
+footer_contact_us = "Свяжитесь с нами"
+footer_all_rights = "Все права защищены."
+footer_privacy = "Политика конфиденциальности"
+footer_terms = "Условия обслуживания"
+footer_subscribe = "Подписаться"
+footer_interests = "Интересы:"
+footer_email_placeholder = "ваш@бизнес.email"
+
+# Common
+search_placeholder = "Поиск..."
+search_results = "Результаты поиска"
+skip_to_content = "Перейти к содержанию"
+send_email = "Отправить письмо"
+learn_more = "Подробнее"
+read_more = "Читать далее"
+home = "Главная"

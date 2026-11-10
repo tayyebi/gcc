@@ -1,0 +1,266 @@
+baseURL = "https://globalcommercecouncil.com"
+defaultContentLanguage = "en_us"
+defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+enableGitInfo = false
+enableEmoji = true
+
+# Pagination settings
+[pagination]
+  pagerSize = 12
+
+# Build settings
+[build]
+  writeStats = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+
+[languages]
+  [languages.en_us]
+    languageCode = "en-US"
+    languageName = "English"
+    weight = 1
+    title = "Global Commerce Council"
+    contentDir = "content/en_us"
+
+  [languages.ru_ru]
+    languageCode = "ru-RU"
+    languageName = "Русский"
+    weight = 2
+    title = "Global Commerce Council"
+    contentDir = "content/ru_ru"
+
+  [languages.ar_iq]
+    languageCode = "ar-IQ"
+    languageName = "العربية (العراق)"
+    weight = 3
+    title = "مجلس التجارة العالمي"
+    contentDir = "content/ar_iq"
+    [languages.ar_iq.params]
+      rtl = true
+
+  [languages.hy_am]
+    languageCode = "hy-AM"
+    languageName = "Հայերեն"
+    weight = 4
+    title = "Global Commerce Council"
+    contentDir = "content/hy_am"
+
+  [languages.fa_ir]
+    languageCode = "fa-IR"
+    languageName = "فارسی"
+    weight = 5
+    title = "Global Commerce Council"
+    contentDir = "content/fa_ir"
+
+  [languages.ar_ae]
+    languageCode = "ar-AE"
+    languageName = "العربية (الإمارات)"
+    weight = 6
+    title = "مجلس التجارة العالمي"
+    contentDir = "content/ar_ae"
+    [languages.ar_ae.params]
+      rtl = true
+
+[params]
+  # ========================================
+  # GLOBAL VARIABLES - SINGLE SOURCE OF TRUTH
+  # ========================================
+  [params.globals]
+    # Organization Identity
+    name = "Global Commerce Council"
+    tagline = "Connecting Global Markets Through Innovation"
+    description = "Global Commerce Council - Connecting businesses worldwide through commerce in Ceramics, Gypsum, Petroleum, and more."
+    domain = "globalcommercecouncil.com"
+    
+    [params.globals.logo]
+      path = "/images/logo.svg"
+      alt = "Global Commerce Council Logo"
+    
+    # Contact Emails
+    [params.globals.email]
+      main = "info@globalcommercecouncil.com"
+      support = "support@globalcommercecouncil.com"
+      privacy = "privacy@globalcommercecouncil.com"
+      legal = "legal@globalcommercecouncil.com"
+    
+    # Social Media
+    [params.globals.social]
+      twitter = "@globalcommerce"
+      linkedin = "globalcommercecouncil"
+      rss = "https://globalcommercecouncil.com/index.xml"
+
+  description = "Global Commerce Council - Connecting businesses worldwide through commerce in Ceramics, Gypsum, Petroleum, and more."
+  author = "Global Commerce Council"
+  images = ["/images/og-image.jpg"]
+  
+  [params.seo]
+    twitter_card = "summary_large_image"
+    twitter_site = "@globalcommerce"
+    fb_app_id = ""
+
+  [params.contact]
+    email = "info@globalcommercecouncil.com"
+
+  # Semantic Versioning
+  # Format: MAJOR.MINOR.PATCH
+  # Can be automatically updated via CI/CD using commit hash and date
+  # Example CI update: sed -i 's/version = .*/version = "1.0.0+git.'"$(git rev-parse --short HEAD)"'"/g' hugo.toml
+  [params.version]
+    semantic = "1.0.0"
+    build_date = "2026-02-06"
+    git_hash = "main"  # Set by CI/CD pipeline
+
+  # Single Source of Truth for Key Metrics
+  [params.stats]
+    countries = "4+"
+    partners = "100+"
+    avg_response = "72hrs"
+    growth_rate = "45%"
+    satisfaction = "98%"
+    transactions = "10K+"
+
+  # ========================================
+  # DESIGN SYSTEM CONFIGURATION
+  # Single source of truth for animations and interactions
+  # ========================================
+  [params.design]
+    # Animation Timings (in milliseconds)
+    [params.design.timing]
+      fast = 100
+      base = 150
+      normal = 200
+      slow = 300
+      slower = 400
+      slowest = 500
+    
+    # Spacing Scale (in rem units)
+    [params.design.spacing]
+      xs = "0.25rem"
+      sm = "0.5rem"
+      md = "1rem"
+      lg = "1.5rem"
+      xl = "2rem"
+      "2xl" = "3rem"
+      "3xl" = "4rem"
+    
+    # Border Radius Values
+    [params.design.radius]
+      xs = "2px"
+      sm = "4px"
+      md = "8px"
+      lg = "12px"
+      xl = "16px"
+      full = "9999px"
+    
+    # Animation Easing Functions
+    [params.design.easing]
+      linear = "linear"
+      "in" = "ease-in"
+      out = "ease-out"
+      "in-out" = "ease-in-out"
+      smooth = "cubic-bezier(0.4, 0, 0.2, 1)"
+      bounce = "cubic-bezier(0.68, -0.55, 0.265, 1.55)"
+    
+    # Color Palette Reference
+    [params.design.colors]
+      primary = "#2563EB"
+      primary_dark = "#1E40AF"
+      primary_light = "#60A5FA"
+      success = "#10B981"
+      danger = "#EF4444"
+      warning = "#F59E0B"
+      info = "#0EA5E9"
+    
+    # Z-Index Scale
+    [params.design.zindex]
+      hide = "-1"
+      base = "0"
+      dropdown = "100"
+      sticky = "500"
+      fixed = "1000"
+      modal = "1100"
+      tooltip = "1300"
+      notification = "1400"
+      skiplink = "2000"
+    
+    # Component-Specific Configuration
+    [params.design.components]
+      card_shadow = "0 10px 15px -3px rgba(0,0,0,0.05)"
+      card_radius = "12px"
+      button_padding = "0.625rem 1.5rem"
+      input_padding = "0.625rem 1rem"
+      badge_padding = "0.25rem 0.75rem"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+
+[menu]
+  [[menu.main]]
+    identifier = "products"
+    name = "Products"
+    url = "/products/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "knowledge-base"
+    name = "Knowledge Base"
+    url = "/knowledge-base/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "tools"
+    name = "Tools"
+    url = "/tools/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "country-guides"
+    name = "Country Guides"
+    url = "/country-guides/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "supply-chain"
+    name = "Supply Chain"
+    url = "/supply-chain/"
+    weight = 5
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About Us"
+    url = "/about/"
+    weight = 6
+
+  [[menu.main]]
+    identifier = "suppliers"
+    name = "Suppliers"
+    url = "/suppliers/"
+    weight = 7
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 8
+

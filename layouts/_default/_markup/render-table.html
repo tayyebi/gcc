@@ -1,0 +1,26 @@
+<div class="table-responsive my-4">
+  <table class="table table-striped table-hover table-bordered align-middle mb-0" {{ range $k, $v := .Attributes }} {{ $k }}="{{ $v }}"{{ end }}>
+    <thead class="table-light">
+      {{ range .THead }}
+        <tr>
+          {{ range . }}
+            <th scope="col" {{ with .Alignment }}style="text-align: {{ . }}"{{ end }}>
+              {{ .Text }}
+            </th>
+          {{ end }}
+        </tr>
+      {{ end }}
+    </thead>
+    <tbody>
+      {{ range .TBody }}
+        <tr>
+          {{ range . }}
+            <td {{ with .Alignment }}style="text-align: {{ . }}"{{ end }}>
+              {{ .Text }}
+            </td>
+          {{ end }}
+        </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>

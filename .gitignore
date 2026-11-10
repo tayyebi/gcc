@@ -1,12 +1,21 @@
-# serve-md serves this directory in place: there is no build output to ignore.
+# Hugo
+/public
+/resources/_gen
+/.hugo_build.lock
+hugo_extended_*.tar.gz
+hugo_stats.json
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Editors
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+
+# Dependencies
+node_modules/
+package-lock.json
