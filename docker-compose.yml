@@ -4,9 +4,10 @@ services:
   hugo:
     # Base image only — project files are NOT baked into the image,
     # they are mounted from the host at runtime (see volumes below).
-    # Official Hugo extended image, pinned to the same version used in CI (0.147.0).
-    # Alternative community image: hugomods/hugo:exts-0.147.0
-    image: ghcr.io/gohugoio/hugo:v0.147.0-extended
+    # Community Hugo extended image, pinned to the same version used in CI (0.147.0).
+    # This image is available on Docker Hub and is reliably pullable.
+    # Alternative official image: ghcr.io/gohugoio/hugo:v0.147.0 (extended by default)
+    image: hugomods/hugo:exts-0.147.0
     container_name: gcc-hugo
     working_dir: /src
     command: >
@@ -22,7 +23,7 @@ services:
       - "8019:1313"
     volumes:
       # Mount the entire project from host (live reload, no COPY in Dockerfile)
-      - .:/src
+      - ./:/src
       # Optional: persist Hugo cache / modules between restarts (improves rebuild speed)
       # Uncomment if you use Hugo Modules:
       # - hugo_cache:/tmp/hugo_cache
@@ -30,7 +31,6 @@ services:
       HUGO_CACHEDIR: /tmp/hugo_cache
       TZ: UTC
     restart: unless-stopped
-    # stdin_open/tty keep the server attached correctly for logs; not strictly required for -d
     stdin_open: true
     tty: true
 
