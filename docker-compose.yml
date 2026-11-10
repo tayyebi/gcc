@@ -5,7 +5,6 @@ services:
     # Base image only — project files are NOT baked into the image,
     # they are mounted from the host at runtime (see volumes below).
     # Community Hugo extended image, pinned to the same version used in CI (0.147.0).
-    # This image is available on Docker Hub and is reliably pullable.
     # Alternative official image: ghcr.io/gohugoio/hugo:v0.147.0 (extended by default)
     image: hugomods/hugo:exts-0.147.0
     container_name: gcc-hugo
@@ -14,12 +13,14 @@ services:
       server
       --bind 0.0.0.0
       --port 1313
-      --baseURL http://localhost:8019/
+      --baseURL https://www.globalcommercecouncil.com/
+      --appendPort=false
       --buildDrafts
       --buildFuture
       --disableFastRender
     ports:
       # Host:Container — bind Hugo (1313 inside) to 8019 on the server/host
+      # Reverse proxy (nginx/caddy/traefik) should forward https://www.globalcommercecouncil.com → host:8019
       - "8019:1313"
     volumes:
       # Mount the entire project from host (live reload, no COPY in Dockerfile)
@@ -29,6 +30,7 @@ services:
       # - hugo_cache:/tmp/hugo_cache
     environment:
       HUGO_CACHEDIR: /tmp/hugo_cache
+      HUGO_ENVIRONMENT: production
       TZ: UTC
     restart: unless-stopped
     stdin_open: true
