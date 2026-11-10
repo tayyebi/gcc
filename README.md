@@ -3,46 +3,16 @@
 Product catalogue, trade knowledge base, HS code directory, country guides and
 trade tools for the Global Commerce Council, written in six languages.
 
-This repository **is** the website. There is no build step at deploy time, no
-package manager and no framework: [serve-md](https://github.com/tayyebi/serve-md)
-serves the files in place, both to browsers and to AI agents, and the server
-does `git pull` then `docker compose up` and nothing else.
-
-## How the site is put together
-
-serve-md renders Markdown into a deliberately minimal shell — a `<title>`, a
-viewport, one `img` rule and `<main>`. It has no theming hook: it escapes raw
-HTML in Markdown, so a stylesheet cannot be attached to a Markdown page, and its
-own templates are compiled into the binary.
-
-Hand-written `.html` files, however, are served **verbatim**, and so are static
-assets. That is the one door, and it is what this repository uses:
-
-```
-.source/     Markdown source of truth        (hidden from serve-md)
-.build/      build.py, the generator          (hidden from serve-md)
-static/      the theme: CSS, JS, images       (served as static assets)
-<lang>/…     the generated HTML               (what serve-md serves)
-```
-
-`.build/build.py` reads every document under `.source/`, renders it with
-[Python-Markdown](https://python-markdown.github.io/), wraps it in the themed
-page shell, and writes `<path>/index.html`. The output is **committed**, which
-is why the server needs no build step — the HTML it serves is already in Git.
-
-```sh
-pip install markdown pyyaml      # once
-python3 .build/build.py          # after editing anything in .source/
-```
-
-Edit Markdown, run the script, commit both. Never hand-edit the generated HTML:
-the next run overwrites it.
+This repository **is** the website. There is no build step, no package manager,
+no framework and no generated output: [serve-md](https://github.com/tayyebi/serve-md)
+reads the Markdown in place and serves it, both to browsers and to AI agents.
+What a reader sees here is exactly what is in Git.
 
 ## Serving the site
 
-`compose.yaml` runs serve-md against this directory. The published image is
-pulled, the repository root is mounted read-only at `/docs`, and the generated
-HTML plus the theme are served as a website.
+`compose.yaml` runs serve-md against this directory. There is nothing to build:
+the published image is pulled, the repository root is mounted read-only at
+`/docs`, and the Markdown is served as a website.
 
 ```sh
 docker compose up -d
@@ -71,79 +41,51 @@ at it with:
 ```
 
 `llms.txt` is hand-written rather than generated, so it is the curated index an
-agent reads first.
+agent reads first; the generated `llms-full.txt` still concatenates the whole
+tree.
 
 Clients that ask get what suits them — `curl` and `wget` receive 80-column plain
-text, `Accept: text/markdown` converts a page back to Markdown, and a browser
-gets the themed site.
-
-## The theme
-
-Restored from the previous Hugo build and kept as close to the original as
-serve-md allows: Bootstrap 5 and Bootstrap Icons from a CDN, the Inter and Outfit
-webfaces, a dark/light toggle persisted in `localStorage`, a products mega-menu,
-a full-screen mobile menu, and a language switcher that lands on the same page in
-each language where one exists.
-
-| File | |
-|---|---|
-| `static/css/design-tokens.css` | colours, spacing, radii, shadows, z-index scale |
-| `static/css/custom.css` | the theme itself |
-| `static/css/animations.css` | the animation system |
-| `static/css/site.css` | extras the generator needs: mermaid container, code blocks |
-| `static/js/main.js` | theme toggle, mega-menu, mobile menu, language dropdown |
-| `static/images/`, `static/favicon.svg` | logo, hero, OG image, favicon |
-
-Mermaid diagrams are drawn client-side from
-`https://cdn.jsdelivr.net/npm/mermaid@10`, exactly as the Hugo build did. This is
-the one place serve-md's own mermaid plugin does not apply, because it only
-transforms Markdown and these pages are HTML; the diagram source is still in the
-document for anyone reading without JavaScript.
+text, `Accept: text/markdown` returns the source unchanged, and a browser gets
+semantic HTML5 with no CSS and no JavaScript.
 
 ## Layout
 
-One directory is one page. Every page is a directory holding an `index.html`, so
-every public URL is pretty — `/en_us/products/bitumen-60-70`, never an extension
-— and no directory is ever left without an index for serve-md to fall back to a
-file listing.
+One directory is one page. serve-md resolves a directory to its `index.md`, so
+`/en_us/products` serves `en_us/products/index.md`.
 
 ```
-index.html                 the landing page (generated)
-llms.txt                   the index AI agents read first
-README.md                  this file
-compose.yaml               the container definition
-static/                    the theme
-.source/                   the Markdown source of truth
-  index.md                 the landing page's source
-  en_us/  ru_ru/  ar_iq/  hy_am/  fa_ir/  ar_ae/
-    index.md               the language home
-    about.md  contact.md  hscode.md  privacy.md  terms.md
-    products/  categories/  knowledge-base/  country-guides/
-    tools/  supply-chain/  suppliers/  search/
-.build/
-  build.py                 the generator
-  i18n.json                navigation and footer strings, all six languages
-en_us/  ru_ru/  …          the generated site
-  about/index.html  contact/index.html  products/index.html  …
-  products/bitumen-60-70/index.html  …
+index.md                  the landing page
+llms.txt                  the index AI agents read first
+README.md                 this file
+compose.yaml              the container definition
+en_us/  ru_ru/  ar_iq/  hy_am/  fa_ir/  ar_ae/
+  index.md                the language home
+  about.md  contact.md  hscode.md  privacy.md  terms.md
+  products/  categories/  knowledge-base/  country-guides/
+  tools/  supply-chain/  suppliers/  search/
 ```
 
-`ar_iq`, `ar_ae` and `fa_ir` are rendered right-to-left.
+Every directory carries an `index.md`. Without one, serve-md would fall back to
+a file listing for that directory instead of a page.
 
 ## Writing documents
 
-Three rules keep a document readable in the source, in the generated page, and by
-an agent:
+Three rules keep a document readable by the server, by an agent, and by anyone
+reading the source on GitHub:
 
-1. **Start the body with a `#` heading.** The generator takes that heading as the
-   page title, emits it as the styled `<h1>`, and uses it in `<title>`. A leading
-   `---` front matter block is metadata only — the server strips it, and the
-   generator reads `description` and `date` from it.
-2. **Link with paths relative to the file that holds them**, exactly as if the
-   page were still a Markdown file. `../contact.md`, `../products` and
-   `../../index.md` are all fine: the generator resolves each one against the
-   real output paths and rewrites it. Links to real root-level files such as
-   `llms.txt` work the same way.
+1. **Start the body with a `#` heading.** serve-md reads a document's title from
+   its first heading, and that title is what appears in `llms.txt`, in the
+   `list_docs` tool and in the `Doc-Title` response header. A leading `---`
+   front matter block is stripped before rendering, so it is safe to keep for
+   metadata, but it is not what names the page.
+2. **Link with paths relative to the file that holds them.** The server has no
+   idea what the site's root URL is, so `/contact/` is a 404 here. Link a
+   section by its bare directory name — `products`, `../categories/ceramics` —
+   because that is the one canonical URL serve-md gives it; `products/index.md`
+   redirects there with a `301`.
 3. **Mermaid labels are plain text.** No `<br/>`, no HTML tags and no HTML
-   entities inside them. A fenced `mermaid` block becomes `<pre class="mermaid">`
-   for the client-side renderer, and the source is left untouched inside it.
+   entities inside them: the renderer escapes whatever it reads, so
+   `Crude Oil<br/>Brent` would be printed literally. Subgraphs, `style` and
+   `%%{init}%%` lines are ignored rather than fatal — the flowchart still draws,
+   just flat and uncoloured. A fence the renderer cannot parse at all is left as
+   an ordinary code block.

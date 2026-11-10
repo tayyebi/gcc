@@ -10,7 +10,3 @@ Thumbs.db
 *.swp
 *.swo
 *~
-
-# Python (the generator in .build/)
-__pycache__/
-*.pyc
